@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Where is the site</title>
+    <title>Mildly Journaling</title>
     <link>//localhost:1313/</link>
-    <description>Recent content on Where is the site</description>
+    <description>Recent content on Mildly Journaling</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Feb 2025 20:04:32 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2025 09:56:04 -0800</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Add a Custom Domain</title>
+      <link>//localhost:1313/posts/add-a-custom-domain/</link>
+      <pubDate>Sun, 16 Feb 2025 09:56:04 -0800</pubDate>
+      <guid>//localhost:1313/posts/add-a-custom-domain/</guid>
+      <description>&lt;p&gt;My website has a name and a domain now, and looks like this:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/blog_screenshot_with_name.png&#34; alt=&#34;My website has a name now&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This article talks about how I come up with the name and set up the website under the new domain.&lt;/p&gt;&#xA;&lt;p&gt;The purpose of this site is so I can write. The reason I am writing is two: 1. remember stuff for me; 2. sharing stuff I did. It is basically a journal. The consistency of journaling and writing in general is chanllenging, so I want to keep my hopes low. All in all, &amp;ldquo;Mildly Journaling&amp;rdquo; sounds like what this site intends to be.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How I set up my blog</title>
       <link>//localhost:1313/posts/hello-world/</link>
