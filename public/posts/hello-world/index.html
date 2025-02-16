@@ -47,7 +47,7 @@
   />
 
   
-  <title>Hello World - Where is the site</title>
+  <title>How I set up my blog - Where is the site</title>
 
   
   <meta name="theme-color" />
@@ -56,9 +56,10 @@
   
   
   
-  <meta name="description" content="Introduction
-This is bold text, and this is emphasized text.
-Visit the Hugo website!" />
+  <meta name="description" content="I created yet another blog to write stuff. Here is what it looks like:
+
+This blog talks about what did I do to set it up. It is created using Hugo, and hosted on Cloudflare Pages via Github. All free.
+Hugo is a free tool that takes simple text I write and turns it into a blog website. Cloudflare Pages is a platform to host the actual website I create on the Internet. Github is a platform to store code (or really anything digitally), track changes and open to others for e.g. sharing and collaboration. Some basic knowledge of the three tools would make reading the following a bit easier, but not required." />
   <meta name="author" content="Where is the site" />
   
 
@@ -68,14 +69,14 @@ Visit the Hugo website!" />
   
   
   
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
 
   
   
   
   
   
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+  <link rel="preload" as="image" href="//localhost:1313/theme.png" />
 
   
   
@@ -91,7 +92,7 @@ Visit the Hugo website!" />
   
   <script
     defer
-    src="http://localhost:1313/highlight.min.js"
+    src="//localhost:1313/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
   
@@ -103,11 +104,11 @@ Visit the Hugo website!" />
   
   <link
     rel="icon"
-    href="http://localhost:1313/favicon.ico"
+    href="//localhost:1313/favicon.ico"
   />
   <link
     rel="apple-touch-icon"
-    href="http://localhost:1313/apple-touch-icon.png"
+    href="//localhost:1313/apple-touch-icon.png"
   />
 
   
@@ -121,7 +122,7 @@ Visit the Hugo website!" />
   <body class="text-black duration-200 ease-out dark:text-white">
     <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
   <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
-    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:1313/"
+    <a class="-translate-y-[1px] text-2xl font-medium" href="//localhost:1313/"
       >Where is the site</a
     >
     <div
@@ -200,7 +201,7 @@ Visit the Hugo website!" />
 
 <article>
   <header class="mb-14">
-    <h1 class="!my-0 pb-2.5">Hello World</h1>
+    <h1 class="!my-0 pb-2.5">How I set up my blog</h1>
 
     
     <div class="text-xs antialiased opacity-60">
@@ -214,9 +215,42 @@ Visit the Hugo website!" />
     
   </header>
 
-  <section><h2 id="introduction">Introduction</h2>
-<p>This is <strong>bold</strong> text, and this is <em>emphasized</em> text.</p>
-<p>Visit the <a href="https://gohugo.io">Hugo</a> website!</p>
+  <section><p>I created yet another blog to write stuff. Here is what it looks like:</p>
+<p><img src="/blog_screenshot.png" alt="What does my blog look like"></p>
+<p>This blog talks about what did I do to set it up. It is created using Hugo, and hosted on Cloudflare Pages via Github. All free.</p>
+<p>Hugo is a free tool that takes simple text I write and turns it into a blog website. Cloudflare Pages is a platform to host the actual website I create on the Internet. Github is a platform to store code (or really anything digitally), track changes and open to others for e.g. sharing and collaboration. Some basic knowledge of the three tools would make reading the following a bit easier, but not required.</p>
+<p>The rest of blog walks through the how-to step by step:</p>
+<ol>
+<li>Use Hugo locally to create the blog</li>
+<li>Setup Github to host and track the Hugo files</li>
+<li>Deploy the blog to Cloudflare Pages</li>
+</ol>
+<h2 id="use-hugo-to-create-the-blog">Use Hugo to create the blog</h2>
+<p>First of all I setup Hugo locally to create the blog. Practically speaking, it means I need to use tools Hugo provides to generate a bunch of files that are used to configure how does my site look and feel, and then another bunch of files generated based the first bunch that actually represent my website (like a HTML file of the home page). My laptop is a Macbook so I follow <a href="https://gohugo.io/installation/macos/#homebrew">this instruction</a> to install Hugo. I then follow <a href="https://gohugo.io/getting-started/quick-start/">this Hugo documentation page</a> to create a new site, select a theme for the site, and create a new blog to the site, all in one folder. The folder looks roughly like below. Each subfolder <a href="https://gohugo.io/getting-started/directory-structure/#site-skeleton">serves its own usage</a>, but for now only a few are relevant as pointed out below.</p>
+<pre tabindex="0"><code>my-hugo-site/
+├── archetypes/
+├── assets/
+├── content/         &lt;-- the actual blog content is here
+│   └── posts/       &lt;-- blog posts
+├── data/
+├── i18n/
+├── layouts/
+├── public/
+├── static/
+├── themes/          
+│   └── paper/       &lt;-- the theme you selected
+└── hugo.toml        &lt;-- the site configuration
+</code></pre><p>Besides deploying to Cloudflare Pages, it is also possible to run the blog locally on my laptop by issuing this command under the site root folder <code>my-hugo-site</code>:</p>
+<pre tabindex="0"><code>hugo server -D
+</code></pre><p>The flag <code>-D</code> is to tell Hugo to include draft posts in the blog as well. When I create a post, by default Hugo marks it as a draft by adding the line <code>draft = true</code> in the post. Without the flag, draft posts won&rsquo;t show up as blogs in the website. Alternatively, removing that line from the post &ldquo;publishes&rdquo; the post and Hugo would include it automatically.</p>
+<h2 id="setup-github-to-host-and-track-the-blog">Setup Github to host and track the blog</h2>
+<p>Practically speaking, this step puts the files of my blog somewhere on the Internet to be discoverable and readable. It also enables easy integrations with other servides such as Cloudflare Pages. It is necessary to automate the deployment to Cloudflare Pages.</p>
+<p>There is a plenty of tutorials on how to create a new repository in Github and push the local files to the repository. I won&rsquo;t cover it as I didn&rsquo;t do anything extra or special here. The only thing to mention is that to push to the repository hosted online at Github, I need to authenticate myself with my Github credentials. Unfortunately, Github has disabled using password as part of the credentials there - one has to use either <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">an access token</a> or rely on special tools like Github command line tool. This is quite complex.</p>
+<h2 id="deploy-the-blog-to-cloudflare-pages">Deploy the blog to Cloudflare Pages</h2>
+<p>One might wonder: didn&rsquo;t we already use Github to host the blog, why do we need this step? Github is more of a file storage, if you will, with other features such as collaboration and version tracking. It requires a computer to process the blog files and render them into a website when visitors come. That is what Cloudflare Pages does.</p>
+<p>Cloudflare Pages supports integrating with Github such that every time there&rsquo;s a new change in the Github repository (that I push in from my local version), it automatically fetches all the file and deloy them again, ensuring the website it renders always stays at the latest.</p>
+<p>I follow the instruction <a href="https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/">here</a> provided by Cloudflare. Steps are straightfoward except one thing: remember to remove the line <code>baseurl = &quot;https://example.com&quot;</code> from the <code>hugo.toml</code> configuration file. This line is automatically generated when I generate the site, but is wrong because it points to a fake website as an example. This is supposed to tell Hugo the full URL of the website for various purpose. Removing it does not hurt the basic functionality, and I can add it back when I do have an actual URL/domain for my blog.</p>
+<p>That&rsquo;s it! I have a blog again.</p>
 </section>
 
   
@@ -249,7 +283,7 @@ Visit the Hugo website!" />
   <div class="mr-auto">
   
     &copy; 2025
-    <a class="link" href="http://localhost:1313/">Where is the site</a>
+    <a class="link" href="//localhost:1313/">Where is the site</a>
   
   </div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
