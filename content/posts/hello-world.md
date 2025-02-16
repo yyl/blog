@@ -2,6 +2,7 @@
 date = '2025-02-13T20:04:32-08:00'
 draft = false
 title = 'How I set up my blog'
+tags = ['howto', 'blog-setup', 'cloudflare-pages', 'hugo', 'github']
 +++
 
 I created yet another blog to write stuff. Here is what it looks like:
