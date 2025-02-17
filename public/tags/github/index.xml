@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Github on Mildly Journaling</title>
+    <title>github on Mildly Journaling</title>
     <link>//localhost:1313/tags/github/</link>
-    <description>Recent content in Github on Mildly Journaling</description>
+    <description>Recent content in github on Mildly Journaling</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Feb 2025 20:04:32 -0800</lastBuildDate>

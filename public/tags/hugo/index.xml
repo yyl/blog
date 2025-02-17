@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Mildly Journaling</title>
+    <title>hugo on Mildly Journaling</title>
     <link>//localhost:1313/tags/hugo/</link>
-    <description>Recent content in Hugo on Mildly Journaling</description>
+    <description>Recent content in hugo on Mildly Journaling</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Feb 2025 20:04:32 -0800</lastBuildDate>

@@ -1,3 +1,4 @@
 languageCode = 'en-us'
 title = 'Mildly Journaling'
 theme = 'paper'
+capitalizeListTitles = false

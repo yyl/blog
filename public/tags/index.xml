@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Mildly Journaling</title>
+    <title>tags on Mildly Journaling</title>
     <link>//localhost:1313/tags/</link>
-    <description>Recent content in Tags on Mildly Journaling</description>
+    <description>Recent content in tags on Mildly Journaling</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Feb 2025 09:56:04 -0800</lastBuildDate>
     <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blog-Setup</title>
+      <title>blog-setup</title>
       <link>//localhost:1313/tags/blog-setup/</link>
       <pubDate>Sun, 16 Feb 2025 09:56:04 -0800</pubDate>
       <guid>//localhost:1313/tags/blog-setup/</guid>
       <description></description>
     </item>
     <item>
-      <title>Cloudflare-Pages</title>
+      <title>cloudflare-pages</title>
       <link>//localhost:1313/tags/cloudflare-pages/</link>
       <pubDate>Sun, 16 Feb 2025 09:56:04 -0800</pubDate>
       <guid>//localhost:1313/tags/cloudflare-pages/</guid>
       <description></description>
     </item>
     <item>
-      <title>Howto</title>
+      <title>howto</title>
       <link>//localhost:1313/tags/howto/</link>
       <pubDate>Sun, 16 Feb 2025 09:56:04 -0800</pubDate>
       <guid>//localhost:1313/tags/howto/</guid>
       <description></description>
     </item>
     <item>
-      <title>Github</title>
+      <title>github</title>
       <link>//localhost:1313/tags/github/</link>
       <pubDate>Thu, 13 Feb 2025 20:04:32 -0800</pubDate>
       <guid>//localhost:1313/tags/github/</guid>
       <description></description>
     </item>
     <item>
-      <title>Hugo</title>
+      <title>hugo</title>
       <link>//localhost:1313/tags/hugo/</link>
       <pubDate>Thu, 13 Feb 2025 20:04:32 -0800</pubDate>
       <guid>//localhost:1313/tags/hugo/</guid>

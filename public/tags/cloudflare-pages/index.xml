@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cloudflare-Pages on Mildly Journaling</title>
+    <title>cloudflare-pages on Mildly Journaling</title>
     <link>//localhost:1313/tags/cloudflare-pages/</link>
-    <description>Recent content in Cloudflare-Pages on Mildly Journaling</description>
+    <description>Recent content in cloudflare-pages on Mildly Journaling</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Feb 2025 09:56:04 -0800</lastBuildDate>
