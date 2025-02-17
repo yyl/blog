@@ -1,8 +1,8 @@
 +++
-date = '2025-02-17T20:00:01-08:00'
+date = '2025-02-17T11:03:03-08:00'
 draft = false
 title = 'How I add tags to the posts'
-tags = ['howto', 'blog-setup', 'tags']
+tags = ['howto', 'blog-setup', 'tags', 'taxonomy']
 +++
 
 I added tags to my posts so that each post has its own set of tags to give you an idea what the content is about. It looks like this at the bottom of the post:
