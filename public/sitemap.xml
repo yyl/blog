@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/tags/blog-setup/</loc>
+    <lastmod>2025-02-16T09:56:04-08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/cloudflare-pages/</loc>
+    <lastmod>2025-02-16T09:56:04-08:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/posts/add-a-custom-domain/</loc>
+    <lastmod>2025-02-16T09:56:04-08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/howto/</loc>
     <lastmod>2025-02-16T09:56:04-08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/</loc>
@@ -11,11 +20,8 @@
     <loc>//localhost:1313/posts/</loc>
     <lastmod>2025-02-16T09:56:04-08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/blog-setup/</loc>
-    <lastmod>2025-02-13T20:04:32-08:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/cloudflare-pages/</loc>
-    <lastmod>2025-02-13T20:04:32-08:00</lastmod>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2025-02-16T09:56:04-08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/github/</loc>
     <lastmod>2025-02-13T20:04:32-08:00</lastmod>
@@ -23,13 +29,7 @@
     <loc>//localhost:1313/posts/hello-world/</loc>
     <lastmod>2025-02-13T20:04:32-08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/howto/</loc>
-    <lastmod>2025-02-13T20:04:32-08:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/tags/hugo/</loc>
-    <lastmod>2025-02-13T20:04:32-08:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
     <lastmod>2025-02-13T20:04:32-08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/</loc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Mildly Journaling</title>
+    <link>//localhost:1313/tags/github/</link>
+    <description>Recent content in Github on Mildly Journaling</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Feb 2025 20:04:32 -0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I set up my blog</title>
+      <link>//localhost:1313/posts/hello-world/</link>
+      <pubDate>Thu, 13 Feb 2025 20:04:32 -0800</pubDate>
+      <guid>//localhost:1313/posts/hello-world/</guid>
+      <description>&lt;p&gt;I created yet another blog to write stuff. Here is what it looks like:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/blog_screenshot.png&#34; alt=&#34;What does my blog look like&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This blog talks about what did I do to set it up. It is created using Hugo, and hosted on Cloudflare Pages via Github. All free.&lt;/p&gt;&#xA;&lt;p&gt;Hugo is a free tool that takes simple text I write and turns it into a blog website. Cloudflare Pages is a platform to host the actual website I create on the Internet. Github is a platform to store code (or really anything digitally), track changes and open to others for e.g. sharing and collaboration. Some basic knowledge of the three tools would make reading the following a bit easier, but not required.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
