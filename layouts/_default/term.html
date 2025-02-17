@@ -2,12 +2,11 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
   {{ range .Pages }}
-  <div class="relative">  <!-- Add a positioned container -->
-    <div style="display: flex; align-items: center;">
-      <h3 class="!my-0" style="margin-right: 1rem;">{{ .Title }}</h3>
-      <time class="text-xs antialiased opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
-    </div>
-    <a class="absolute inset-0 text-[0]" href="{{ .Permalink }}">{{ .Title }}</a>
+  <div style="display: flex; align-items: center;">
+    <h3 class="!my-0" style="margin-right: 1rem;">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h3>
+    <time class="text-xs antialiased opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
   </div>
   {{ end }}
 {{ end }}
