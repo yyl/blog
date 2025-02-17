@@ -27,7 +27,7 @@
     {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }}
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="\{{ $href }}"
+      href="{{ $href }}"
       >{{ . }}</a
     >
     {{ end }}
