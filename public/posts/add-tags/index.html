@@ -47,7 +47,7 @@
   />
 
   
-  <title>Give my website a name - Mildly Journaling</title>
+  <title>I add tags to the posts - Mildly Journaling</title>
 
   
   <meta name="theme-color" />
@@ -56,10 +56,9 @@
   
   
   
-  <meta name="description" content="My website has a name and a domain now, and looks like this:
+  <meta name="description" content="I added tags to my posts so that each post has its own set of tags to give you an idea what the content is about. It looks like this at the bottom of the post:
 
-This article talks about how I come up with the name and set up the website under the new domain.
-The purpose of this site is so I can write. The reason I am writing is two: 1. remember stuff for me; 2. sharing stuff I did. It is basically a journal. The consistency of journaling and writing in general is chanllenging, so I want to keep my hopes low. All in all, &ldquo;Mildly Journaling&rdquo; sounds like what this site intends to be." />
+In fact, Hugo has tags support by default. The system is called Taxonomies. It allows users to freely define categorizations that can be used to classify the content. For example, if my blog is movie reviews, then I can create a Taxonomy called genre, and label each post based on the type of the movie it reviews. The good news is Hugo creates a Taxonomy called tags already for users (as well as categorization). To add tags to a post, I just need to put them in the front matter of the post. The code below shows the front matter of this post with tags added:" />
   <meta name="author" content="Mildly Journaling" />
   
 
@@ -201,7 +200,7 @@ The purpose of this site is so I can write. The reason I am writing is two: 1. r
 
 <article>
   <header class="mb-14">
-    <h1 class="!my-0 pb-2.5">Give my website a name</h1>
+    <h1 class="!my-0 pb-2.5">I add tags to the posts</h1>
 
     
     <div class="text-xs antialiased opacity-60">
@@ -215,16 +214,23 @@ The purpose of this site is so I can write. The reason I am writing is two: 1. r
     
   </header>
 
-  <section><p>My website has a name and a domain now, and looks like this:</p>
-<p><img src="/blog_screenshot_with_name.png" alt="My website has a name now"></p>
-<p>This article talks about how I come up with the name and set up the website under the new domain.</p>
-<p>The purpose of this site is so I can write. The reason I am writing is two: 1. remember stuff for me; 2. sharing stuff I did. It is basically a journal. The consistency of journaling and writing in general is chanllenging, so I want to keep my hopes low. All in all, &ldquo;Mildly Journaling&rdquo; sounds like what this site intends to be.</p>
-<p>More importantly, the domain <a href="https://www.mildlyjournaling.com">www.mildlyjournaling.com</a> is available for cheap price ($10 a year). I bought the domain and followed <a href="https://developers.cloudflare.com/pages/configuration/custom-domains/">this instruction</a> to map the domain to my website hosted on Cloudflare Pages.</p>
-<p>To change the name of the website so the content there actually says this name, I just modify the <code>hugo.toml</code> file in the root directory of the website files locally. Now the file looks like this:</p>
-<pre tabindex="0"><code>languageCode = &#39;en-us&#39;
-title = &#39;Mildly Journaling&#39;
-theme = &#39;paper&#39;
-</code></pre><p>That&rsquo;s it!</p>
+  <section><p>I added tags to my posts so that each post has its own set of tags to give you an idea what the content is about. It looks like this at the bottom of the post:</p>
+<p><img src="/tags_screenshot.png" alt="Tags in a post"></p>
+<p>In fact, Hugo has tags support by default. The system is called <a href="https://gohugo.io/content-management/taxonomies/">Taxonomies</a>. It allows users to freely define categorizations that can be used to classify the content. For example, if my blog is movie reviews, then I can create a Taxonomy called genre, and label each post based on the type of the movie it reviews. The good news is Hugo creates a Taxonomy called <code>tags</code> already for users (as well as <code>categorization</code>). To add tags to a post, I just need to put them in the front matter of the post. The code below shows the front matter of this post with tags added:</p>
+<pre tabindex="0"><code>+++
+date = &#39;2025-02-16T20:00:01-08:00&#39;
+draft = true
+title = &#39;I add tags to the posts&#39;
+tags = [&#39;howto&#39;, &#39;blog-setup&#39;, &#39;tags&#39;]
++++
+</code></pre><p>With tags on each post, there are 2 more features I can add. The first one is to list all tags used in my blog, and it looks like this:</p>
+<p><img src="/taxonomy_list_screenshot.png" alt="A page showing all tags created"></p>
+<p>To enable this, I simply add <a href="https://gohugo.io/templates/taxonomy/">this template</a> provided by Hugo to my site at <code>my-hugo-site/layouts/_default/taxonomy.html</code>.</p>
+<p>Another one is to show all the posts that use a particular tag when someone clicks a tag in the post, and it looks like this:</p>
+<p><img src="/term_page_screenshot.png" alt="A page showing all posts use this tag"></p>
+<p>To enable this, I add <a href="https://gohugo.io/templates/term/">another Hugo template</a> to my site as a file at <code>my-hugo-site/layouts/_default/term.html</code>. A <code>term</code> means a key or an item of a certain taxonomy - in the <code>tags</code> taxonomy, it means a tag.</p>
+<p>One issue I notice after setting everything up is the link of each tag in a post is wrong. It should look like <code>{my-website-url}/tags/{the-tag-name}</code>, so that when someone clicks it it takes them to the <code>term</code> page I add above. Instead, it looks like <code>{my-website-url}posts/{this-post}/tags/{the-tag-name}</code>, resulting a <code>page not found (404)</code> error if I click it. The root cause is in the Hugo theme I use. In its post template, it uses <code>tags/{the-tag-name}</code> as the hyperlink instead of <code>/tags/{the-tag-name}</code>: the former is always treated as the postfix to be appended to the <strong>current URL</strong> (the post link), while the latter to the root URL (my website url). Adding the forward slash fixes the issue.</p>
+<p>Although to fix the issue, I have to copy and paste the template in question (<code>my-hugo-site/themes/paper/layouts/_default/single.html</code>) to my template folder (<code>my-hugo-site/layouts/_default/single.html</code>) to modifty it so that the latter overrides the former when Hugo generates the website.</p>
 </section>
 
   
@@ -245,8 +251,8 @@ theme = &#39;paper&#39;
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="\//localhost:1313/tags/cloudflare-pages"
-      >cloudflare-pages</a
+      href="\//localhost:1313/tags/tags"
+      >tags</a
     >
     
   </footer>
@@ -260,13 +266,9 @@ theme = &#39;paper&#39;
     class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
   >
     
-    <a class="ltr:pr-3 rtl:pl-3" href="//localhost:1313/posts/add-tags/"
-      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>I add tags to the posts</span></a
-    >
     
-    
-    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="//localhost:1313/posts/hello-world/"
-      ><span>How I set up my blog</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="//localhost:1313/posts/add-a-custom-domain/"
+      ><span>Give my website a name</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
     >
     
   </nav>
