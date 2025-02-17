@@ -13,4 +13,4 @@ title = 'Add Tags'
 	- how to modify it though?
 	- https://discourse.gohugo.io/t/how-to-modify-a-theme/40080
 	- just copy and override!
-- there seems to be another bug in the tag template
+- there seems to be another bug in the tag template: it's because of the absolute inset-0 classes on the <a> tag. This makes the link expand to fill its nearest positioned parent container. Since there's no explicitly positioned parent, it's likely expanding to fill the entire viewport or page. remove absolute inset-0 works
