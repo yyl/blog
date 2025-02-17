@@ -3,3 +3,13 @@ languageCode = 'en-us'
 title = 'Mildly Journaling'
 theme = 'paper'
 capitalizeListTitles = false
+
+[params]
+  rss = true 
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
