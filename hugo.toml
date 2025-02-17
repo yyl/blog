@@ -1,4 +1,3 @@
-baseURL = "https://mildlyjournaling.com/"
 languageCode = 'en-us'
 title = 'Mildly Journaling'
 theme = 'paper'
