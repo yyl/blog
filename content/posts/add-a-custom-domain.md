@@ -2,6 +2,7 @@
 date = '2025-02-16T09:56:04-08:00'
 draft = false
 title = 'Give my website a name'
+tags = ['howto', 'blog-setup', 'cloudflare-pages']
 +++
 
 My website has a name and a domain now, and looks like this:
