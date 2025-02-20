@@ -17,7 +17,7 @@
     <loc>http://localhost:1313/tags/howto/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/posts/index.xml</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tags/</loc>
@@ -43,6 +43,9 @@
   </url><url>
     <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2025-02-13T20:04:32-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/blog-features/</loc>
+    <lastmod>2025-02-10T16:44:37-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url>

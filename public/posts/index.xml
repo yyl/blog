@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>posts on Mildly Journaling</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>http://localhost:1313/posts/index.xml</link>
     <description>Recent content in posts on Mildly Journaling</description>
     <generator>Hugo</generator>
     <language>en-us</language>
@@ -28,6 +28,13 @@
       <pubDate>Thu, 13 Feb 2025 20:04:32 -0800</pubDate>
       <guid>http://localhost:1313/posts/hello-world/</guid>
       <description>&lt;p&gt;I created yet another blog to write stuff. Here is what it looks like:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/blog_screenshot.png&#34; alt=&#34;What does my blog look like&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This blog talks about what did I do to set it up. It is created using Hugo, and hosted on Cloudflare Pages via Github. All free.&lt;/p&gt;&#xA;&lt;p&gt;Hugo is a free tool that takes simple text I write and turns it into a blog website. Cloudflare Pages is a platform to host the actual website I create on the Internet. Github is a platform to store code (or really anything digitally), track changes and open to others for e.g. sharing and collaboration. Some basic knowledge of the three tools would make reading the following a bit easier, but not required.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Features of this website as of 2/17/2025</title>
+      <link>http://localhost:1313/posts/blog-features/</link>
+      <pubDate>Mon, 10 Feb 2025 16:44:37 -0800</pubDate>
+      <guid>http://localhost:1313/posts/blog-features/</guid>
+      <description>&lt;p&gt;I want a place to track notable features of this website for reference. This post will be a bit different from others, as it will get periodically updated as this website gets more features.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2/17/2025 &lt;a href=&#34;http://localhost:1313/posts/add-tags&#34;&gt;tags per post, tag page&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2/16/2025 &lt;a href=&#34;http://localhost:1313/posts/add-a-custom-domain&#34;&gt;custom domain&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

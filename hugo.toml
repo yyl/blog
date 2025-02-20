@@ -6,6 +6,7 @@ capitalizeListTitles = false
 
 [params]
   rss = true 
+  twitter = "MildJournaling"
 
 [menu]
   [[menu.main]]
@@ -13,3 +14,6 @@ capitalizeListTitles = false
     name = "About"
     url = "/about/"
     weight = 10
+
+[outputs]
+  section = ['rss']
