@@ -16,4 +16,5 @@ capitalizeListTitles = false
     weight = 10
 
 [outputs]
+  home = ['rss']
   section = ['rss']
