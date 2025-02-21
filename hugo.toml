@@ -16,5 +16,7 @@ capitalizeListTitles = false
     weight = 10
 
 [outputs]
-  home = ['rss']
-  section = ['rss']
+  home = ['html']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']

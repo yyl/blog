@@ -51,7 +51,7 @@
   />
 
   
-  <title>Mildly Journaling</title>
+  <title>Add RSS to My Site - Mildly Journaling</title>
 
   
   <meta name="theme-color" />
@@ -60,11 +60,19 @@
   
   
   
-  
-  <meta
-    name="description"
-    content="A personal blog"
-  />
+  <meta name="description" content="
+theme has a way to enable RSS, but that feed has only description, not full text, and it includes pages like About
+change it from .Summary to .Content
+
+&lt;item&gt;
+  &lt;title&gt;{{ .Title }}&lt;/title&gt;
+  &lt;link&gt;{{ .Permalink }}&lt;/link&gt;
+  &lt;pubDate&gt;{{ .PublishDate.Format &#34;Mon, 02 Jan 2006 15:04:05 -0700&#34; | safeHTML }}&lt;/pubDate&gt;
+  {{- with $authorEmail }}&lt;author&gt;{{ . }}{{ with $authorName }} ({{ . }}){{ end }}&lt;/author&gt;{{ end }}
+  &lt;guid&gt;{{ .Permalink }}&lt;/guid&gt;
+  &lt;description&gt;{{ .Content | transform.XMLEscape | safeHTML }}&lt;/description&gt;
+&lt;/item&gt;
+" />
   <meta name="author" content="Mildly Journaling" />
   
 
@@ -98,6 +106,12 @@
   
 
   
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
   
 
   
@@ -238,90 +252,67 @@
     >
       
 
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">Add RSS to My Site</h1>
 
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Feb 20, 2025</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
 
+  <section><ul>
+<li>theme has a way to enable RSS, but that feed has only description, not full text, and it includes pages like About</li>
+<li>change it from <code>.Summary</code> to <code>.Content</code></li>
+</ul>
+<pre tabindex="0"><code>&lt;item&gt;
+  &lt;title&gt;{{ .Title }}&lt;/title&gt;
+  &lt;link&gt;{{ .Permalink }}&lt;/link&gt;
+  &lt;pubDate&gt;{{ .PublishDate.Format &#34;Mon, 02 Jan 2006 15:04:05 -0700&#34; | safeHTML }}&lt;/pubDate&gt;
+  {{- with $authorEmail }}&lt;author&gt;{{ . }}{{ with $authorName }} ({{ . }}){{ end }}&lt;/author&gt;{{ end }}
+  &lt;guid&gt;{{ .Permalink }}&lt;/guid&gt;
+  &lt;description&gt;{{ .Content | transform.XMLEscape | safeHTML }}&lt;/description&gt;
+&lt;/item&gt;
+</code></pre></section>
 
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   
-  <h2 class="!my-0">Add RSS to My Site</h2>
-  <time class="text-xs antialiased opacity-60"
-    >Feb 20, 2025</time
-  >
-  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/add-rss-to-my-site/">Add RSS to My Site</a>
-</section>
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   
-  <h2 class="!my-0">How I add tags to the posts</h2>
-  <time class="text-xs antialiased opacity-60"
-    >Feb 17, 2025</time
-  >
-  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/add-tags/">How I add tags to the posts</a>
-</section>
 
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   
-  <h2 class="!my-0">How I give my website a name</h2>
-  <time class="text-xs antialiased opacity-60"
-    >Feb 16, 2025</time
-  >
-  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/add-a-custom-domain/">How I give my website a name</a>
-</section>
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   
-  <h2 class="!my-0">How I set up my blog</h2>
-  <time class="text-xs antialiased opacity-60"
-    >Feb 13, 2025</time
-  >
-  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/hello-world/">How I set up my blog</a>
-</section>
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   
-  <h2 class="!my-0">Features of this website as of 2/17/2025</h2>
-  <time class="text-xs antialiased opacity-60"
-    >Feb 10, 2025</time
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
   >
-  <a class="absolute inset-0 text-[0]" href="http://localhost:1313/posts/blog-features/">Features of this website as of 2/17/2025</a>
-</section>
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:1313/posts/add-tags/"
+      ><span>How I add tags to the posts</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
 
 
-
-
+  
+</article>
 
 
     </main>
