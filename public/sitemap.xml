@@ -2,54 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/add-rss-to-my-site/</loc>
+    <loc>https://www.mildlyjournaling.com/</loc>
     <lastmod>2025-02-20T06:37:30-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/</loc>
     <lastmod>2025-02-20T06:37:30-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-02-20T06:37:30-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://www.mildlyjournaling.com/about/</loc>
     <lastmod>2025-02-17T15:51:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blog-setup/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/blog-setup/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/add-tags/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/add-tags/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/howto/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/howto/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tags/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/tags/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/taxonomy/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/taxonomy/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cloudflare-pages/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/cloudflare-pages/</loc>
     <lastmod>2025-02-16T09:56:04-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/add-a-custom-domain/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/add-a-custom-domain/</loc>
     <lastmod>2025-02-16T09:56:04-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/github/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/github/</loc>
     <lastmod>2025-02-13T20:04:32-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hello-world/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/hello-world/</loc>
     <lastmod>2025-02-13T20:04:32-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/hugo/</loc>
     <lastmod>2025-02-13T20:04:32-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/blog-features/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/blog-features/</loc>
     <lastmod>2025-02-10T16:44:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://www.mildlyjournaling.com/categories/</loc>
   </url>
 </urlset>
