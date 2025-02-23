@@ -1,0 +1,382 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en-us"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title> - Mildly Journaling</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="I have an outline below for my blog post &ldquo;How I add RSS feed to my site&rdquo;. Please expand it into a proper article. Please try to write it in the style and voice of Michael Lynch&rsquo;s personal blog (https://mtlynch.io). I attached a file (mtlynch1.pdf) of an example post he writes as a reference if you can&rsquo;t find any. Please also write it so tech novice can read the post - explain technical concepts with relative easy and non-technical way. The article length is less important but keep it in a length such that readers can comfortably finish it within 10 minutes. Write it in markdown to preserve formatting and links." />
+  <meta name="author" content="Mildly Journaling" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:1313/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.144.2">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:1313/"
+      >Mildly Journaling</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/MildJournaling"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="http://localhost:1313/posts/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5"></h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>I have an outline below for my blog post &ldquo;How I add RSS feed to my site&rdquo;. Please expand it into a proper article. Please try to write it in the style and voice of Michael Lynch&rsquo;s personal blog (<a href="https://mtlynch.io">https://mtlynch.io</a>). I attached a file (mtlynch1.pdf) of an example post he writes as a reference if you can&rsquo;t find any. Please also write it so tech novice can read the post - explain technical concepts with relative easy and non-technical way. The article length is less important but keep it in a length such that readers can comfortably finish it within 10 minutes. Write it in markdown to preserve formatting and links.</p>
+<ul>
+<li>Tries <a href="https://github.com/nanxiaobei/hugo-paper?tab=readme-ov-file#options">the RSS configuration provided by the theme</a> but there are two issues
+<ul>
+<li>the feed contains only a snippet of the content instead of the full content: I prefer the feed to deliver full content so that my subscribers do not need to come to my website to read them</li>
+<li>the feed is the home feed and includes everything from my website including non-article pages like About page: I do not want to include non-Article pages since they are not readable content</li>
+</ul>
+</li>
+<li>To fix both issues, I need to create a RSS template myself to override the default configuration
+<ul>
+<li><a href="https://gohugo.io/templates/rss/">the Hugo documentation on RSS</a> leads me to the <a href="https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/rss.xml">original template</a></li>
+<li>I copy and paste it into <code>section.rss.xml</code>, not <code>home.rss.xml</code> because I intend to include only the articles I write which are in the &ldquo;posts&rdquo; section</li>
+<li>Hugo has the concept of home and section (see attachment)</li>
+<li>I also need to change the template so it pulls the full content instead of just a snippet</li>
+<li>It is straightforward: change the <code>.Summary</code> to <code>.Content</code> in the <a href="https://github.com/gohugoio/hugo/blob/e07028cb90901931cd71a210f9d0b237d1bcc99f/tpl/tplimpl/embedded/templates/_default/rss.xml#L55">line 55</a> <code>&lt;description&gt;{{ .Content | transform.XMLEscape | safeHTML }}&lt;/description&gt;</code></li>
+<li>With that, I should have a feed generated at <code>{my-website-url}/posts/index.xml</code> that includes the full content of all articles</li>
+</ul>
+</li>
+<li>However adding the rss template to my project causes Cloudflare Pages to fail to build my website
+<ul>
+<li>Error message: <code>can't evaluate field XMLEscape in type interface {}</code></li>
+<li>The build log (code 1 below) shows it uses hugo v0.118.2 during the build</li>
+<li>However, according to <a href="https://discourse.gohugo.io/t/problem-with-rss-xmlescape/47682/2">this reply in a discussion on a similar issue</a>, hugo adds support for <code>XMLEscape</code> in v0.121.0, newer than the version used in Cloudflare Pages</li>
+<li>The <a href="https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/#use-a-specific-or-newer-hugo-version">hugo documentation from Cloudflare Pages</a> shows a way to specify the desired version needed, so I set it to be the latest v0.144.2</li>
+<li>That resolves the build issue</li>
+</ul>
+</li>
+<li>When it is built, I notice the RSS icon provided by the theme still shows <code>{my-website-url}/index.xml</code> aka home RSS, not section RSS
+<ul>
+<li>To make it point to the correct URL, I need to override the template the theme uses to generate this icon and its link</li>
+<li>The one to override for my theme: <code>layouts/partials/header.html</code></li>
+<li>The specific part of the template that needs to be changed is in code 2 below</li>
+<li>The first <code>if</code> controls the generation of URL that the RSS icon uses, so change it from <code>{{ </code>index.xml<code> | absURL }}</code> to <code>{{ </code>posts/index.xml<code> | absURL }}</code> should do the trick</li>
+</ul>
+</li>
+<li>Finally my website has a RSS feed now!</li>
+</ul>
+<h2 id="code-1">code 1</h2>
+<pre tabindex="0"><code>06:37:32.630  hugo v0.118.2-da7983ac4b94d97d776d7c2405040de97e95c03d+extended linux/amd64 BuildDate=2023-08-31T11:23:51Z VendorInfo=gohugoio
+</code></pre><h2 id="code-2">code 2</h2>
+<pre tabindex="0"><code>href=&#34;{{ if eq . `rss` }}
+        {{ `posts/index.xml` | absURL }}
+      {{ else if eq . `mastodon` }}
+        {{ index site.Params . }}
+      {{ else }}
+        {{ if eq . `threads` }}
+          https://threads.net/
+        {{ else if eq . `bluesky` }}
+          https://bsky.app/profile/
+          {{ else }}
+            https://{{ . }}.com/
+          {{ if eq . `linkedin` }}
+            in/
+          {{ end }}
+        {{ end }}
+        {{ index site.Params . }}
+      {{ end }}&#34;
+</code></pre><h2 id="code-3">code 3</h2>
+<pre tabindex="0"><code>&lt;item&gt;
+  &lt;title&gt;{{ .Title }}&lt;/title&gt;
+  &lt;link&gt;{{ .Permalink }}&lt;/link&gt;
+  &lt;pubDate&gt;{{ .PublishDate.Format &#34;Mon, 02 Jan 2006 15:04:05 -0700&#34; | safeHTML }}&lt;/pubDate&gt;
+  {{- with $authorEmail }}&lt;author&gt;{{ . }}{{ with $authorName }} ({{ . }}){{ end }}&lt;/author&gt;{{ end }}
+  &lt;guid&gt;{{ .Permalink }}&lt;/guid&gt;
+  &lt;description&gt;{{ .Content | transform.XMLEscape | safeHTML }}&lt;/description&gt;
+&lt;/item&gt;
+</code></pre></section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    <a class="ltr:pr-3 rtl:pl-3" href="http://localhost:1313/posts/blog-features/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Features of this website as of 2/17/2025</span></a
+    >
+    
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    &copy; 2025
+    <a class="link" href="http://localhost:1313/">Mildly Journaling</a>
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

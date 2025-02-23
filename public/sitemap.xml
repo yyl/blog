@@ -2,35 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mildlyjournaling.com/posts/add-rss-to-my-site/</loc>
+    <lastmod>2025-02-22T20:37:30-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/blog-setup/</loc>
+    <lastmod>2025-02-22T20:37:30-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/cloudflare-pages/</loc>
+    <lastmod>2025-02-22T20:37:30-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/howto/</loc>
+    <lastmod>2025-02-22T20:37:30-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/hugo/</loc>
+    <lastmod>2025-02-22T20:37:30-08:00</lastmod>
+  </url><url>
     <loc>https://www.mildlyjournaling.com/</loc>
-    <lastmod>2025-02-20T06:37:30-08:00</lastmod>
+    <lastmod>2025-02-22T20:37:30-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/</loc>
-    <lastmod>2025-02-20T06:37:30-08:00</lastmod>
+    <lastmod>2025-02-22T20:37:30-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/rss/</loc>
+    <lastmod>2025-02-22T20:37:30-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/</loc>
+    <lastmod>2025-02-22T20:37:30-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/about/</loc>
     <lastmod>2025-02-17T15:51:28-08:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/blog-setup/</loc>
-    <lastmod>2025-02-17T11:03:03-08:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/posts/add-tags/</loc>
-    <lastmod>2025-02-17T11:03:03-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/howto/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/tags/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/</loc>
-    <lastmod>2025-02-17T11:03:03-08:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/taxonomy/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/cloudflare-pages/</loc>
-    <lastmod>2025-02-16T09:56:04-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/add-a-custom-domain/</loc>
     <lastmod>2025-02-16T09:56:04-08:00</lastmod>
@@ -39,9 +48,6 @@
     <lastmod>2025-02-13T20:04:32-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/hello-world/</loc>
-    <lastmod>2025-02-13T20:04:32-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/hugo/</loc>
     <lastmod>2025-02-13T20:04:32-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/blog-features/</loc>
