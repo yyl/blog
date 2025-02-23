@@ -6,7 +6,6 @@ capitalizeListTitles = false
 
 [params]
   rss = true 
-  twitter = "MildJournaling"
 
 [menu]
   [[menu.main]]
