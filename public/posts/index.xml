@@ -6,8 +6,15 @@
     <description>Recent content in posts on Mildly Journaling</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Feb 2025 20:37:30 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2025 21:28:37 -0800</lastBuildDate>
     <atom:link href="https://www.mildlyjournaling.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stratechery Netflix Earnings Q4 24</title>
+      <link>https://www.mildlyjournaling.com/posts/stratechery-netflix-earnings-q4-24/</link>
+      <pubDate>Mon, 24 Feb 2025 21:28:37 -0800</pubDate>
+      <guid>https://www.mildlyjournaling.com/posts/stratechery-netflix-earnings-q4-24/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;While I don’t think Netflix planned it this way, it is quite the flex to report record subscriber ads in the last quarter where they will report that number as a matter of course. I thought the reporting change was reasonable, but I also thought that part of the reason for the reporting change was because the password-sharing crackdown represented the last big growth surge. I guess not!&lt;/p&gt;&#xA;&lt;p&gt;Netflix executives on the earnings call strongly disagreed with an analyst who assumed that the Mike Tyson-Jake Paul boxing event and Christmas Day NFL games were the primary drivers of that subscriber growth, crediting them with only “a small minority of our total member acquisition in the quarter”; that said, executives also spoke very positively about the events and that they would do more.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Neither password crackdown nor live stream events are the main driver of the subscriber growth, the growth is organic then?&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;This makes total sense, and is a worthy extension of Aggregation Theory. Specifically, while more subscribers means that Netflix can spend more on content, thus attracting more subscribers, more content also means that Netflix can drive more engagement on a per-customer basis — there’s just more to watch! This, in Netflix’s case, provides “permission” to raise prices&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;The benefit of being an aggregator, for Netflix, is having both pricing power and buying power.&lt;/p&gt;&#xA;&lt;p&gt;pricing power:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;having the largest subscriber base means it needs less revenue per subscriber to achieve the same revenue&lt;/li&gt;&#xA;&lt;li&gt;Netflix is indeed getting less revenue per subscriber compared with other streaming competitors&lt;/li&gt;&#xA;&lt;li&gt;as a result, Netflix has more room to increase its subscription fee&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;buying power:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;having the largest subscriber base means it can spread the content cost to more subscribers&lt;/li&gt;&#xA;&lt;li&gt;Netflix is indeed having the lowest content spend per subscriber compared with other streaming competitors&lt;/li&gt;&#xA;&lt;li&gt;as a result, Netflix can afford to spend more on content&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;These two form a virtuous cycle.&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>Adding an RSS Feed to My Site</title>
       <link>https://www.mildlyjournaling.com/posts/add-rss-to-my-site/</link>
