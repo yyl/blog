@@ -5,6 +5,7 @@ title = 'Reading Stratechery analysis on Netflix Earnings Q4 2024'
 tags = ['stratechery', 'earnings', 'netflix']
 +++
 
+From [Stratechery](https://stratechery.com/2025/encryption-and-the-uneasy-compromise-netflix-earnings-the-aggregators-compounding-advantage/):
 
 > While I don’t think Netflix planned it this way, it is quite the flex to report record subscriber ads in the last quarter where they will report that number as a matter of course. I thought the reporting change was reasonable, but I also thought that part of the reason for the reporting change was because the password-sharing crackdown represented the last big growth surge. I guess not!
 > 
