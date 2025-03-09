@@ -1,6 +1,6 @@
 +++
 date = '2025-03-08T20:45:58-08:00'
-draft = true
+draft = false
 title = 'A Practical Guide to Managing iPhone Photos/Videos'
 tags = ['howto', 'icloud', 'blog']
 +++
