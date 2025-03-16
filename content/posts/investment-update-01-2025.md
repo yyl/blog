@@ -2,7 +2,7 @@
 date = '2025-03-01T14:57:58-08:00'
 draft = false
 title = 'Investment Update - January 2025'
-tags = ['investment update', 'investment update 2025', 'recurring']
+tags = ['investment update', 'recurring', 'investment update 2025', 'investment update january', 'monthly update']
 +++
 
 This is our monthly update on the family fund’s investment performance for January 2025. It highlights this month’s changes, with a full month-over-month trend analysis coming soon as a separate page.
