@@ -5,9 +5,9 @@ title = 'Understanding SSH and using it to clone a Github repository'
 tags = ['github', 'workflow', 'howto', 'ssh', 'technical', 'open_source']
 +++
 
-In this post I try to learn a little bit about SSH, and show you how to clone a Github repository via SSH. I've scrabbled most secrets, keys or identities in the terminal output but it should not affect the reading or the functionality.
+In this post I try to learn a little bit about SSH, and show you how to clone a Github repository via SSH. I've scrambled most secrets, keys or identities in the terminal output but it should not affect the reading or the functionality.
 
-I have tried to clone some github repositories to local for development lately. The easiest way to do that used to be `HTTPS` - "Clone using the web URL" option: I copy and paste the repo HTTPS URL, run `git clone {URL}`, that's it. 
+I have tried to clone some github repositories to my local machine for development lately. The easiest way to do that used to be `HTTPS` - "Clone using the web URL" option: I copy and paste the repo HTTPS URL, run `git clone {URL}`, that's it. 
 
 But now it's been failing:
 
@@ -37,7 +37,7 @@ Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
 yyl@github.com: Permission denied (publickey).
 ```
 
-The command (`ssh git@github.com`) failed but what it does is trying to connect to github.com via the SSH client `ssh`. It did a few things:
+The command (`ssh git@github.com`) failed but what it does is try to connect to github.com via the SSH client `ssh`. It did a few things:
 
 1. it creates the directory `~/.ssh` for me: everything related to SSH connections is in here (this is only for using ssh the first time)
 2. it tries to check it's really `github.com` that is connecting with us (server authentication)
