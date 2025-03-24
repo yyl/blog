@@ -37,7 +37,7 @@ Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
 yyl@github.com: Permission denied (publickey).
 ```
 
-The command (`ssh yyl@github.com`) failed but what it does is trying to connect to github.com using username `yyl` via the SSH client `ssh`. It did a few things:
+The command (`ssh git@github.com`) failed but what it does is trying to connect to github.com via the SSH client `ssh`. It did a few things:
 
 1. it creates the directory `~/.ssh` for me: everything related to SSH connections is in here (this is only for using ssh the first time)
 2. it tries to check it's really `github.com` that is connecting with us (server authentication)
