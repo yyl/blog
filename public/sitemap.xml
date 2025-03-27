@@ -2,144 +2,156 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/github/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/github/</loc>
+    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/howto/</loc>
+    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/keychain/</loc>
+    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/macos/</loc>
+    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/</loc>
+    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/passphrase/</loc>
+    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/</loc>
+    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/save-ssh-private-key-in-keychain-and-never-type-it-once-on-macos/</loc>
+    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/ssh/</loc>
+    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/</loc>
+    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/open_source/</loc>
     <lastmod>2025-03-23T14:47:51-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/howto/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/technical/</loc>
     <lastmod>2025-03-23T14:47:51-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/understanding-ssh-and-using-it-to-clone-a-github-repository/</loc>
     <lastmod>2025-03-23T14:47:51-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/open_source/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/workflow/</loc>
     <lastmod>2025-03-23T14:47:51-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-03-23T14:47:51-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ssh/</loc>
-    <lastmod>2025-03-23T14:47:51-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-03-23T14:47:51-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/technical/</loc>
-    <lastmod>2025-03-23T14:47:51-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/understanding-ssh-and-using-it-to-clone-a-github-repository/</loc>
-    <lastmod>2025-03-23T14:47:51-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/workflow/</loc>
-    <lastmod>2025-03-23T14:47:51-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/investment-update/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/investment-update/</loc>
     <lastmod>2025-03-15T17:21:01-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/investment-update-02-2025/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/investment-update-02-2025/</loc>
     <lastmod>2025-03-15T17:21:01-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/investment-update-2025/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/investment-update-2025/</loc>
     <lastmod>2025-03-15T17:21:01-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/investment-update-february/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/investment-update-february/</loc>
     <lastmod>2025-03-15T17:21:01-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/monthly-update/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/monthly-update/</loc>
     <lastmod>2025-03-15T17:21:01-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/recurring/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/recurring/</loc>
     <lastmod>2025-03-15T17:21:01-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/google/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/google/</loc>
     <lastmod>2025-03-14T20:06:44-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/interview/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/interview/</loc>
     <lastmod>2025-03-14T20:06:44-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/meta/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/meta/</loc>
     <lastmod>2025-03-14T20:06:44-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/michael-nathanson/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/michael-nathanson/</loc>
     <lastmod>2025-03-14T20:06:44-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/netflix/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/netflix/</loc>
     <lastmod>2025-03-14T20:06:44-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/reading/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/reading/</loc>
     <lastmod>2025-03-14T20:06:44-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/stratechery-an-interview-with-michael-nathanson-about-the-streaming-endgame/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/stratechery-an-interview-with-michael-nathanson-about-the-streaming-endgame/</loc>
     <lastmod>2025-03-14T20:06:44-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/stratechery/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/stratechery/</loc>
     <lastmod>2025-03-14T20:06:44-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/streaming/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/streaming/</loc>
     <lastmod>2025-03-14T20:06:44-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/a-practical-guide-to-managing-iphone-photos-videos/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/a-practical-guide-to-managing-iphone-photos-videos/</loc>
     <lastmod>2025-03-08T20:45:58-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/blog/</loc>
     <lastmod>2025-03-08T20:45:58-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/icloud/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/icloud/</loc>
     <lastmod>2025-03-08T20:45:58-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/ai/</loc>
     <lastmod>2025-03-05T20:31:42-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/reading-stratechery-an-interview-with-benedict-evans-about-ai-unknowns/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/reading-stratechery-an-interview-with-benedict-evans-about-ai-unknowns/</loc>
     <lastmod>2025-03-05T20:31:42-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/investment-update-01-2025/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/investment-update-01-2025/</loc>
     <lastmod>2025-03-01T14:57:58-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/investment-update-january/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/investment-update-january/</loc>
     <lastmod>2025-03-01T14:57:58-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/earnings/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/earnings/</loc>
     <lastmod>2025-02-24T21:28:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/stratechery-netflix-earnings-q4-24/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/stratechery-netflix-earnings-q4-24/</loc>
     <lastmod>2025-02-24T21:28:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/add-rss-to-my-site/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/add-rss-to-my-site/</loc>
     <lastmod>2025-02-22T20:37:30-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blog-setup/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/blog-setup/</loc>
     <lastmod>2025-02-22T20:37:30-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cloudflare-pages/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/cloudflare-pages/</loc>
     <lastmod>2025-02-22T20:37:30-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/hugo/</loc>
     <lastmod>2025-02-22T20:37:30-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rss/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/rss/</loc>
     <lastmod>2025-02-22T20:37:30-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://www.mildlyjournaling.com/about/</loc>
     <lastmod>2025-02-17T15:51:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/add-tags/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/add-tags/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tags/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/tags/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/taxonomy/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/taxonomy/</loc>
     <lastmod>2025-02-17T11:03:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/add-a-custom-domain/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/add-a-custom-domain/</loc>
     <lastmod>2025-02-16T09:56:04-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hello-world/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/hello-world/</loc>
     <lastmod>2025-02-13T20:04:32-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/blog-features/</loc>
+    <loc>https://www.mildlyjournaling.com/posts/blog-features/</loc>
     <lastmod>2025-02-10T16:44:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://www.mildlyjournaling.com/categories/</loc>
   </url>
 </urlset>

@@ -11,7 +11,7 @@
   style="--bg:#faf8f1"
   lang="en-us"
   dir="ltr"
-><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+><head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -27,38 +27,67 @@
 
   <meta name="description" content="In this post I try to learn a little bit about SSH, and show you how to clone a Github repository via SSH. I&rsquo;ve scrambled most secrets, keys or identities in the terminal output but it should not affect the reading or the functionality.
 I have tried to clone some github repositories to my local machine for development lately. The easiest way to do that used to be HTTPS - &ldquo;Clone using the web URL&rdquo; option: I copy and paste the repo HTTPS URL, run git clone {URL}, that&rsquo;s it." />
-  <meta name="author" content="Mildly Journaling" /><link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+  <meta name="author" content="Mildly Journaling" /><link rel="preload stylesheet" as="style" href="https://www.mildlyjournaling.com/main.min.css" />
 
   
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+  <link rel="preload" as="image" href="https://www.mildlyjournaling.com/theme.png" />
 
   
 
-  <link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
+  <link rel="preload" as="image" href="https://www.mildlyjournaling.com/rss.svg" />
 
   <script
     defer
-    src="http://localhost:1313/highlight.min.js"
+    src="https://www.mildlyjournaling.com/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
 
   
   <link
     rel="icon"
-    href="http://localhost:1313/favicon.ico"
+    href="https://www.mildlyjournaling.com/favicon.ico"
   />
   <link
     rel="apple-touch-icon"
-    href="http://localhost:1313/apple-touch-icon.png"
+    href="https://www.mildlyjournaling.com/apple-touch-icon.png"
   />
 
-  <meta name="generator" content="Hugo 0.141.0">
+  <meta name="generator" content="Hugo 0.144.2">
+  <meta itemprop="name" content="Understanding SSH and using it to clone a Github repository">
+  <meta itemprop="description" content="In this post I try to learn a little bit about SSH, and show you how to clone a Github repository via SSH. I’ve scrambled most secrets, keys or identities in the terminal output but it should not affect the reading or the functionality.
+I have tried to clone some github repositories to my local machine for development lately. The easiest way to do that used to be HTTPS - “Clone using the web URL” option: I copy and paste the repo HTTPS URL, run git clone {URL}, that’s it.">
+  <meta itemprop="datePublished" content="2025-03-23T14:47:51-07:00">
+  <meta itemprop="dateModified" content="2025-03-23T14:47:51-07:00">
+  <meta itemprop="wordCount" content="930">
+  <meta itemprop="keywords" content="github,workflow,howto,ssh,technical,open_source"><meta property="og:url" content="https://www.mildlyjournaling.com/posts/understanding-ssh-and-using-it-to-clone-a-github-repository/">
+  <meta property="og:site_name" content="Mildly Journaling">
+  <meta property="og:title" content="Understanding SSH and using it to clone a Github repository">
+  <meta property="og:description" content="In this post I try to learn a little bit about SSH, and show you how to clone a Github repository via SSH. I’ve scrambled most secrets, keys or identities in the terminal output but it should not affect the reading or the functionality.
+I have tried to clone some github repositories to my local machine for development lately. The easiest way to do that used to be HTTPS - “Clone using the web URL” option: I copy and paste the repo HTTPS URL, run git clone {URL}, that’s it.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-23T14:47:51-07:00">
+    <meta property="article:modified_time" content="2025-03-23T14:47:51-07:00">
+    <meta property="article:tag" content="github">
+    <meta property="article:tag" content="workflow">
+    <meta property="article:tag" content="howto">
+    <meta property="article:tag" content="ssh">
+    <meta property="article:tag" content="technical">
+    <meta property="article:tag" content="open_source">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Understanding SSH and using it to clone a Github repository">
+  <meta name="twitter:description" content="In this post I try to learn a little bit about SSH, and show you how to clone a Github repository via SSH. I’ve scrambled most secrets, keys or identities in the terminal output but it should not affect the reading or the functionality.
+I have tried to clone some github repositories to my local machine for development lately. The easiest way to do that used to be HTTPS - “Clone using the web URL” option: I copy and paste the repo HTTPS URL, run git clone {URL}, that’s it.">
+
+  <link rel="canonical" href="https://www.mildlyjournaling.com/posts/understanding-ssh-and-using-it-to-clone-a-github-repository/" />
 </head>
 <body
     class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
   ><header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
   <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
-    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:1313/"
+    <a class="-translate-y-[1px] text-2xl font-medium" href="https://www.mildlyjournaling.com/"
       >Mildly Journaling</a
     >
     <div
@@ -143,7 +172,7 @@ I have tried to clone some github repositories to my local machine for developme
       <a
         class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./rss.svg)"
-        href="http://localhost:1313/posts/index.xml"
+        href="https://www.mildlyjournaling.com/posts/index.xml"
         target="_blank"
         rel="alternate"
       >
@@ -255,27 +284,27 @@ Resolving deltas: 100% (8/8), done.
 
   <footer class="mt-12 flex flex-wrap"><a
       class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="http://localhost:1313/tags/github"
+      href="https://www.mildlyjournaling.com/tags/github"
       >github</a
     ><a
       class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="http://localhost:1313/tags/workflow"
+      href="https://www.mildlyjournaling.com/tags/workflow"
       >workflow</a
     ><a
       class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="http://localhost:1313/tags/howto"
+      href="https://www.mildlyjournaling.com/tags/howto"
       >howto</a
     ><a
       class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="http://localhost:1313/tags/ssh"
+      href="https://www.mildlyjournaling.com/tags/ssh"
       >ssh</a
     ><a
       class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="http://localhost:1313/tags/technical"
+      href="https://www.mildlyjournaling.com/tags/technical"
       >technical</a
     ><a
       class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="http://localhost:1313/tags/open_source"
+      href="https://www.mildlyjournaling.com/tags/open_source"
       >open_source</a
     ></footer><style>
     .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview {
@@ -385,14 +414,16 @@ Resolving deltas: 100% (8/8), done.
 
   <nav
     class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
-  ><a
+  ><a class="ltr:pr-3 rtl:pl-3" href="https://www.mildlyjournaling.com/posts/save-ssh-private-key-in-keychain-and-never-type-it-once-on-macos/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Save SSH Private Key in Keychain so you don&#39;t need to type it anymore on MacOS</span></a
+    ><a
       class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
-      href="http://localhost:1313/posts/investment-update-02-2025/"
+      href="https://www.mildlyjournaling.com/posts/investment-update-02-2025/"
       ><span>Investment Update - February 2025</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
     ></nav></article></main><footer
   class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
 >
-  <div class="mr-auto">&copy;2025<a class="link" href="http://localhost:1313/">Mildly Journaling</a></div>
+  <div class="mr-auto">&copy;2025<a class="link" href="https://www.mildlyjournaling.com/">Mildly Journaling</a></div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
     >powered by hugo️️</a
   >️
