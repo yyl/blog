@@ -6,8 +6,15 @@
     <description>Recent content in posts on Mildly Journaling</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Mar 2025 06:25:38 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 13 Apr 2025 06:20:54 -0700</lastBuildDate>
     <atom:link href="https://www.mildlyjournaling.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I add a newsletter subscription option to my website</title>
+      <link>https://www.mildlyjournaling.com/posts/add-follow-it-newsletter-to-my-site/</link>
+      <pubDate>Sun, 13 Apr 2025 06:20:54 -0700</pubDate>
+      <guid>https://www.mildlyjournaling.com/posts/add-follow-it-newsletter-to-my-site/</guid>
+      <description>&lt;p&gt;I add a subscribe form so that whoever interested can subscribe to my new post and receive them via email. The form is at the end of every post:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.mildlyjournaling.com/follow_it_subscribe_form.png&#34; alt=&#34;Subscribe form at the end of the post&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The service I use is called &lt;a href=&#34;https://follow.it&#34;&gt;follow.it&lt;/a&gt;. Its free-tier is quite generous e.g. can only support up to 5 different feeds. For me it&amp;rsquo;s more than generous.&lt;/p&gt;&#xA;&lt;p&gt;The email looks ok on a desktop:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.mildlyjournaling.com/follow_it_newsletter_desktop_look.png&#34; alt=&#34;Newsletter look on a desktop&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;But less so on a mobile phone:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.mildlyjournaling.com/follow_it_newsletter_mobile_look.jpeg&#34; alt=&#34;Newsletter look on a desktop&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;It looks a bit crammed - but since it is free, it&amp;rsquo;s a decent starting point!&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>Save SSH Private Key in Keychain so you don&#39;t need to type it anymore on MacOS</title>
       <link>https://www.mildlyjournaling.com/posts/save-ssh-private-key-in-keychain-and-never-type-it-once-on-macos/</link>
