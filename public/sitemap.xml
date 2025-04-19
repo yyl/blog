@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mildlyjournaling.com/</loc>
+    <lastmod>2025-04-19T15:08:01-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/</loc>
+    <lastmod>2025-04-19T15:08:01-07:00</lastmod>
+  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/blog-setup/</loc>
     <lastmod>2025-04-13T06:20:54-07:00</lastmod>
   </url><url>
@@ -11,13 +17,7 @@
     <loc>https://www.mildlyjournaling.com/posts/add-follow-it-newsletter-to-my-site/</loc>
     <lastmod>2025-04-13T06:20:54-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/</loc>
-    <lastmod>2025-04-13T06:20:54-07:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/newsletter/</loc>
-    <lastmod>2025-04-13T06:20:54-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/posts/</loc>
     <lastmod>2025-04-13T06:20:54-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/</loc>
