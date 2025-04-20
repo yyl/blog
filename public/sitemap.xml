@@ -2,16 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mildlyjournaling.com/tags/cli/</loc>
+    <lastmod>2025-04-19T15:08:01-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/howto/</loc>
+    <lastmod>2025-04-19T15:08:01-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/iterm2/</loc>
+    <lastmod>2025-04-19T15:08:01-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/jump-to-anywhere-of-the-command-in-iterm2/</loc>
+    <lastmod>2025-04-19T15:08:01-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/macos/</loc>
+    <lastmod>2025-04-19T15:08:01-07:00</lastmod>
+  </url><url>
     <loc>https://www.mildlyjournaling.com/</loc>
     <lastmod>2025-04-19T15:08:01-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/</loc>
     <lastmod>2025-04-19T15:08:01-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/blog-setup/</loc>
-    <lastmod>2025-04-13T06:20:54-07:00</lastmod>
+    <loc>https://www.mildlyjournaling.com/tags/</loc>
+    <lastmod>2025-04-19T15:08:01-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/howto/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/til/</loc>
+    <lastmod>2025-04-19T15:08:01-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/blog-setup/</loc>
     <lastmod>2025-04-13T06:20:54-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/add-follow-it-newsletter-to-my-site/</loc>
@@ -20,16 +38,10 @@
     <loc>https://www.mildlyjournaling.com/tags/newsletter/</loc>
     <lastmod>2025-04-13T06:20:54-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/</loc>
-    <lastmod>2025-04-13T06:20:54-07:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/github/</loc>
     <lastmod>2025-03-27T06:25:38-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/keychain/</loc>
-    <lastmod>2025-03-27T06:25:38-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/macos/</loc>
     <lastmod>2025-03-27T06:25:38-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/passphrase/</loc>

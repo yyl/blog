@@ -1,6 +1,6 @@
 +++
 date = '2025-04-19T15:08:01-07:00'
-draft = true
+draft = false
 title = 'Jump by word in the command line in iTerm2'
 tags = ['TIL', 'howto', 'macos', 'iterm2', 'cli', ]
 +++
