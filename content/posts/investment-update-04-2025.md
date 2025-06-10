@@ -7,7 +7,7 @@ tags = ['investment update', 'recurring', 'investment update 2025', 'investment 
 
 This is the 4th post of the monthly family investment update. The post tracks the performance in the month of April, 2025. [The first post]({{< ref "investment-update-01-2025.md" >}}) contains some explanation of why and how we are doing this. 
 
-Overall, our family investment asset return to growth after 2 months of decline. It was 91.90 at the end of March and 98.43 at the end of April, with a positive growth of 2.44%. A breakdown is as follows:
+Overall, our family investment asset return to growth after 2 months of decline. It was 96.35 at the end of March and 100.47 at the end of April, with a positive growth of 2.44%. A breakdown is as follows:
 
 | Name        | Growth rate (%) | 
 | ----------- | -------         | 

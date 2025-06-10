@@ -7,7 +7,7 @@ tags = ['investment update', 'recurring', 'investment update 2025', 'investment 
 
 This is the 3rd post of the monthly family investment update. The post tracks the performance in the month of March, 2025. [The first post]({{< ref "investment-update-01-2025.md" >}}) contains some explanation of why and how we are doing this. 
 
-Overall, our family investment asset shrinks in March, a 2nd time in a row. It was 102.08 in Feb and 91.90 at the end of March, with a negative growth of -7.96%. A breakdown is as follows:
+Overall, our family investment asset shrinks in March, a 2nd time in a row. It was 102.08 in Feb and 96.35 at the end of March, with a negative growth of -7.96%. A breakdown is as follows:
 
 | Name        | Growth rate (%) | 
 | ----------- | -------         | 
