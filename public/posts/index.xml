@@ -6,8 +6,15 @@
     <description>Recent content in posts on Mildly Journaling</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Jun 2025 13:21:01 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jun 2025 14:54:34 -0700</lastBuildDate>
     <atom:link href="https://www.mildlyjournaling.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quick notes - How Does OAuth Work</title>
+      <link>https://www.mildlyjournaling.com/posts/how-does-oauth-work/</link>
+      <pubDate>Sun, 15 Jun 2025 14:54:34 -0700</pubDate>
+      <guid>https://www.mildlyjournaling.com/posts/how-does-oauth-work/</guid>
+      <description>&lt;p&gt;Recently I am building a web app that pulls user data from an Internet consumer social app. In order for the app user to grant access to my web app to read their data, the app uses an OAuth flow to authorize the user and grant access to the client (my web app). Here are some quick notes about OAuth that I learned through the process.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;OAuth stands for Open Authorization because it is an open source authorization framework&lt;/li&gt;&#xA;&lt;li&gt;There are two versions of OAuth (1.0/2.0) and people usually mean OAuth 2.0 when they mention OAuth&lt;/li&gt;&#xA;&lt;li&gt;OAuth is used for users of service A to grant access to their service A data to service B&lt;/li&gt;&#xA;&lt;li&gt;OAuth makes it possible to authorize data access without involving user credentials (i.e. passwords)&lt;/li&gt;&#xA;&lt;li&gt;A typical OAuth flow involves 4 entities:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;resource owner: users of the app&lt;/li&gt;&#xA;&lt;li&gt;client: the server that requests access&lt;/li&gt;&#xA;&lt;li&gt;authorization server: the server that coordinates the authorization flow&lt;/li&gt;&#xA;&lt;li&gt;resource server: where the user data actually resides&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;A typical OAuth flow:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The client requests authorization from the authorization server, supplying its identification obtained from the latter before&lt;/li&gt;&#xA;&lt;li&gt;The authorization server authenticates the client and verifies that the requested scopes are permitted&lt;/li&gt;&#xA;&lt;li&gt;The user interacts with the authorization server to grant access&lt;/li&gt;&#xA;&lt;li&gt;The authorization server redirects back to the client with either an access token&lt;/li&gt;&#xA;&lt;li&gt;The client requests access to the said resource from the resource server using the token&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;</description>
+    </item>
     <item>
       <title>Investment Update - May 2025</title>
       <link>https://www.mildlyjournaling.com/posts/investment-update-05-2025/</link>
