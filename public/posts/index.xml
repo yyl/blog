@@ -6,8 +6,15 @@
     <description>Recent content in posts on Mildly Journaling</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jul 2025 14:24:12 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jul 2025 21:05:54 -0700</lastBuildDate>
     <atom:link href="https://www.mildlyjournaling.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ways to Fetch Kindle Highlights Programmatically</title>
+      <link>https://www.mildlyjournaling.com/posts/ways-to-fetch-my-kindle-highlights-programmatically/</link>
+      <pubDate>Tue, 22 Jul 2025 21:05:54 -0700</pubDate>
+      <guid>https://www.mildlyjournaling.com/posts/ways-to-fetch-my-kindle-highlights-programmatically/</guid>
+      <description>&lt;p&gt;Like many people, I read books on Kindle. It is the e-ink digital reader device from Amazon. &lt;a href=&#34;https://www.amazon.com/b/?node=11627044011&#34;&gt;Kindle&lt;/a&gt; also allows users to create highlights and notes while they are reading. Users can search and read highlights and notes they create either on Kindle or online at &lt;a href=&#34;https://read.amazon.com/notebook&#34;&gt;https://read.amazon.com/notebook&lt;/a&gt;. However, Amazon does not have an official Kindle API to pull highlights and notes programmatically. It kinda makes sense - 3rd-party services that consume Kindle highlights/notes do not benefit Amazon directly.&lt;/p&gt;&#xA;&lt;p&gt;But, people find workarounds to that - primarily two ways.&lt;/p&gt;&#xA;&lt;p&gt;First is through a browser extension. It asks users to log in with their Amazon account, and then the extension essentially open the notebook website and scraps all the highlights and notes on user behalf. &lt;a href=&#34;https://docs.readwise.io/readwise/docs/importing-highlights/kindle#how-do-i-download-the-readwise-chrome-extension&#34;&gt;Readwise&lt;/a&gt;, a platform for users to create and manage reading highlights, uses it.&lt;/p&gt;&#xA;&lt;p&gt;Another way is through a file created on the Kindle - &lt;code&gt;Clippings.txt&lt;/code&gt;. This file contains all the highlights/notes that are created by the account currently registered on the specific Kindle. Services like &lt;a href=&#34;https://www.clippings.io&#34;&gt;Clippings&lt;/a&gt; (the name tells it all) work exactly like that: it asks users to get that file from their Kindle device and upload to their website. There are also &lt;a href=&#34;https://github.com/paperboi/kindle2notion&#34;&gt;open source libraries&lt;/a&gt; work that way.&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>Investment Retrospect H1 2025 - part 1</title>
       <link>https://www.mildlyjournaling.com/posts/investment-retrospect-h1-2025/</link>
