@@ -2,13 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mildlyjournaling.com/tags/automated/</loc>
+    <lastmod>2025-08-02T04:11:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/categories/</loc>
+    <lastmod>2025-08-02T04:11:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/digest/</loc>
+    <lastmod>2025-08-02T04:11:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/</loc>
+    <lastmod>2025-08-02T04:11:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/</loc>
+    <lastmod>2025-08-02T04:11:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/reading/</loc>
+    <lastmod>2025-08-02T04:11:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/categories/reading/</loc>
+    <lastmod>2025-08-02T04:11:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/readwise/</loc>
+    <lastmod>2025-08-02T04:11:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/</loc>
+    <lastmod>2025-08-02T04:11:01+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/test-2025-07-26-weekly-reading-digest/</loc>
+    <lastmod>2025-08-02T04:11:01+00:00</lastmod>
+  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/chapter-two/</loc>
     <lastmod>2025-07-25T07:26:54-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/learning/</loc>
-    <lastmod>2025-07-25T07:26:54-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/</loc>
     <lastmod>2025-07-25T07:26:54-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/music/</loc>
@@ -26,12 +53,6 @@
     <loc>https://www.mildlyjournaling.com/tags/music-theory-for-dummies-chapter-two/</loc>
     <lastmod>2025-07-25T07:26:54-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/posts/</loc>
-    <lastmod>2025-07-25T07:26:54-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/</loc>
-    <lastmod>2025-07-25T07:26:54-07:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/time-signature/</loc>
     <lastmod>2025-07-25T07:26:54-07:00</lastmod>
   </url><url>
@@ -44,16 +65,10 @@
     <loc>https://www.mildlyjournaling.com/tags/kindle/</loc>
     <lastmod>2025-07-22T21:05:54-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/reading/</loc>
-    <lastmod>2025-07-22T21:05:54-07:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/reading-digest/</loc>
     <lastmod>2025-07-22T21:05:54-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/reading-stats/</loc>
-    <lastmod>2025-07-22T21:05:54-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/readwise/</loc>
     <lastmod>2025-07-22T21:05:54-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/ways-to-fetch-my-kindle-highlights-programmatically/</loc>
@@ -367,7 +382,5 @@
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/blog-features/</loc>
     <lastmod>2025-02-10T16:44:37-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/categories/</loc>
   </url>
 </urlset>

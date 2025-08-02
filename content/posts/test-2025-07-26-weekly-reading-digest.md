@@ -1,13 +1,13 @@
 ---
 title: "Weekly Reading Digest - 2025-07-26 to 2025-08-02"
 date: 2025-08-02T04:11:01.047622Z
-draft: true
+draft: false
 tags: ["reading", "digest", "readwise", "automated"]
 categories: ["Reading"]
 ---
 ## Overview
 
-- **Articles Archived**: 14
+- **Articles Read**: 14
 - **Total Words Read**: 27,833
 - **Highlights Created**: 1
 - **Average Words per Article**: 1,988
@@ -21,13 +21,9 @@ categories: ["Reading"]
 
 ### By Source
 
-- **Unknown**: 8
+- **Email**: 8
 - **Reader In App Link Save**: 4
-- **Reader Share Sheet Ios**: 2
-
-### By Location
-
-- **Archive**: 14
+- **Reader Share Sheet iOS**: 2
 
 ### Archived Articles
 
@@ -39,7 +35,7 @@ categories: ["Reading"]
   - Ramp, a startup that uses AI to automate corporate finance tasks, raised $500 million, valuing the company at $22.5 billion. Its AI agents help companies manage expenses and compliance more easily, with thousands of customers already trying the technology. Ramp plans to use the new funds to build more AI tools and grow its team amid competition and some business skepticism.
 - **[Figma S-1, The Figma OS, Figma's AI Potential](mailto:reader-forwarded-email/8ce97502142f623842caa4b38b8a1029)** by Ben Thompson (2,391 words)
   - A few scheduling announcements: starting next week Stratechery will shift from publishing Updates and Articles Monday–Wednesday to Tuesday–Thursday; Stratechery Interviews are still on their summer break and will be back in September.
-- **[Benedict's Newsletter: No. 602](mailto:reader-forwarded-email/6e8ca39b25f77e0177aa12c90a51cf24)** by list@ben-evans.com [via Relay] (1,374 words)
+- **[Benedict's Newsletter: No. 602](mailto:reader-forwarded-email/6e8ca39b25f77e0177aa12c90a51cf24)** by list@ben-evans.com (1,374 words)
   - New research from Slack's Workforce Lab reveals daily AI usage has surged over 233% in six months, with users reporting 64% higher productivity and 81% greater job satisfaction.
 - **[Tesla and Samsung, Customer Service and Intel, The U.S. Semi Supply Chain (Stratechery Update 7-29-2025)](mailto:reader-forwarded-email/c291a377ed1ce1634d88d4792240b7ec)** by Ben Thompson (3,468 words)
   - One of the things that makes Greatest of All Talk my favorite podcast is that it actually gets better — or at least more entertaining — when there isn’t any basketball.
