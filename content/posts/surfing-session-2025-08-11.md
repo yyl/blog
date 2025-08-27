@@ -1,6 +1,6 @@
 +++
 date = '2025-08-11T19:37:32-07:00'
-draft = true
+draft = false
 title = 'Surfing Session 2025/08/11'
 tags = ['surfing', 'surfing session', 'sessions', 'notes', 'linda mar', 'surf condition', 'linda mar the creek']
 +++
