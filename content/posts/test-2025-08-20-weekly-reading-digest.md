@@ -1,7 +1,7 @@
 ---
 title: "Weekly Reading Digest - 2025-08-20 to 2025-08-27"
 date: 2025-08-27T16:41:54-07:00
-draft: true
+draft: false
 tags: ["reading", "digest", "readwise", "automated"]
 categories: ["Reading"]
 ---
