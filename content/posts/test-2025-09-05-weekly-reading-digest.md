@@ -1,8 +1,8 @@
 ---
 title: "Weekly Reading Digest - 2025-09-05 to 2025-09-12"
 date: 2025-09-11T21:37:01-07:00
-draft: true
-tags: ["reading", "digest", "readwise", "automated"]
+draft: false
+tags: ["reading", "digest", "readwise", "automated", "september"]
 categories: ["Reading"]
 ---
 ## Overview
