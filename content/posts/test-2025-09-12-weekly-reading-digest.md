@@ -1,8 +1,8 @@
 ---
 title: "Weekly Reading Digest - 2025-09-12 to 2025-09-19"
 date: 2025-09-19T06:48:51-07:00
-draft: true
-tags: ["reading", "digest", "readwise", "automated"]
+draft: false
+tags: ["reading", "digest", "readwise", "automated", "september"]
 categories: ["Reading"]
 ---
 ## Overview
@@ -24,7 +24,7 @@ categories: ["Reading"]
 
 - **Unknown**: 10
 - **Reader In App Link Save**: 4
-- **Reader Share Sheet Ios**: 2
+- **Reader Share Sheet iOS**: 2
 
 ### By Tag
 
