@@ -348,7 +348,67 @@
       class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
       href="https://www.mildlyjournaling.com/posts/reading-stratechery-an-interview-with-benedict-evans-about-ai-unknowns/"
       ><span>Reading &#34;an Interview With Benedict Evans About Ai Unknowns&#34;</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
-    ></nav></article></main><footer
+    ></nav></article></main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js"></script>
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    var tables = document.querySelectorAll('table');
+    
+    tables.forEach(function(table) {
+      
+      table.classList.add('sortable');
+      
+      
+      new Tablesort(table);
+    });
+  });
+</script>
+
+<style>
+   
+  .sortable th {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 20px;
+  }
+  
+  .sortable th:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .sortable th::after {
+    content: '⇅';
+    position: absolute;
+    right: 5px;
+    opacity: 0.3;
+    font-size: 0.8em;
+  }
+  
+  .sortable th[aria-sort="ascending"]::after {
+    content: '↑';
+    opacity: 1;
+  }
+  
+  .sortable th[aria-sort="descending"]::after {
+    content: '↓';
+    opacity: 1;
+  }
+  
+   
+  .sortable tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .sortable tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+</style>
+<footer
   class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
 >
   <div class="mr-auto">&copy;2025<a class="link" href="https://www.mildlyjournaling.com/">Mildly Journaling</a></div>
