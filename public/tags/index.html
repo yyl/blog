@@ -53,8 +53,8 @@
 
   <meta name="generator" content="Hugo 0.144.2">
   <meta itemprop="name" content="tags">
-  <meta itemprop="datePublished" content="2025-10-03T21:00:06-07:00">
-  <meta itemprop="dateModified" content="2025-10-03T21:00:06-07:00"><meta property="og:url" content="https://www.mildlyjournaling.com/tags/">
+  <meta itemprop="datePublished" content="2025-10-10T08:37:50-07:00">
+  <meta itemprop="dateModified" content="2025-10-10T08:37:50-07:00"><meta property="og:url" content="https://www.mildlyjournaling.com/tags/">
   <meta property="og:site_name" content="Mildly Journaling">
   <meta property="og:title" content="tags">
   <meta property="og:locale" content="en_us">
@@ -159,13 +159,33 @@
   <h1>tags</h1>
   
   
+    <h2><a href="/tags/automation/">automation</a></h2>
+  
+    <h2><a href="/tags/build/">build</a></h2>
+  
+    <h2><a href="/tags/coding/">coding</a></h2>
+  
+    <h2><a href="/tags/gemini/">Gemini</a></h2>
+  
+    <h2><a href="/tags/github-api/">Github API</a></h2>
+  
+    <h2><a href="/tags/google-cloud/">google cloud</a></h2>
+  
+    <h2><a href="/tags/how-to/">how-to</a></h2>
+  
+    <h2><a href="/tags/hugo/">hugo</a></h2>
+  
+    <h2><a href="/tags/reading-digest-generator/">reading digest generator</a></h2>
+  
+    <h2><a href="/tags/readwise/">Readwise</a></h2>
+  
+    <h2><a href="/tags/readwise-api/">Readwise api</a></h2>
+  
     <h2><a href="/tags/automated/">automated</a></h2>
   
     <h2><a href="/tags/digest/">digest</a></h2>
   
     <h2><a href="/tags/reading/">reading</a></h2>
-  
-    <h2><a href="/tags/readwise/">Readwise</a></h2>
   
     <h2><a href="/tags/learning/">learning</a></h2>
   
@@ -371,8 +391,6 @@
   
     <h2><a href="/tags/cloudflare-pages/">cloudflare-pages</a></h2>
   
-    <h2><a href="/tags/hugo/">hugo</a></h2>
-  
     <h2><a href="/tags/rss/">rss</a></h2>
   
     <h2><a href="/tags/tags/">tags</a></h2>
@@ -387,7 +405,7 @@
   
   document.addEventListener('DOMContentLoaded', function() {
     
-    var tables = document.querySelectorAll('table');
+    var tables = document.querySelectorAll('article table, .content table, main table');
     
     tables.forEach(function(table) {
       
@@ -401,42 +419,81 @@
 
 <style>
    
+  .sortable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+  }
+  
   .sortable th {
     cursor: pointer;
     user-select: none;
     position: relative;
-    padding-right: 20px;
+    padding: 12px 28px 12px 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color, rgba(128, 128, 128, 0.3));
+    background-color: var(--table-header-bg, rgba(128, 128, 128, 0.1));
   }
   
   .sortable th:hover {
-    background-color: #f0f0f0;
+    background-color: var(--table-header-hover, rgba(128, 128, 128, 0.2));
   }
   
   .sortable th::after {
     content: '⇅';
     position: absolute;
-    right: 5px;
-    opacity: 0.3;
-    font-size: 0.8em;
+    right: 8px;
+    opacity: 0.4;
+    font-size: 0.85em;
   }
   
   .sortable th[aria-sort="ascending"]::after {
     content: '↑';
-    opacity: 1;
+    opacity: 0.8;
   }
   
   .sortable th[aria-sort="descending"]::after {
     content: '↓';
-    opacity: 1;
+    opacity: 0.8;
   }
   
-   
-  .sortable tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
+  .sortable td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color, rgba(128, 128, 128, 0.2));
   }
   
   .sortable tbody tr:hover {
-    background-color: #f0f0f0;
+    background-color: var(--table-row-hover, rgba(128, 128, 128, 0.1));
+  }
+  
+   
+  @media (prefers-color-scheme: light) {
+    .sortable th {
+      --table-header-bg: rgba(0, 0, 0, 0.05);
+      --table-header-hover: rgba(0, 0, 0, 0.08);
+      --table-row-hover: rgba(0, 0, 0, 0.03);
+      --border-color: rgba(0, 0, 0, 0.12);
+    }
+  }
+  
+   
+  @media (prefers-color-scheme: dark) {
+    .sortable th {
+      --table-header-bg: rgba(255, 255, 255, 0.05);
+      --table-header-hover: rgba(255, 255, 255, 0.08);
+      --table-row-hover: rgba(255, 255, 255, 0.03);
+      --border-color: rgba(255, 255, 255, 0.12);
+    }
+  }
+  
+   
+  .dark .sortable th,
+  [data-theme="dark"] .sortable th {
+    --table-header-bg: rgba(255, 255, 255, 0.05);
+    --table-header-hover: rgba(255, 255, 255, 0.08);
+    --table-row-hover: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.12);
   }
 </style>
 <footer

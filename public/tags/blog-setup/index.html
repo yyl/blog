@@ -202,7 +202,7 @@
   
   document.addEventListener('DOMContentLoaded', function() {
     
-    var tables = document.querySelectorAll('table');
+    var tables = document.querySelectorAll('article table, .content table, main table');
     
     tables.forEach(function(table) {
       
@@ -216,42 +216,81 @@
 
 <style>
    
+  .sortable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+  }
+  
   .sortable th {
     cursor: pointer;
     user-select: none;
     position: relative;
-    padding-right: 20px;
+    padding: 12px 28px 12px 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color, rgba(128, 128, 128, 0.3));
+    background-color: var(--table-header-bg, rgba(128, 128, 128, 0.1));
   }
   
   .sortable th:hover {
-    background-color: #f0f0f0;
+    background-color: var(--table-header-hover, rgba(128, 128, 128, 0.2));
   }
   
   .sortable th::after {
     content: '⇅';
     position: absolute;
-    right: 5px;
-    opacity: 0.3;
-    font-size: 0.8em;
+    right: 8px;
+    opacity: 0.4;
+    font-size: 0.85em;
   }
   
   .sortable th[aria-sort="ascending"]::after {
     content: '↑';
-    opacity: 1;
+    opacity: 0.8;
   }
   
   .sortable th[aria-sort="descending"]::after {
     content: '↓';
-    opacity: 1;
+    opacity: 0.8;
   }
   
-   
-  .sortable tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
+  .sortable td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color, rgba(128, 128, 128, 0.2));
   }
   
   .sortable tbody tr:hover {
-    background-color: #f0f0f0;
+    background-color: var(--table-row-hover, rgba(128, 128, 128, 0.1));
+  }
+  
+   
+  @media (prefers-color-scheme: light) {
+    .sortable th {
+      --table-header-bg: rgba(0, 0, 0, 0.05);
+      --table-header-hover: rgba(0, 0, 0, 0.08);
+      --table-row-hover: rgba(0, 0, 0, 0.03);
+      --border-color: rgba(0, 0, 0, 0.12);
+    }
+  }
+  
+   
+  @media (prefers-color-scheme: dark) {
+    .sortable th {
+      --table-header-bg: rgba(255, 255, 255, 0.05);
+      --table-header-hover: rgba(255, 255, 255, 0.08);
+      --table-row-hover: rgba(255, 255, 255, 0.03);
+      --border-color: rgba(255, 255, 255, 0.12);
+    }
+  }
+  
+   
+  .dark .sortable th,
+  [data-theme="dark"] .sortable th {
+    --table-header-bg: rgba(255, 255, 255, 0.05);
+    --table-header-hover: rgba(255, 255, 255, 0.08);
+    --table-row-hover: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.12);
   }
 </style>
 <footer
