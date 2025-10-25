@@ -1,7 +1,7 @@
 ---
 title: "Weekly Reading Digest - 2025-10-18 to 2025-10-25"
 date: 2025-10-24T21:00:06-07:00
-draft: true
+draft: false
 tags: ["reading", "digest", "readwise", "automated"]
 categories: ["Reading"]
 ---
@@ -23,7 +23,7 @@ categories: ["Reading"]
 ### By Source
 
 - **Unknown**: 8
-- **Reader Share Sheet Ios**: 7
+- **Reader Share Sheet iOS**: 7
 
 ### By Tag
 
