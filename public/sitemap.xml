@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mildlyjournaling.com/</loc>
+    <lastmod>2025-10-26T06:21:01-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/</loc>
+    <lastmod>2025-10-26T06:21:01-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/automated/</loc>
+    <lastmod>2025-10-24T21:00:06-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/categories/</loc>
+    <lastmod>2025-10-24T21:00:06-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/digest/</loc>
+    <lastmod>2025-10-24T21:00:06-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/october/</loc>
+    <lastmod>2025-10-24T21:00:06-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/reading/</loc>
+    <lastmod>2025-10-24T21:00:06-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/categories/reading/</loc>
+    <lastmod>2025-10-24T21:00:06-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/readwise/</loc>
+    <lastmod>2025-10-24T21:00:06-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/</loc>
+    <lastmod>2025-10-24T21:00:06-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/2025-10-18-weekly-reading-digest/</loc>
+    <lastmod>2025-10-24T21:00:06-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/2025-10-11-weekly-reading-digest/</loc>
+    <lastmod>2025-10-17T21:00:10-07:00</lastmod>
+  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/build/</loc>
     <lastmod>2025-10-12T19:19:55-07:00</lastmod>
   </url><url>
@@ -20,17 +56,11 @@
     <loc>https://www.mildlyjournaling.com/posts/make-table-in-articles-sortable/</loc>
     <lastmod>2025-10-12T19:19:55-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/</loc>
-    <lastmod>2025-10-12T19:19:55-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/posts/</loc>
-    <lastmod>2025-10-12T19:19:55-07:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/reading-digest-generator/</loc>
     <lastmod>2025-10-12T19:19:55-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/</loc>
-    <lastmod>2025-10-12T19:19:55-07:00</lastmod>
+    <loc>https://www.mildlyjournaling.com/posts/2025-10-04-weekly-reading-digest/</loc>
+    <lastmod>2025-10-10T21:00:10-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/automation/</loc>
     <lastmod>2025-10-10T08:37:50-07:00</lastmod>
@@ -47,25 +77,10 @@
     <loc>https://www.mildlyjournaling.com/tags/google-cloud/</loc>
     <lastmod>2025-10-10T08:37:50-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/readwise/</loc>
-    <lastmod>2025-10-10T08:37:50-07:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/readwise-api/</loc>
     <lastmod>2025-10-10T08:37:50-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/automated/</loc>
-    <lastmod>2025-10-03T21:00:06-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/categories/</loc>
-    <lastmod>2025-10-03T21:00:06-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/digest/</loc>
-    <lastmod>2025-10-03T21:00:06-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/reading/</loc>
-    <lastmod>2025-10-03T21:00:06-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/categories/reading/</loc>
+    <loc>https://www.mildlyjournaling.com/tags/september/</loc>
     <lastmod>2025-10-03T21:00:06-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/2025-09-27-weekly-reading-digest/</loc>
@@ -94,9 +109,6 @@
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/notes/</loc>
     <lastmod>2025-09-20T06:30:45-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/september/</loc>
-    <lastmod>2025-09-19T06:48:51-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/test-2025-09-12-weekly-reading-digest/</loc>
     <lastmod>2025-09-19T06:48:51-07:00</lastmod>

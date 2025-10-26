@@ -19,7 +19,7 @@ A breakdown of growth by investment type is as follows:
 
 After tax and 401(k) portion are similar this month. They are also similar to the market performance - S&P index grows at 2.24% and NASDAQ Comp. at 3.72% ([source](https://ccmg.com/benchmark-review-monthly-recap-july-2025/)). 
 
-One of the annual goal this year for our investment asset is to lower its portion of stock holdings. The shift reverts a little bit in May:
+One of the annual goal this year for our investment asset is to lower its portion of stock holdings. The shift reverts a little bit in July:
 
 | Name        | Ratio (%)   | 
 | ----------- | -------     | 
