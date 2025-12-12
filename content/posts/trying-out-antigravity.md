@@ -1,6 +1,6 @@
 +++
-date = '2025-12-10T20:38:09-08:00'
-draft = true
+date = '2025-12-11T20:38:09-08:00'
+draft = false
 title = 'Trying Out Antigravity, the Google AI IDE'
 tags = ['ai', 'antigravity', 'agent', 'coding agent', 'coding', 'review', 'ide']
 +++
