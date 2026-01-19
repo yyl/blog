@@ -9,6 +9,7 @@ categories: ["Reading"]
 
 - **Articles Archived**: 26
 - **Total Words Read**: 42,645
+- **Time Spent Reading**: 2.84 hours
 - **Highlights Created**: 2
 - **Average Words per Article**: 1,640
 - **Average Time Before Archive**: 158 hours
