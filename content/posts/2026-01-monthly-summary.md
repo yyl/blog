@@ -1,14 +1,23 @@
 ---
 title: "Monthly activity summary - 01/2026"
-date: 2026-01-30T23:54:40-08:00
-draft: false
-tags: ["monthly", "readwise", "digest", "automated", "january", "202601"]
+date: 2026-01-31T16:32:32-08:00
+draft: true
+tags: ["monthly", "digest", "automated", "readwise", "letterboxd"]
 categories: ["Summary"]
 ---
 
 ## Readwise
 
-- **Articles Archived**: 21
-- **Total Words Read**: 47,898
-- **Time Spent Reading**: 3h 10m
-- **Average Reading Speed**: 252 words/min
+- **Articles Archived**: 26
+- **Total Words Read**: 54,428
+- **Time Spent Reading**: 3h 38m
+- **Average Reading Speed**: 250 words/min
+
+
+## Letterboxd
+
+- **Movies Watched**: 1
+- **Average Rating**: 4.50 ⭐
+- **Lowest Rating**: 4.50 ⭐
+- **Highest Rating**: 4.50 ⭐
+- **Average Years Since Release**: 12.00
