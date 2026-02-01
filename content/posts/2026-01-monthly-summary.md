@@ -1,7 +1,7 @@
 ---
 title: "What did I do this month - 01/2026 edition"
 date: 2026-02-01T08:19:42-08:00
-draft: true
+draft: false
 tags: ["monthly", "digest", "automated", "readwise", "foursquare", "letterboxd", "overcast"]
 categories: ["Summary"]
 ---
