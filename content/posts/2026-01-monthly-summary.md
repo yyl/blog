@@ -1,8 +1,8 @@
 ---
 title: "Monthly activity summary - 01/2026"
-date: 2026-01-31T16:32:32-08:00
+date: 2026-01-31T23:22:30-08:00
 draft: true
-tags: ["monthly", "digest", "automated", "readwise", "letterboxd"]
+tags: ["monthly", "digest", "automated", "readwise", "letterboxd", "overcast"]
 categories: ["Summary"]
 ---
 
@@ -21,3 +21,10 @@ categories: ["Summary"]
 - **Lowest Rating**: 4.50 ⭐
 - **Highest Rating**: 4.50 ⭐
 - **Average Years Since Release**: 12.00
+
+
+## Podcast (Overcast)
+
+- **New Feeds Subscribed**: 1
+- **Feeds Removed**: 0
+- **Episodes Played**: 31
