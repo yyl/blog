@@ -1,12 +1,12 @@
 ---
-title: "Monthly activity summary - 01/2026"
-date: 2026-02-01T08:10:30-08:00
+title: "What did I do this month - 01/2026 edition"
+date: 2026-02-01T08:13:20-08:00
 draft: true
 tags: ["monthly", "digest", "automated", "readwise", "foursquare", "letterboxd", "overcast"]
 categories: ["Summary"]
 ---
 
-## Readwise
+## Reading - Readwise
 
 - **Articles Archived**: 26
 - **Total Words Read**: 54,428
@@ -14,13 +14,13 @@ categories: ["Summary"]
 - **Average Reading Speed**: 250 words/min
 
 
-## Foursquare
+## Travel - Foursquare
 
 - **Checkins**: 107
 - **Unique Places Visited**: 101
 
 
-## Letterboxd
+## Movies - Letterboxd
 
 - **Movies Watched**: 1
 - **Average Rating**: 4.50 ⭐
@@ -29,7 +29,7 @@ categories: ["Summary"]
 - **Average Years Since Release**: 12.00
 
 
-## Podcast (Overcast)
+## Podcasts - Overcast
 
 - **New Feeds Subscribed**: 1
 - **Feeds Removed**: 0
