@@ -1,8 +1,8 @@
 ---
 title: "Monthly activity summary - 01/2026"
-date: 2026-01-31T23:22:30-08:00
+date: 2026-02-01T08:10:30-08:00
 draft: true
-tags: ["monthly", "digest", "automated", "readwise", "letterboxd", "overcast"]
+tags: ["monthly", "digest", "automated", "readwise", "foursquare", "letterboxd", "overcast"]
 categories: ["Summary"]
 ---
 
@@ -12,6 +12,12 @@ categories: ["Summary"]
 - **Total Words Read**: 54,428
 - **Time Spent Reading**: 3h 38m
 - **Average Reading Speed**: 250 words/min
+
+
+## Foursquare
+
+- **Checkins**: 107
+- **Unique Places Visited**: 101
 
 
 ## Letterboxd
