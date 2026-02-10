@@ -1,0 +1,33 @@
+# Monthly movies activity data
+- month: "2025-07"
+  movies_watched: 7.00
+  avg_rating: 2.86
+
+- month: "2025-08"
+  movies_watched: 2.00
+  avg_rating: 3.25
+
+- month: "2025-09"
+  movies_watched: 2.00
+  avg_rating: 4.00
+
+- month: "2025-10"
+  movies_watched: 1.00
+  avg_rating: 3.00
+
+- month: "2025-11"
+  movies_watched: 3.00
+  avg_rating: 2.67
+
+- month: "2025-12"
+  movies_watched: 5.00
+  avg_rating: 3.50
+
+- month: "2026-01"
+  movies_watched: 1.00
+  avg_rating: 4.50
+
+- month: "2026-02"
+  movies_watched: 1.00
+  avg_rating: 2.50
+

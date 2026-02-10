@@ -1,0 +1,73 @@
+# Monthly reading activity data
+- month: "2025-01"
+  articles_archived: 78
+  total_words: 116126
+  time_spent_minutes: 474
+  avg_reading_speed: 245
+
+- month: "2025-02"
+  articles_archived: 3
+  total_words: 4638
+  time_spent_minutes: 19
+  avg_reading_speed: 244
+
+- month: "2025-05"
+  articles_archived: 12
+  total_words: 24661
+  time_spent_minutes: 99
+  avg_reading_speed: 249
+
+- month: "2025-06"
+  articles_archived: 28
+  total_words: 53067
+  time_spent_minutes: 216
+  avg_reading_speed: 246
+
+- month: "2025-07"
+  articles_archived: 35
+  total_words: 56750
+  time_spent_minutes: 233
+  avg_reading_speed: 244
+
+- month: "2025-08"
+  articles_archived: 53
+  total_words: 101183
+  time_spent_minutes: 404
+  avg_reading_speed: 250
+
+- month: "2025-09"
+  articles_archived: 62
+  total_words: 109154
+  time_spent_minutes: 440
+  avg_reading_speed: 248
+
+- month: "2025-10"
+  articles_archived: 56
+  total_words: 110313
+  time_spent_minutes: 440
+  avg_reading_speed: 251
+
+- month: "2025-11"
+  articles_archived: 53
+  total_words: 118631
+  time_spent_minutes: 477
+  avg_reading_speed: 249
+
+- month: "2025-12"
+  articles_archived: 54
+  total_words: 116037
+  time_spent_minutes: 466
+  avg_reading_speed: 249
+
+- month: "2026-01"
+  articles_archived: 26
+  total_words: 54428
+  time_spent_minutes: 218
+  avg_reading_speed: 250
+
+- month: "2026-02"
+  articles_archived: 15
+  total_words: 30007
+  time_spent_minutes: 121
+  avg_reading_speed: 248
+
