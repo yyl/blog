@@ -232,7 +232,11 @@
           scales: {
             x: {
               grid: { display: false },
-              ticks: { color: colors.text }
+              ticks: {
+                color: colors.text,
+                autoSkip: false,
+                maxRotation: 0
+              }
             },
             y: {
               beginAtZero: true,
@@ -244,11 +248,19 @@
       });
     };
 
-    // Format month labels
-    const formatMonth = (m) => {
-      const [year, month] = m.split('-');
-      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-      return months[parseInt(month) - 1] + ' ' + year.slice(2);
+    // Format month labels as two-level: month on top, year only at year boundary
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const formatLabels = (dataSlice) => {
+      let lastYear = null;
+      return dataSlice.map(d => {
+        const [year, month] = d.month.split('-');
+        const monthLabel = monthNames[parseInt(month) - 1];
+        if (year !== lastYear) {
+          lastYear = year;
+          return [monthLabel, year];
+        }
+        return monthLabel;
+      });
     };
 
     // Show "No data available yet" message for missing data
@@ -271,7 +283,7 @@
         return;
       }
       const recent = data.slice(-12);
-      const labels = recent.map(d => formatMonth(d.month));
+      const labels = formatLabels(recent);
       chartConfigs.forEach(config => {
         createChart(document.getElementById(config.id), labels, recent.map(d => d[config.field]), config.label);
       });
