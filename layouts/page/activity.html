@@ -270,9 +270,10 @@
         chartConfigs.forEach(config => showNoData(config.id));
         return;
       }
-      const labels = data.map(d => formatMonth(d.month));
+      const recent = data.slice(-12);
+      const labels = recent.map(d => formatMonth(d.month));
       chartConfigs.forEach(config => {
-        createChart(document.getElementById(config.id), labels, data.map(d => d[config.field]), config.label);
+        createChart(document.getElementById(config.id), labels, recent.map(d => d[config.field]), config.label);
       });
     };
 
