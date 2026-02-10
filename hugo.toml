@@ -13,6 +13,11 @@ capitalizeListTitles = false
     name = "About"
     url = "/about/"
     weight = 10
+  [[menu.main]]
+    identifier = "activity"
+    name = "My Activity"
+    url = "/activity/"
+    weight = 20
 
 [outputs]
   home = ['html']

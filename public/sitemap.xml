@@ -2,41 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.mildlyjournaling.com/tags/202601/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/automated/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/categories/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/digest/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/january/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <loc>https://www.mildlyjournaling.com/tags/foursquare/</loc>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/letterboxd/</loc>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/monthly/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/posts/2026-01-monthly-summary/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <loc>https://www.mildlyjournaling.com/tags/overcast/</loc>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/readwise/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/categories/summary/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/</loc>
-    <lastmod>2026-01-30T23:54:40-08:00</lastmod>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/2026-01-monthly-summary/</loc>
+    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/reading/</loc>
     <lastmod>2026-01-23T17:00:12-08:00</lastmod>
@@ -616,5 +619,8 @@
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/blog-features/</loc>
     <lastmod>2025-02-10T16:44:37-08:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/activity/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url>
 </urlset>

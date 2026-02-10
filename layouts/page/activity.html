@@ -1,0 +1,320 @@
+{{- define "main" -}}
+<article>
+  <header class="mb-14">
+    <h1 class="my-0! pb-2.5">{{- .Title -}}</h1>
+  </header>
+
+  <section>
+    <!-- Tab Navigation -->
+    <div class="activity-tabs">
+      <input type="radio" name="activity-tab" id="tab-reading" checked>
+      <label for="tab-reading">📚 Reading</label>
+
+      <input type="radio" name="activity-tab" id="tab-travel">
+      <label for="tab-travel">🗺️ Travel</label>
+
+      <input type="radio" name="activity-tab" id="tab-movies">
+      <label for="tab-movies">🎬 Movies</label>
+
+      <input type="radio" name="activity-tab" id="tab-podcasts">
+      <label for="tab-podcasts">🎧 Podcasts</label>
+
+      <!-- Reading Tab Content -->
+      <div class="tab-content" id="content-reading">
+        <div class="charts-grid">
+          <div class="chart-container">
+            <h3>Articles Archived</h3>
+            <canvas id="chart-articles-archived"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Total Words Read</h3>
+            <canvas id="chart-total-words"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Time Spent Reading (minutes)</h3>
+            <canvas id="chart-time-spent"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Travel Tab Content -->
+      <div class="tab-content" id="content-travel">
+        <div class="charts-grid">
+          <div class="chart-container">
+            <h3>Check-ins</h3>
+            <canvas id="chart-checkins"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Unique Places</h3>
+            <canvas id="chart-unique-places"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Movies Tab Content -->
+      <div class="tab-content" id="content-movies">
+        <div class="charts-grid">
+          <div class="chart-container">
+            <h3>Movies Watched</h3>
+            <canvas id="chart-movies-watched"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Average Rating</h3>
+            <canvas id="chart-avg-rating"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Podcasts Tab Content -->
+      <div class="tab-content" id="content-podcasts">
+        <div class="charts-grid">
+          <div class="chart-container">
+            <h3>Episodes Played</h3>
+            <canvas id="chart-episodes-played"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Feeds Added</h3>
+            <canvas id="chart-feeds-added"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Feeds Removed</h3>
+            <canvas id="chart-feeds-removed"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Tab Styling */
+    .activity-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .activity-tabs input[type="radio"] {
+      display: none;
+    }
+
+    .activity-tabs label {
+      padding: 0.75rem 1.25rem;
+      cursor: pointer;
+      font-weight: 500;
+      border-radius: 0.5rem 0.5rem 0 0;
+      background: rgba(0, 0, 0, 0.03);
+      transition: background 0.2s ease;
+      margin-right: 0.25rem;
+    }
+
+    .dark .activity-tabs label {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .activity-tabs label:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .dark .activity-tabs label:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .activity-tabs input[type="radio"]:checked+label {
+      background: rgba(0, 0, 0, 0.08);
+      color: #000;
+    }
+
+    .dark .activity-tabs input[type="radio"]:checked+label {
+      background: rgba(255, 255, 255, 0.16);
+      color: #fff;
+    }
+
+    /* Tab Content */
+    .tab-content {
+      display: none;
+      width: 100%;
+      order: 99;
+      padding: 1.5rem 0;
+    }
+
+    #tab-reading:checked~#content-reading,
+    #tab-travel:checked~#content-travel,
+    #tab-movies:checked~#content-movies,
+    #tab-podcasts:checked~#content-podcasts {
+      display: block;
+    }
+
+    /* Charts Grid */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .chart-container {
+      background: rgba(0, 0, 0, 0.02);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+    }
+
+    .dark .chart-container {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .chart-container h3 {
+      margin: 0 0 1rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+      opacity: 0.8;
+    }
+
+    .chart-container canvas {
+      width: 100% !important;
+      max-height: 200px;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .activity-tabs label {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+      }
+
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <script>
+    // Data from Hugo
+    const readingData = {{ .Site.Data.activity.reading | jsonify | safeJS }};
+    const travelData = {{ .Site.Data.activity.travel | jsonify | safeJS }};
+    const moviesData = {{ .Site.Data.activity.movies | jsonify | safeJS }};
+    const podcastsData = {{ .Site.Data.activity.podcasts | jsonify | safeJS }};
+
+    // Detect dark mode
+    const isDark = () => document.documentElement.classList.contains('dark');
+
+    // Theme colors
+    const getColors = () => ({
+      bar: isDark() ? 'rgba(209, 213, 219, 0.8)' : 'rgba(55, 65, 81, 0.8)',
+      barHover: isDark() ? 'rgba(209, 213, 219, 1)' : 'rgba(55, 65, 81, 1)',
+      grid: isDark() ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+      text: isDark() ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'
+    });
+
+    // Chart defaults
+    const createChart = (ctx, labels, data, label) => {
+      const colors = getColors();
+      return new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: label,
+            data: data,
+            backgroundColor: colors.bar,
+            hoverBackgroundColor: colors.barHover,
+            borderRadius: 4,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+              ticks: { color: colors.text }
+            },
+            y: {
+              beginAtZero: true,
+              grid: { color: colors.grid },
+              ticks: { color: colors.text }
+            }
+          }
+        }
+      });
+    };
+
+    // Format month labels
+    const formatMonth = (m) => {
+      const [year, month] = m.split('-');
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return months[parseInt(month) - 1] + ' ' + year.slice(2);
+    };
+
+    // Show "No data available yet" message for missing data
+    const showNoData = (canvasId) => {
+      const canvas = document.getElementById(canvasId);
+      if (canvas) {
+        const container = canvas.parentElement;
+        canvas.style.display = 'none';
+        const msg = document.createElement('p');
+        msg.textContent = 'No data available yet';
+        msg.style.cssText = 'opacity: 0.5; font-style: italic; text-align: center; padding: 2rem 0;';
+        container.appendChild(msg);
+      }
+    };
+
+    // Safely initialize charts with data validation
+    const initCharts = (data, chartConfigs) => {
+      if (!data || !Array.isArray(data) || data.length === 0) {
+        chartConfigs.forEach(config => showNoData(config.id));
+        return;
+      }
+      const labels = data.map(d => formatMonth(d.month));
+      chartConfigs.forEach(config => {
+        createChart(document.getElementById(config.id), labels, data.map(d => d[config.field]), config.label);
+      });
+    };
+
+    // Initialize charts
+    document.addEventListener('DOMContentLoaded', () => {
+      // Reading charts
+      initCharts(readingData, [
+        { id: 'chart-articles-archived', field: 'articles_archived', label: 'Articles' },
+        { id: 'chart-total-words', field: 'total_words', label: 'Words' },
+        { id: 'chart-time-spent', field: 'time_spent_minutes', label: 'Minutes' }
+      ]);
+
+      // Travel charts
+      initCharts(travelData, [
+        { id: 'chart-checkins', field: 'checkins', label: 'Check-ins' },
+        { id: 'chart-unique-places', field: 'unique_places', label: 'Places' }
+      ]);
+
+      // Movies charts
+      initCharts(moviesData, [
+        { id: 'chart-movies-watched', field: 'movies_watched', label: 'Movies' },
+        { id: 'chart-avg-rating', field: 'avg_rating', label: 'Rating' }
+      ]);
+
+      // Podcasts charts
+      initCharts(podcastsData, [
+        { id: 'chart-episodes-played', field: 'episodes_played', label: 'Episodes' },
+        { id: 'chart-feeds-added', field: 'feeds_added', label: 'Feeds' },
+        { id: 'chart-feeds-removed', field: 'feeds_removed', label: 'Feeds' }
+      ]);
+    });
+
+    // Watch for dark mode changes (debounced to avoid reload loops)
+    let lastDarkState = isDark();
+    const observer = new MutationObserver(() => {
+      const currentDarkState = isDark();
+      if (currentDarkState !== lastDarkState) {
+        lastDarkState = currentDarkState;
+        location.reload();
+      }
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  </script>
+</article>
+{{- end -}}
