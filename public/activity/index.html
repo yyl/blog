@@ -235,12 +235,8 @@
             <canvas id="chart-episodes-played"></canvas>
           </div>
           <div class="chart-container">
-            <h3>Feeds Added</h3>
-            <canvas id="chart-feeds-added"></canvas>
-          </div>
-          <div class="chart-container">
-            <h3>Feeds Removed</h3>
-            <canvas id="chart-feeds-removed"></canvas>
+            <h3>Feed Changes</h3>
+            <canvas id="chart-feed-changes"></canvas>
           </div>
         </div>
       </div>
@@ -411,6 +407,61 @@
     };
 
     
+    const createDualChart = (ctx, labels, addedData, removedData) => {
+      const colors = getColors();
+      return new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Added',
+              data: addedData,
+              backgroundColor: isDark() ? 'rgba(134, 239, 172, 0.7)' : 'rgba(34, 197, 94, 0.7)',
+              hoverBackgroundColor: isDark() ? 'rgba(134, 239, 172, 1)' : 'rgba(34, 197, 94, 1)',
+              borderRadius: 4,
+              borderSkipped: false
+            },
+            {
+              label: 'Removed',
+              data: removedData.map(v => -v),
+              backgroundColor: isDark() ? 'rgba(252, 165, 165, 0.7)' : 'rgba(239, 68, 68, 0.7)',
+              hoverBackgroundColor: isDark() ? 'rgba(252, 165, 165, 1)' : 'rgba(239, 68, 68, 1)',
+              borderRadius: 4,
+              borderSkipped: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: { display: true, labels: { color: colors.text } },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => ctx.dataset.label + ': ' + Math.abs(ctx.raw)
+              }
+            }
+          },
+          scales: {
+            x: {
+              stacked: true,
+              grid: { display: false },
+              ticks: { color: colors.text, autoSkip: false, maxRotation: 0 }
+            },
+            y: {
+              grid: { color: colors.grid },
+              ticks: {
+                color: colors.text,
+                callback: (v) => Math.abs(v)
+              }
+            }
+          }
+        }
+      });
+    };
+
+    
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const formatLabels = (dataSlice) => {
       let lastYear = null;
@@ -474,10 +525,22 @@
 
       
       initCharts(podcastsData, [
-        { id: 'chart-episodes-played', field: 'episodes_played', label: 'Episodes' },
-        { id: 'chart-feeds-added', field: 'feeds_added', label: 'Feeds' },
-        { id: 'chart-feeds-removed', field: 'feeds_removed', label: 'Feeds' }
+        { id: 'chart-episodes-played', field: 'episodes_played', label: 'Episodes' }
       ]);
+
+      
+      if (podcastsData && Array.isArray(podcastsData) && podcastsData.length > 0) {
+        const recentPodcasts = podcastsData.slice(-12);
+        const feedLabels = formatLabels(recentPodcasts);
+        createDualChart(
+          document.getElementById('chart-feed-changes'),
+          feedLabels,
+          recentPodcasts.map(d => d.feeds_added),
+          recentPodcasts.map(d => d.feeds_removed)
+        );
+      } else {
+        showNoData('chart-feed-changes');
+      }
     });
 
     
