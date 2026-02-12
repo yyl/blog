@@ -217,12 +217,8 @@
       <div class="tab-content" id="content-movies">
         <div class="charts-grid">
           <div class="chart-container">
-            <h3>Movies Watched</h3>
-            <canvas id="chart-movies-watched"></canvas>
-          </div>
-          <div class="chart-container">
-            <h3>Average Rating</h3>
-            <canvas id="chart-avg-rating"></canvas>
+            <h3>Movies Watched & Rating</h3>
+            <canvas id="chart-movies-combo"></canvas>
           </div>
         </div>
       </div>
@@ -523,10 +519,72 @@
       ]);
 
       
-      initCharts(moviesData, [
-        { id: 'chart-movies-watched', field: 'movies_watched', label: 'Movies' },
-        { id: 'chart-avg-rating', field: 'avg_rating', label: 'Rating' }
-      ]);
+      if (moviesData && Array.isArray(moviesData) && moviesData.length > 0) {
+        const recentMovies = moviesData.filter(d => d.month !== currentMonth).slice(-12);
+        const moviesLabels = formatLabels(recentMovies);
+        const colors = getColors();
+        new Chart(document.getElementById('chart-movies-combo'), {
+          type: 'bar',
+          data: {
+            labels: moviesLabels,
+            datasets: [
+              {
+                type: 'bar',
+                label: 'Movies Watched',
+                data: recentMovies.map(d => d.movies_watched),
+                backgroundColor: colors.bar,
+                hoverBackgroundColor: colors.barHover,
+                borderRadius: 4,
+                borderSkipped: false,
+                yAxisID: 'y'
+              },
+              {
+                type: 'line',
+                label: 'Avg Rating',
+                data: recentMovies.map(d => d.avg_rating),
+                borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
+                backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
+                borderWidth: 2,
+                pointRadius: 4,
+                pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                tension: 0.3,
+                fill: false,
+                yAxisID: 'y1'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+              legend: { display: true, labels: { color: colors.text } }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { color: colors.text, autoSkip: false, maxRotation: 0 }
+              },
+              y: {
+                beginAtZero: true,
+                position: 'left',
+                grid: { color: colors.grid },
+                ticks: { color: colors.text },
+                title: { display: true, text: 'Movies', color: colors.text }
+              },
+              y1: {
+                beginAtZero: true,
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                ticks: { color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
+                title: { display: true, text: 'Rating', color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
+                max: 5
+              }
+            }
+          }
+        });
+      } else {
+        showNoData('chart-movies-combo');
+      }
 
       
       initCharts(podcastsData, [
