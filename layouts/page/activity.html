@@ -41,12 +41,8 @@
       <div class="tab-content" id="content-travel">
         <div class="charts-grid">
           <div class="chart-container">
-            <h3>Check-ins</h3>
-            <canvas id="chart-checkins"></canvas>
-          </div>
-          <div class="chart-container">
-            <h3>Unique Places</h3>
-            <canvas id="chart-unique-places"></canvas>
+            <h3>Check-ins & Unique Places</h3>
+            <canvas id="chart-travel-combo"></canvas>
           </div>
         </div>
       </div>
@@ -350,11 +346,69 @@
         { id: 'chart-time-spent', field: 'time_spent_minutes', label: 'Minutes' }
       ]);
 
-      // Travel charts
-      initCharts(travelData, [
-        { id: 'chart-checkins', field: 'checkins', label: 'Check-ins' },
-        { id: 'chart-unique-places', field: 'unique_places', label: 'Places' }
-      ]);
+      // Travel combo chart (overlaid bars)
+      if (travelData && Array.isArray(travelData) && travelData.length > 0) {
+        const recentTravel = travelData.filter(d => d.month !== currentMonth).slice(-12);
+        const travelLabels = formatLabels(recentTravel);
+        const colors = getColors();
+        new Chart(document.getElementById('chart-travel-combo'), {
+          type: 'bar',
+          data: {
+            labels: travelLabels,
+            datasets: [
+              {
+                label: 'Check-ins',
+                data: recentTravel.map(d => d.checkins),
+                backgroundColor: colors.bar,
+                hoverBackgroundColor: colors.barHover,
+                borderRadius: 4,
+                borderSkipped: false,
+                barPercentage: 0.8,
+                categoryPercentage: 0.7,
+                xAxisID: 'x',
+                order: 2
+              },
+              {
+                label: 'Unique Places',
+                data: recentTravel.map(d => d.unique_places),
+                backgroundColor: 'rgba(239, 68, 68, 0.7)',
+                hoverBackgroundColor: 'rgba(239, 68, 68, 1)',
+                borderRadius: 4,
+                borderSkipped: false,
+                barPercentage: 0.8,
+                categoryPercentage: 0.7,
+                xAxisID: 'x2',
+                order: 1
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+              legend: { display: true, labels: { color: colors.text } }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { color: colors.text, autoSkip: false, maxRotation: 0 }
+              },
+              x2: {
+                display: false,
+                grid: { display: false },
+                offset: true
+              },
+              y: {
+                beginAtZero: true,
+                grid: { color: colors.grid },
+                ticks: { color: colors.text }
+              }
+            }
+          }
+        });
+      } else {
+        showNoData('chart-travel-combo');
+      }
 
       // Movies combo chart (bar + line with dual y-axes)
       if (moviesData && Array.isArray(moviesData) && moviesData.length > 0) {
