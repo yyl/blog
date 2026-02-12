@@ -327,13 +327,18 @@
       }
     };
 
+    // Exclude current (incomplete) month
+    const now = new Date();
+    const currentMonth = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
+
     // Safely initialize charts with data validation
     const initCharts = (data, chartConfigs) => {
       if (!data || !Array.isArray(data) || data.length === 0) {
         chartConfigs.forEach(config => showNoData(config.id));
         return;
       }
-      const recent = data.slice(-12);
+      const completed = data.filter(d => d.month !== currentMonth);
+      const recent = completed.slice(-12);
       const labels = formatLabels(recent);
       chartConfigs.forEach(config => {
         createChart(document.getElementById(config.id), labels, recent.map(d => d[config.field]), config.label);
@@ -368,7 +373,7 @@
 
       // Feed changes (dual chart)
       if (podcastsData && Array.isArray(podcastsData) && podcastsData.length > 0) {
-        const recentPodcasts = podcastsData.slice(-12);
+        const recentPodcasts = podcastsData.filter(d => d.month !== currentMonth).slice(-12);
         const feedLabels = formatLabels(recentPodcasts);
         createDualChart(
           document.getElementById('chart-feed-changes'),
