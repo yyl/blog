@@ -19,6 +19,9 @@
       <input type="radio" name="activity-tab" id="tab-podcasts">
       <label for="tab-podcasts">🎧 Podcasts</label>
 
+      <input type="radio" name="activity-tab" id="tab-workout">
+      <label for="tab-workout">🏋️ Workout</label>
+
       <!-- Reading Tab Content -->
       <div class="tab-content" id="content-reading">
         <div class="charts-grid">
@@ -33,6 +36,10 @@
           <div class="chart-container">
             <h3>Time Spent Reading (minutes)</h3>
             <canvas id="chart-time-spent"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Books Finished</h3>
+            <canvas id="chart-books-finished"></canvas>
           </div>
         </div>
       </div>
@@ -67,6 +74,16 @@
           <div class="chart-container">
             <h3>Feed Changes</h3>
             <canvas id="chart-feed-changes"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workout Tab Content -->
+      <div class="tab-content" id="content-workout">
+        <div class="charts-grid">
+          <div class="chart-container">
+            <h3>Workouts & Minutes</h3>
+            <canvas id="chart-workout-combo"></canvas>
           </div>
         </div>
       </div>
@@ -128,7 +145,8 @@
     #tab-reading:checked~#content-reading,
     #tab-travel:checked~#content-travel,
     #tab-movies:checked~#content-movies,
-    #tab-podcasts:checked~#content-podcasts {
+    #tab-podcasts:checked~#content-podcasts,
+    #tab-workout:checked~#content-workout {
       display: block;
     }
 
@@ -183,6 +201,8 @@
     const travelData = {{ .Site.Data.activity.travel | jsonify | safeJS }};
     const moviesData = {{ .Site.Data.activity.movies | jsonify | safeJS }};
     const podcastsData = {{ .Site.Data.activity.podcasts | jsonify | safeJS }};
+    const booksData = {{ .Site.Data.activity.books | jsonify | safeJS }};
+    const workoutsData = {{ .Site.Data.activity.workouts | jsonify | safeJS }};
 
     // Detect dark mode
     const isDark = () => document.documentElement.classList.contains('dark');
@@ -323,14 +343,38 @@
     const now = new Date();
     const currentMonth = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
 
+    // Fill gaps in monthly data so missing months show as 0
+    const fillMonthGaps = (data, fields) => {
+      if (!data || data.length < 2) return data;
+      const filled = [];
+      for (let i = 0; i < data.length; i++) {
+        filled.push(data[i]);
+        if (i < data.length - 1) {
+          let [y, m] = data[i].month.split('-').map(Number);
+          const [ny, nm] = data[i + 1].month.split('-').map(Number);
+          m++;
+          if (m > 12) { m = 1; y++; }
+          while (y < ny || (y === ny && m < nm)) {
+            const entry = { month: y + '-' + String(m).padStart(2, '0') };
+            fields.forEach(f => entry[f] = 0);
+            filled.push(entry);
+            m++;
+            if (m > 12) { m = 1; y++; }
+          }
+        }
+      }
+      return filled;
+    };
+
     // Safely initialize charts with data validation
-    const initCharts = (data, chartConfigs) => {
+    const initCharts = (data, chartConfigs, gapFields) => {
       if (!data || !Array.isArray(data) || data.length === 0) {
         chartConfigs.forEach(config => showNoData(config.id));
         return;
       }
       const completed = data.filter(d => d.month !== currentMonth);
-      const recent = completed.slice(-12);
+      const gapped = gapFields ? fillMonthGaps(completed, gapFields) : completed;
+      const recent = gapped.slice(-12);
       const labels = formatLabels(recent);
       chartConfigs.forEach(config => {
         createChart(document.getElementById(config.id), labels, recent.map(d => d[config.field]), config.label);
@@ -344,11 +388,84 @@
         { id: 'chart-articles-archived', field: 'articles_archived', label: 'Articles' },
         { id: 'chart-total-words', field: 'total_words', label: 'Words' },
         { id: 'chart-time-spent', field: 'time_spent_minutes', label: 'Minutes' }
-      ]);
+      ], ['articles_archived', 'total_words', 'time_spent_minutes']);
+
+      // Books chart
+      initCharts(booksData, [
+        { id: 'chart-books-finished', field: 'books_finished', label: 'Books' }
+      ], ['books_finished']);
+
+      // Workout combo chart (bar + line with dual y-axes)
+      if (workoutsData && Array.isArray(workoutsData) && workoutsData.length > 0) {
+        const completedWorkouts = fillMonthGaps(workoutsData.filter(d => d.month !== currentMonth), ['workouts', 'total_minutes']);
+        const recentWorkouts = completedWorkouts.slice(-12);
+        const workoutLabels = formatLabels(recentWorkouts);
+        const colors = getColors();
+        new Chart(document.getElementById('chart-workout-combo'), {
+          type: 'bar',
+          data: {
+            labels: workoutLabels,
+            datasets: [
+              {
+                type: 'bar',
+                label: 'Workouts',
+                data: recentWorkouts.map(d => d.workouts),
+                backgroundColor: colors.bar,
+                hoverBackgroundColor: colors.barHover,
+                borderRadius: 4,
+                borderSkipped: false,
+                yAxisID: 'y'
+              },
+              {
+                type: 'line',
+                label: 'Minutes',
+                data: recentWorkouts.map(d => d.total_minutes),
+                borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
+                backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
+                borderWidth: 2,
+                pointRadius: 4,
+                pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                tension: 0.3,
+                fill: false,
+                yAxisID: 'y1'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+              legend: { display: true, labels: { color: colors.text } }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { color: colors.text, autoSkip: false, maxRotation: 0 }
+              },
+              y: {
+                beginAtZero: true,
+                position: 'left',
+                grid: { color: colors.grid },
+                ticks: { color: colors.text },
+                title: { display: true, text: 'Workouts', color: colors.text }
+              },
+              y1: {
+                beginAtZero: true,
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                ticks: { color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
+                title: { display: true, text: 'Minutes', color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' }
+              }
+            }
+          }
+        });
+      } else {
+        showNoData('chart-workout-combo');
+      }
 
       // Travel combo chart (overlaid bars)
       if (travelData && Array.isArray(travelData) && travelData.length > 0) {
-        const recentTravel = travelData.filter(d => d.month !== currentMonth).slice(-12);
+        const recentTravel = fillMonthGaps(travelData.filter(d => d.month !== currentMonth), ['checkins', 'unique_places']).slice(-12);
         const travelLabels = formatLabels(recentTravel);
         const colors = getColors();
         new Chart(document.getElementById('chart-travel-combo'), {
@@ -412,7 +529,7 @@
 
       // Movies combo chart (bar + line with dual y-axes)
       if (moviesData && Array.isArray(moviesData) && moviesData.length > 0) {
-        const recentMovies = moviesData.filter(d => d.month !== currentMonth).slice(-12);
+        const recentMovies = fillMonthGaps(moviesData.filter(d => d.month !== currentMonth), ['movies_watched', 'avg_rating']).slice(-12);
         const moviesLabels = formatLabels(recentMovies);
         const colors = getColors();
         new Chart(document.getElementById('chart-movies-combo'), {
@@ -481,11 +598,11 @@
       // Podcasts charts
       initCharts(podcastsData, [
         { id: 'chart-episodes-played', field: 'episodes_played', label: 'Episodes' }
-      ]);
+      ], ['episodes_played', 'feeds_added', 'feeds_removed']);
 
       // Feed changes (dual chart)
       if (podcastsData && Array.isArray(podcastsData) && podcastsData.length > 0) {
-        const recentPodcasts = podcastsData.filter(d => d.month !== currentMonth).slice(-12);
+        const recentPodcasts = fillMonthGaps(podcastsData.filter(d => d.month !== currentMonth), ['feeds_added', 'feeds_removed']).slice(-12);
         const feedLabels = formatLabels(recentPodcasts);
         createDualChart(
           document.getElementById('chart-feed-changes'),
