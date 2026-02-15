@@ -1,0 +1,73 @@
+# Monthly workout activity data
+- month: "2025-03"
+  workouts: 1
+  total_minutes: 55
+  unique_exercises: 7
+  total_sets: 20
+
+- month: "2025-04"
+  workouts: 9
+  total_minutes: 461
+  unique_exercises: 17
+  total_sets: 137
+
+- month: "2025-05"
+  workouts: 5
+  total_minutes: 222
+  unique_exercises: 17
+  total_sets: 81
+
+- month: "2025-06"
+  workouts: 3
+  total_minutes: 216
+  unique_exercises: 14
+  total_sets: 61
+
+- month: "2025-07"
+  workouts: 4
+  total_minutes: 268
+  unique_exercises: 15
+  total_sets: 81
+
+- month: "2025-08"
+  workouts: 4
+  total_minutes: 263
+  unique_exercises: 14
+  total_sets: 82
+
+- month: "2025-09"
+  workouts: 4
+  total_minutes: 259
+  unique_exercises: 14
+  total_sets: 79
+
+- month: "2025-10"
+  workouts: 5
+  total_minutes: 318
+  unique_exercises: 13
+  total_sets: 94
+
+- month: "2025-11"
+  workouts: 4
+  total_minutes: 234
+  unique_exercises: 13
+  total_sets: 78
+
+- month: "2025-12"
+  workouts: 4
+  total_minutes: 221
+  unique_exercises: 13
+  total_sets: 67
+
+- month: "2026-01"
+  workouts: 2
+  total_minutes: 97
+  unique_exercises: 9
+  total_sets: 34
+
+- month: "2026-02"
+  workouts: 3
+  total_minutes: 134
+  unique_exercises: 6
+  total_sets: 43
+
