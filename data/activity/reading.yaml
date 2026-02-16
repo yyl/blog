@@ -4,70 +4,106 @@
   total_words: 116126
   time_spent_minutes: 474
   avg_reading_speed: 245
+  max_words_per_article: 12536
+  median_words_per_article: 926
+  min_words_per_article: 85
 
 - month: "2025-02"
   articles_archived: 3
   total_words: 4638
   time_spent_minutes: 19
   avg_reading_speed: 244
+  max_words_per_article: 2006
+  median_words_per_article: 2003
+  min_words_per_article: 629
 
 - month: "2025-05"
   articles_archived: 12
   total_words: 24661
   time_spent_minutes: 99
   avg_reading_speed: 249
+  max_words_per_article: 5983
+  median_words_per_article: 1309
+  min_words_per_article: 402
 
 - month: "2025-06"
   articles_archived: 28
   total_words: 53067
   time_spent_minutes: 216
   avg_reading_speed: 246
+  max_words_per_article: 6918
+  median_words_per_article: 1419
+  min_words_per_article: 727
 
 - month: "2025-07"
   articles_archived: 35
   total_words: 56750
   time_spent_minutes: 233
   avg_reading_speed: 244
+  max_words_per_article: 4670
+  median_words_per_article: 1312
+  min_words_per_article: 66
 
 - month: "2025-08"
   articles_archived: 53
   total_words: 101183
   time_spent_minutes: 404
   avg_reading_speed: 250
+  max_words_per_article: 6646
+  median_words_per_article: 1652
+  min_words_per_article: 365
 
 - month: "2025-09"
   articles_archived: 62
   total_words: 109154
   time_spent_minutes: 440
   avg_reading_speed: 248
+  max_words_per_article: 12611
+  median_words_per_article: 1325
+  min_words_per_article: 160
 
 - month: "2025-10"
   articles_archived: 56
   total_words: 110313
   time_spent_minutes: 440
   avg_reading_speed: 251
+  max_words_per_article: 14724
+  median_words_per_article: 1274
+  min_words_per_article: 25
 
 - month: "2025-11"
   articles_archived: 53
   total_words: 118631
   time_spent_minutes: 477
   avg_reading_speed: 249
+  max_words_per_article: 12740
+  median_words_per_article: 1596
+  min_words_per_article: 121
 
 - month: "2025-12"
   articles_archived: 54
   total_words: 116037
   time_spent_minutes: 466
   avg_reading_speed: 249
+  max_words_per_article: 12025
+  median_words_per_article: 1638
+  min_words_per_article: 288
 
 - month: "2026-01"
   articles_archived: 26
   total_words: 54428
   time_spent_minutes: 218
   avg_reading_speed: 250
+  max_words_per_article: 14786
+  median_words_per_article: 1203
+  min_words_per_article: 175
 
 - month: "2026-02"
   articles_archived: 23
   total_words: 43709
   time_spent_minutes: 177
   avg_reading_speed: 247
+  max_words_per_article: 10621
+  median_words_per_article: 1229
+  min_words_per_article: 155
 
