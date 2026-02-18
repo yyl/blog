@@ -99,11 +99,11 @@
   min_words_per_article: 175
 
 - month: "2026-02"
-  articles_archived: 23
-  total_words: 43709
-  time_spent_minutes: 177
+  articles_archived: 24
+  total_words: 45653
+  time_spent_minutes: 185
   avg_reading_speed: 247
   max_words_per_article: 10621
-  median_words_per_article: 1229
+  median_words_per_article: 1301
   min_words_per_article: 155
 
