@@ -166,161 +166,101 @@
     <h1 class="my-0! pb-2.5">My Activity</h1>
   </header>
 
-  <section>
-    
-    <div class="activity-tabs">
-      <input type="radio" name="activity-tab" id="tab-reading" checked>
-      <label for="tab-reading">📚 Reading</label>
-
-      <input type="radio" name="activity-tab" id="tab-travel">
-      <label for="tab-travel">🗺️ Travel</label>
-
-      <input type="radio" name="activity-tab" id="tab-movies">
-      <label for="tab-movies">🎬 Movies</label>
-
-      <input type="radio" name="activity-tab" id="tab-podcasts">
-      <label for="tab-podcasts">🎧 Podcasts</label>
-
-      <input type="radio" name="activity-tab" id="tab-workout">
-      <label for="tab-workout">🏋️ Workout</label>
-
-      <input type="radio" name="activity-tab" id="tab-code">
-      <label for="tab-code">💻 Code</label>
-
-      
-      <div class="tab-content" id="content-reading">
-        <div class="charts-grid">
-          <div class="chart-container">
-            <h3>Articles Read</h3>
-            <canvas id="chart-total-words"></canvas>
-          </div>
-          <div class="chart-container">
-            <h3>Books Finished</h3>
-            <canvas id="chart-books-finished"></canvas>
-          </div>
-        </div>
+  
+  <section class="activity-section">
+    <h2>&#128218; Reading</h2>
+    <div class="charts-grid">
+      <div class="chart-container">
+        <h3>Articles Read</h3>
+        <canvas id="chart-total-words"></canvas>
       </div>
-
-      
-      <div class="tab-content" id="content-travel">
-        <div class="charts-grid">
-          <div class="chart-container">
-            <h3>Check-ins & Unique Places</h3>
-            <canvas id="chart-travel-combo"></canvas>
-          </div>
-        </div>
+      <div class="chart-container">
+        <h3>Books Finished</h3>
+        <canvas id="chart-books-finished"></canvas>
       </div>
+    </div>
+  </section>
 
-      
-      <div class="tab-content" id="content-movies">
-        <div class="charts-grid">
-          <div class="chart-container">
-            <h3>Movies Watched & Rating</h3>
-            <canvas id="chart-movies-combo"></canvas>
-          </div>
-        </div>
+  
+  <section class="activity-section">
+    <h2>🗺️ Travel</h2>
+    <div class="charts-grid">
+      <div class="chart-container">
+        <h3>Check-ins &amp; Unique Places</h3>
+        <canvas id="chart-travel-combo"></canvas>
       </div>
+    </div>
+  </section>
 
-      
-      <div class="tab-content" id="content-podcasts">
-        <div class="charts-grid">
-          <div class="chart-container">
-            <h3>Episodes Played</h3>
-            <canvas id="chart-episodes-played"></canvas>
-          </div>
-          <div class="chart-container">
-            <h3>Feed Changes</h3>
-            <canvas id="chart-feed-changes"></canvas>
-          </div>
-        </div>
+  
+  <section class="activity-section">
+    <h2>🎬 Movies</h2>
+    <div class="charts-grid">
+      <div class="chart-container">
+        <h3>Movies Watched &amp; Rating</h3>
+        <canvas id="chart-movies-combo"></canvas>
       </div>
+    </div>
+  </section>
 
-      
-      <div class="tab-content" id="content-workout">
-        <div class="charts-grid">
-          <div class="chart-container">
-            <h3>Workouts & Minutes</h3>
-            <canvas id="chart-workout-combo"></canvas>
-          </div>
-        </div>
+  
+  <section class="activity-section">
+    <h2>🎧 Podcasts</h2>
+    <div class="charts-grid">
+      <div class="chart-container">
+        <h3>Episodes Played</h3>
+        <canvas id="chart-episodes-played"></canvas>
       </div>
+      <div class="chart-container">
+        <h3>Feed Changes</h3>
+        <canvas id="chart-feed-changes"></canvas>
+      </div>
+    </div>
+  </section>
 
-      
-      <div class="tab-content" id="content-code">
-        <div class="charts-grid">
-          <div class="chart-container">
-            <h3>Monthly Commits</h3>
-            <canvas id="chart-monthly-commits"></canvas>
-          </div>
-          <div class="chart-container">
-            <h3>Daily Contributions</h3>
-            <img id="github-contrib-graph" src="https://ghchart.rshah.org/yyl" alt="GitHub contribution graph"
-              style="width: 100%; border-radius: 4px;" />
-          </div>
-        </div>
+  
+  <section class="activity-section">
+    <h2>🏋️ Workout</h2>
+    <div class="charts-grid">
+      <div class="chart-container">
+        <h3>Workouts &amp; Minutes</h3>
+        <canvas id="chart-workout-combo"></canvas>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="activity-section">
+    <h2>💻 Code</h2>
+    <div class="charts-grid">
+      <div class="chart-container">
+        <h3>Monthly Commits</h3>
+        <canvas id="chart-monthly-commits"></canvas>
+      </div>
+      <div class="chart-container">
+        <h3>Daily Contributions</h3>
+        <img id="github-contrib-graph" src="https://ghchart.rshah.org/yyl" alt="GitHub contribution graph"
+          style="width: 100%; border-radius: 4px;" />
       </div>
     </div>
   </section>
 
   <style>
      
-    .activity-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
+    .activity-section {
+      margin-bottom: 3rem;
     }
 
-    .activity-tabs input[type="radio"] {
-      display: none;
+    .activity-section h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 1.25rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    .activity-tabs label {
-      padding: 0.75rem 1.25rem;
-      cursor: pointer;
-      font-weight: 500;
-      border-radius: 0.5rem 0.5rem 0 0;
-      background: rgba(0, 0, 0, 0.03);
-      transition: background 0.2s ease;
-      margin-right: 0.25rem;
-    }
-
-    .dark .activity-tabs label {
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .activity-tabs label:hover {
-      background: rgba(0, 0, 0, 0.06);
-    }
-
-    .dark .activity-tabs label:hover {
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .activity-tabs input[type="radio"]:checked+label {
-      background: rgba(0, 0, 0, 0.08);
-      color: #000;
-    }
-
-    .dark .activity-tabs input[type="radio"]:checked+label {
-      background: rgba(255, 255, 255, 0.16);
-      color: #fff;
-    }
-
-     
-    .tab-content {
-      display: none;
-      width: 100%;
-      order: 99;
-      padding: 1.5rem 0;
-    }
-
-    #tab-reading:checked~#content-reading,
-    #tab-travel:checked~#content-travel,
-    #tab-movies:checked~#content-movies,
-    #tab-podcasts:checked~#content-podcasts,
-    #tab-workout:checked~#content-workout,
-    #tab-code:checked~#content-code {
-      display: block;
+    .dark .activity-section h2 {
+      border-bottom-color: rgba(255, 255, 255, 0.1);
     }
 
      
