@@ -2,8 +2,8 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
   {{ range .Pages }}
-  <div style="display: flex; align-items: center;">
-    <h3 class="!my-0" style="margin-right: 1rem;">
+  <div class="flex items-center">
+    <h3 class="!my-0 mr-4">
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h3>
     <time class="text-xs antialiased opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
