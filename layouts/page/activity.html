@@ -22,6 +22,9 @@
       <input type="radio" name="activity-tab" id="tab-workout">
       <label for="tab-workout">🏋️ Workout</label>
 
+      <input type="radio" name="activity-tab" id="tab-code">
+      <label for="tab-code">💻 Code</label>
+
       <!-- Reading Tab Content -->
       <div class="tab-content" id="content-reading">
         <div class="charts-grid">
@@ -87,6 +90,23 @@
           </div>
         </div>
       </div>
+
+      <!-- Code Tab Content -->
+      <div class="tab-content" id="content-code">
+        <div class="charts-grid">
+          <div class="chart-container">
+            <h3>GitHub Contributions</h3>
+            <img id="github-contrib-graph" src="https://ghchart.rshah.org/yyl" alt="GitHub contribution graph"
+              style="width: 100%; border-radius: 4px;" />
+          </div>
+          <div class="chart-container">
+            <h3>GitHub Stats</h3>
+            <img id="github-stats"
+              src="https://github-readme-stats.vercel.app/api?username=yyl&show_icons=true&count_private=true&hide_border=true&theme=default"
+              alt="GitHub stats" style="width: 100%; border-radius: 4px;" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -146,7 +166,8 @@
     #tab-travel:checked~#content-travel,
     #tab-movies:checked~#content-movies,
     #tab-podcasts:checked~#content-podcasts,
-    #tab-workout:checked~#content-workout {
+    #tab-workout:checked~#content-workout,
+    #tab-code:checked~#content-code {
       display: block;
     }
 
@@ -615,12 +636,32 @@
       }
     });
 
+    // Update GitHub images on dark mode toggle (avoids full page reload)
+    const GH_USER = 'yyl';
+    const updateGithubImages = (dark) => {
+      const contrib = document.getElementById('github-contrib-graph');
+      const stats = document.getElementById('github-stats');
+      if (contrib) {
+        contrib.src = dark
+          ? `https://ghchart.rshah.org/58a6ff/${GH_USER}`
+          : `https://ghchart.rshah.org/${GH_USER}`;
+      }
+      if (stats) {
+        const theme = dark ? 'dark' : 'default';
+        stats.src = `https://github-readme-stats.vercel.app/api?username=${GH_USER}&show_icons=true&count_private=true&hide_border=true&theme=${theme}`;
+      }
+    };
+
+    // Set initial state
+    updateGithubImages(isDark());
+
     // Watch for dark mode changes (debounced to avoid reload loops)
     let lastDarkState = isDark();
     const observer = new MutationObserver(() => {
       const currentDarkState = isDark();
       if (currentDarkState !== lastDarkState) {
         lastDarkState = currentDarkState;
+        updateGithubImages(currentDarkState);
         location.reload();
       }
     });
