@@ -168,10 +168,6 @@
   {{- if and site.Config.Services.Disqus.Shortname (not (eq .Params.comments
   false)) -}}
   <div class="mt-24" id="disqus_thread"></div>
-  <link
-    rel="preconnect"
-    href="https://{{- site.Config.Services.Disqus.Shortname -}}.disqus.com"
-  />
   <script>
     const disqusShortname = '{{- site.Config.Services.Disqus.Shortname -}}';
     const script = document.createElement('script');
