@@ -29,16 +29,8 @@
       <div class="tab-content" id="content-reading">
         <div class="charts-grid">
           <div class="chart-container">
-            <h3>Articles Archived</h3>
-            <canvas id="chart-articles-archived"></canvas>
-          </div>
-          <div class="chart-container">
-            <h3>Total Words Read</h3>
+            <h3>Articles Read</h3>
             <canvas id="chart-total-words"></canvas>
-          </div>
-          <div class="chart-container">
-            <h3>Time Spent Reading (minutes)</h3>
-            <canvas id="chart-time-spent"></canvas>
           </div>
           <div class="chart-container">
             <h3>Books Finished</h3>
@@ -403,12 +395,76 @@
 
     // Initialize charts
     document.addEventListener('DOMContentLoaded', () => {
-      // Reading charts
-      initCharts(readingData, [
-        { id: 'chart-articles-archived', field: 'articles_archived', label: 'Articles' },
-        { id: 'chart-total-words', field: 'total_words', label: 'Words' },
-        { id: 'chart-time-spent', field: 'time_spent_minutes', label: 'Minutes' }
-      ], ['articles_archived', 'total_words', 'time_spent_minutes']);
+      // Reading combo chart (bar: total words, line: avg reading speed)
+      if (readingData && Array.isArray(readingData) && readingData.length > 0) {
+        const completedReading = fillMonthGaps(readingData.filter(d => d.month !== currentMonth), ['total_words', 'time_spent_minutes']);
+        const recentReading = completedReading.slice(-12);
+        const readingLabels = formatLabels(recentReading);
+        const colors = getColors();
+        new Chart(document.getElementById('chart-total-words'), {
+          type: 'bar',
+          data: {
+            labels: readingLabels,
+            datasets: [
+              {
+                type: 'bar',
+                label: 'Total Words',
+                data: recentReading.map(d => d.total_words),
+                backgroundColor: colors.bar,
+                hoverBackgroundColor: colors.barHover,
+                borderRadius: 4,
+                borderSkipped: false,
+                yAxisID: 'y'
+              },
+              {
+                type: 'line',
+                label: 'Minutes Read',
+                data: recentReading.map(d => d.time_spent_minutes),
+                borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
+                backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
+                borderWidth: 2,
+                pointRadius: 4,
+                pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                tension: 0.3,
+                fill: false,
+                yAxisID: 'y1'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+              legend: { display: true, labels: { color: colors.text } }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { color: colors.text, autoSkip: false, maxRotation: 0 }
+              },
+              y: {
+                beginAtZero: true,
+                position: 'left',
+                grid: { color: colors.grid },
+                ticks: {
+                  color: colors.text,
+                  callback: (v) => v >= 1000 ? (v / 1000) + 'k' : v
+                },
+                title: { display: true, text: 'Words', color: colors.text }
+              },
+              y1: {
+                beginAtZero: true,
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                ticks: { color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
+                title: { display: true, text: 'Minutes', color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' }
+              }
+            }
+          }
+        });
+      } else {
+        showNoData('chart-total-words');
+      }
 
       // Books chart
       initCharts(booksData, [
