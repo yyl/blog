@@ -257,15 +257,13 @@
       <div class="tab-content" id="content-code">
         <div class="charts-grid">
           <div class="chart-container">
-            <h3>GitHub Contributions</h3>
-            <img id="github-contrib-graph" src="https://ghchart.rshah.org/yyl" alt="GitHub contribution graph"
-              style="width: 100%; border-radius: 4px;" />
+            <h3>Monthly Commits</h3>
+            <canvas id="chart-monthly-commits"></canvas>
           </div>
           <div class="chart-container">
-            <h3>GitHub Stats</h3>
-            <img id="github-stats"
-              src="https://github-readme-stats.vercel.app/api?username=yyl&show_icons=true&count_private=true&hide_border=true&theme=default"
-              alt="GitHub stats" style="width: 100%; border-radius: 4px;" />
+            <h3>Daily Contributions</h3>
+            <img id="github-contrib-graph" src="https://ghchart.rshah.org/yyl" alt="GitHub contribution graph"
+              style="width: 100%; border-radius: 4px;" />
           </div>
         </div>
       </div>
@@ -386,6 +384,7 @@
     const podcastsData = [{"episodes_played":0,"feeds_added":1,"feeds_removed":0,"month":"2020-02"},{"episodes_played":0,"feeds_added":1,"feeds_removed":0,"month":"2020-08"},{"episodes_played":0,"feeds_added":1,"feeds_removed":0,"month":"2020-09"},{"episodes_played":0,"feeds_added":1,"feeds_removed":0,"month":"2023-01"},{"episodes_played":1,"feeds_added":0,"feeds_removed":0,"month":"2023-04"},{"episodes_played":7,"feeds_added":3,"feeds_removed":0,"month":"2023-06"},{"episodes_played":8,"feeds_added":0,"feeds_removed":0,"month":"2023-07"},{"episodes_played":17,"feeds_added":1,"feeds_removed":0,"month":"2023-08"},{"episodes_played":15,"feeds_added":0,"feeds_removed":0,"month":"2023-09"},{"episodes_played":2,"feeds_added":0,"feeds_removed":0,"month":"2023-10"},{"episodes_played":13,"feeds_added":0,"feeds_removed":0,"month":"2023-11"},{"episodes_played":34,"feeds_added":1,"feeds_removed":0,"month":"2023-12"},{"episodes_played":39,"feeds_added":2,"feeds_removed":0,"month":"2024-01"},{"episodes_played":28,"feeds_added":0,"feeds_removed":0,"month":"2024-02"},{"episodes_played":28,"feeds_added":1,"feeds_removed":0,"month":"2024-03"},{"episodes_played":33,"feeds_added":1,"feeds_removed":0,"month":"2024-04"},{"episodes_played":34,"feeds_added":1,"feeds_removed":0,"month":"2024-05"},{"episodes_played":31,"feeds_added":0,"feeds_removed":0,"month":"2024-06"},{"episodes_played":19,"feeds_added":1,"feeds_removed":0,"month":"2024-07"},{"episodes_played":15,"feeds_added":2,"feeds_removed":0,"month":"2024-08"},{"episodes_played":21,"feeds_added":2,"feeds_removed":0,"month":"2024-09"},{"episodes_played":2,"feeds_added":1,"feeds_removed":0,"month":"2024-10"},{"episodes_played":9,"feeds_added":1,"feeds_removed":0,"month":"2024-11"},{"episodes_played":10,"feeds_added":1,"feeds_removed":0,"month":"2024-12"},{"episodes_played":9,"feeds_added":0,"feeds_removed":0,"month":"2025-01"},{"episodes_played":3,"feeds_added":0,"feeds_removed":0,"month":"2025-02"},{"episodes_played":2,"feeds_added":0,"feeds_removed":0,"month":"2025-03"},{"episodes_played":10,"feeds_added":2,"feeds_removed":0,"month":"2025-04"},{"episodes_played":2,"feeds_added":0,"feeds_removed":0,"month":"2025-05"},{"episodes_played":26,"feeds_added":4,"feeds_removed":0,"month":"2025-06"},{"episodes_played":30,"feeds_added":0,"feeds_removed":0,"month":"2025-07"},{"episodes_played":64,"feeds_added":0,"feeds_removed":0,"month":"2025-08"},{"episodes_played":63,"feeds_added":0,"feeds_removed":0,"month":"2025-09"},{"episodes_played":46,"feeds_added":1,"feeds_removed":0,"month":"2025-10"},{"episodes_played":41,"feeds_added":0,"feeds_removed":0,"month":"2025-11"},{"episodes_played":38,"feeds_added":4,"feeds_removed":0,"month":"2025-12"},{"episodes_played":31,"feeds_added":1,"feeds_removed":0,"month":"2026-01"},{"episodes_played":19,"feeds_added":0,"feeds_removed":0,"month":"2026-02"}];
     const booksData = [{"avg_rating":4,"books_finished":2,"month":"2023-03"},{"avg_rating":"None","books_finished":1,"month":"2024-11"},{"avg_rating":4,"books_finished":1,"month":"2025-07"},{"avg_rating":5,"books_finished":1,"month":"2025-09"},{"avg_rating":"None","books_finished":1,"month":"2025-10"},{"avg_rating":5,"books_finished":1,"month":"2025-11"},{"avg_rating":4.5,"books_finished":2,"month":"2026-01"}];
     const workoutsData = [{"month":"2025-03","total_minutes":55,"total_sets":20,"unique_exercises":7,"workouts":1},{"month":"2025-04","total_minutes":461,"total_sets":137,"unique_exercises":17,"workouts":9},{"month":"2025-05","total_minutes":222,"total_sets":81,"unique_exercises":17,"workouts":5},{"month":"2025-06","total_minutes":216,"total_sets":61,"unique_exercises":14,"workouts":3},{"month":"2025-07","total_minutes":268,"total_sets":81,"unique_exercises":15,"workouts":4},{"month":"2025-08","total_minutes":263,"total_sets":82,"unique_exercises":14,"workouts":4},{"month":"2025-09","total_minutes":259,"total_sets":79,"unique_exercises":14,"workouts":4},{"month":"2025-10","total_minutes":318,"total_sets":94,"unique_exercises":13,"workouts":5},{"month":"2025-11","total_minutes":234,"total_sets":78,"unique_exercises":13,"workouts":4},{"month":"2025-12","total_minutes":221,"total_sets":67,"unique_exercises":13,"workouts":4},{"month":"2026-01","total_minutes":97,"total_sets":34,"unique_exercises":9,"workouts":2},{"month":"2026-02","total_minutes":134,"total_sets":43,"unique_exercises":6,"workouts":3}];
+    const codeData = [{"commits":55,"month":"2012-06","repos_touched":5},{"commits":93,"month":"2012-07","repos_touched":4},{"commits":12,"month":"2012-08","repos_touched":1},{"commits":20,"month":"2012-09","repos_touched":1},{"commits":24,"month":"2012-10","repos_touched":1},{"commits":8,"month":"2012-11","repos_touched":3},{"commits":7,"month":"2012-12","repos_touched":1},{"commits":1,"month":"2013-02","repos_touched":1},{"commits":89,"month":"2014-03","repos_touched":5},{"commits":76,"month":"2014-04","repos_touched":6},{"commits":2,"month":"2014-05","repos_touched":1},{"commits":13,"month":"2014-06","repos_touched":2},{"commits":8,"month":"2014-07","repos_touched":2},{"commits":1,"month":"2014-08","repos_touched":1},{"commits":5,"month":"2014-10","repos_touched":1},{"commits":25,"month":"2014-12","repos_touched":4},{"commits":13,"month":"2015-01","repos_touched":3},{"commits":22,"month":"2015-02","repos_touched":4},{"commits":39,"month":"2015-03","repos_touched":3},{"commits":33,"month":"2015-04","repos_touched":2},{"commits":1,"month":"2015-05","repos_touched":1},{"commits":1,"month":"2019-04","repos_touched":1},{"commits":18,"month":"2019-05","repos_touched":1},{"commits":3,"month":"2020-02","repos_touched":1},{"commits":38,"month":"2025-02","repos_touched":1},{"commits":17,"month":"2025-03","repos_touched":1},{"commits":13,"month":"2025-04","repos_touched":3},{"commits":3,"month":"2025-05","repos_touched":1},{"commits":5,"month":"2025-06","repos_touched":1},{"commits":4,"month":"2025-07","repos_touched":1},{"commits":22,"month":"2025-08","repos_touched":3},{"commits":14,"month":"2025-09","repos_touched":3},{"commits":22,"month":"2025-10","repos_touched":2},{"commits":6,"month":"2025-11","repos_touched":2},{"commits":23,"month":"2025-12","repos_touched":5},{"commits":19,"month":"2026-01","repos_touched":3},{"commits":50,"month":"2026-02","repos_touched":2}];
 
     
     const isDark = () => document.documentElement.classList.contains('dark');
@@ -796,6 +795,11 @@
       } else {
         showNoData('chart-feed-changes');
       }
+
+      
+      initCharts(codeData, [
+        { id: 'chart-monthly-commits', field: 'commits', label: 'Commits' }
+      ], ['commits', 'repos_touched']);
     });
 
     

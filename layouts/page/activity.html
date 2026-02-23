@@ -95,11 +95,14 @@
       <div class="tab-content" id="content-code">
         <div class="charts-grid">
           <div class="chart-container">
-            <h3>GitHub Contributions</h3>
+            <h3>Monthly Commits</h3>
+            <canvas id="chart-monthly-commits"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Daily Contributions</h3>
             <img id="github-contrib-graph" src="https://ghchart.rshah.org/yyl" alt="GitHub contribution graph"
               style="width: 100%; border-radius: 4px;" />
           </div>
-
         </div>
       </div>
     </div>
@@ -219,6 +222,7 @@
     const podcastsData = {{ .Site.Data.activity.podcasts | jsonify | safeJS }};
     const booksData = {{ .Site.Data.activity.books | jsonify | safeJS }};
     const workoutsData = {{ .Site.Data.activity.workouts | jsonify | safeJS }};
+    const codeData = {{ .Site.Data.activity.code | jsonify | safeJS }};
 
     // Detect dark mode
     const isDark = () => document.documentElement.classList.contains('dark');
@@ -629,6 +633,11 @@
       } else {
         showNoData('chart-feed-changes');
       }
+
+      // Code charts
+      initCharts(codeData, [
+        { id: 'chart-monthly-commits', field: 'commits', label: 'Commits' }
+      ], ['commits', 'repos_touched']);
     });
 
     // Update GitHub images on dark mode toggle (avoids full page reload)
