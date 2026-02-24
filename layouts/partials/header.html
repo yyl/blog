@@ -101,5 +101,7 @@
     </nav>
     {{- end -}}<!---->
   </div>
-  <meta name="follow.it-verification-code" content="UMm5Rw2y4wyN6P6Btlkj"/>
+  {{- with site.Params.followItVerificationCode -}}
+  <meta name="follow.it-verification-code" content="{{ . }}"/>
+  {{- end -}}
 </header>
