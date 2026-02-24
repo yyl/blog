@@ -5,7 +5,8 @@ theme = 'paper'
 capitalizeListTitles = false
 
 [params]
-  rss = true 
+  rss = true
+  followItVerificationCode = "UMm5Rw2y4wyN6P6Btlkj"
 
 [menu]
   [[menu.main]]
