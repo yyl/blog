@@ -156,6 +156,9 @@
     const workoutsData = {{ .Site.Data.activity.workouts | jsonify | safeJS }};
     const codeData = {{ .Site.Data.activity.code | jsonify | safeJS }};
 
+    // Store chart instances
+    const activityCharts = [];
+
     // Detect dark mode
     const isDark = () => document.documentElement.classList.contains('dark');
 
@@ -164,13 +167,22 @@
       bar: isDark() ? 'rgba(209, 213, 219, 0.8)' : 'rgba(55, 65, 81, 0.8)',
       barHover: isDark() ? 'rgba(209, 213, 219, 1)' : 'rgba(55, 65, 81, 1)',
       grid: isDark() ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
-      text: isDark() ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'
+      text: isDark() ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)',
+      // Line charts / Secondary axis
+      line: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
+      lineBg: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
+      linePoint: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+      // Added/Removed
+      added: isDark() ? 'rgba(134, 239, 172, 0.7)' : 'rgba(34, 197, 94, 0.7)',
+      addedHover: isDark() ? 'rgba(134, 239, 172, 1)' : 'rgba(34, 197, 94, 1)',
+      removed: isDark() ? 'rgba(252, 165, 165, 0.7)' : 'rgba(239, 68, 68, 0.7)',
+      removedHover: isDark() ? 'rgba(252, 165, 165, 1)' : 'rgba(239, 68, 68, 1)'
     });
 
     // Chart defaults
     const createChart = (ctx, labels, data, label) => {
       const colors = getColors();
-      return new Chart(ctx, {
+      const chart = new Chart(ctx, {
         type: 'bar',
         data: {
           labels: labels,
@@ -206,12 +218,14 @@
           }
         }
       });
+      activityCharts.push(chart);
+      return chart;
     };
 
     // Diverging bar chart (positive + negative)
     const createDualChart = (ctx, labels, addedData, removedData) => {
       const colors = getColors();
-      return new Chart(ctx, {
+      const chart = new Chart(ctx, {
         type: 'bar',
         data: {
           labels: labels,
@@ -219,16 +233,16 @@
             {
               label: 'Added',
               data: addedData,
-              backgroundColor: isDark() ? 'rgba(134, 239, 172, 0.7)' : 'rgba(34, 197, 94, 0.7)',
-              hoverBackgroundColor: isDark() ? 'rgba(134, 239, 172, 1)' : 'rgba(34, 197, 94, 1)',
+              backgroundColor: colors.added,
+              hoverBackgroundColor: colors.addedHover,
               borderRadius: 4,
               borderSkipped: false
             },
             {
               label: 'Removed',
               data: removedData.map(v => -v),
-              backgroundColor: isDark() ? 'rgba(252, 165, 165, 0.7)' : 'rgba(239, 68, 68, 0.7)',
-              hoverBackgroundColor: isDark() ? 'rgba(252, 165, 165, 1)' : 'rgba(239, 68, 68, 1)',
+              backgroundColor: colors.removed,
+              hoverBackgroundColor: colors.removedHover,
               borderRadius: 4,
               borderSkipped: false
             }
@@ -261,6 +275,8 @@
           }
         }
       });
+      activityCharts.push(chart);
+      return chart;
     };
 
     // Format month labels as two-level: month on top, year only at year boundary
@@ -333,6 +349,59 @@
       });
     };
 
+    // Update charts in-place when theme changes
+    const updateChartsTheme = () => {
+      const colors = getColors();
+
+      activityCharts.forEach(chart => {
+        // Update Datasets
+        chart.data.datasets.forEach(dataset => {
+           if (dataset.label === 'Added') {
+              dataset.backgroundColor = colors.added;
+              dataset.hoverBackgroundColor = colors.addedHover;
+           } else if (dataset.label === 'Removed') {
+              dataset.backgroundColor = colors.removed;
+              dataset.hoverBackgroundColor = colors.removedHover;
+           } else if (['Minutes Read', 'Minutes', 'Avg Rating'].includes(dataset.label)) {
+              dataset.borderColor = colors.line;
+              dataset.backgroundColor = colors.lineBg;
+              dataset.pointBackgroundColor = colors.linePoint;
+           } else if (dataset.label === 'Unique Places') {
+              // Static red, do nothing
+           } else {
+              // Default bar
+              dataset.backgroundColor = colors.bar;
+              dataset.hoverBackgroundColor = colors.barHover;
+           }
+        });
+
+        // Update Scales
+        if (chart.options.scales) {
+            Object.keys(chart.options.scales).forEach(key => {
+               const scale = chart.options.scales[key];
+               if (scale.grid) scale.grid.color = colors.grid;
+
+               if (key === 'y1') {
+                 // Secondary axis
+                 if (scale.ticks) scale.ticks.color = colors.line;
+                 if (scale.title) scale.title.color = colors.line;
+               } else {
+                 // Main axis
+                 if (scale.ticks) scale.ticks.color = colors.text;
+                 if (scale.title) scale.title.color = colors.text;
+               }
+            });
+        }
+
+        // Update Legend
+        if (chart.options.plugins.legend && chart.options.plugins.legend.labels) {
+           chart.options.plugins.legend.labels.color = colors.text;
+        }
+
+        chart.update();
+      });
+    };
+
     // Initialize charts
     document.addEventListener('DOMContentLoaded', () => {
       // Reading combo chart (bar: total words, line: avg reading speed)
@@ -341,7 +410,7 @@
         const recentReading = completedReading.slice(-12);
         const readingLabels = formatLabels(recentReading);
         const colors = getColors();
-        new Chart(document.getElementById('chart-total-words'), {
+        const chart = new Chart(document.getElementById('chart-total-words'), {
           type: 'bar',
           data: {
             labels: readingLabels,
@@ -360,11 +429,11 @@
                 type: 'line',
                 label: 'Minutes Read',
                 data: recentReading.map(d => d.time_spent_minutes),
-                borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
-                backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
+                borderColor: colors.line,
+                backgroundColor: colors.lineBg,
                 borderWidth: 2,
                 pointRadius: 4,
-                pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                pointBackgroundColor: colors.linePoint,
                 tension: 0.3,
                 fill: false,
                 yAxisID: 'y1'
@@ -396,12 +465,13 @@
                 beginAtZero: true,
                 position: 'right',
                 grid: { drawOnChartArea: false },
-                ticks: { color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
-                title: { display: true, text: 'Minutes', color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' }
+                ticks: { color: colors.line },
+                title: { display: true, text: 'Minutes', color: colors.line }
               }
             }
           }
         });
+        activityCharts.push(chart);
       } else {
         showNoData('chart-total-words');
       }
@@ -417,7 +487,7 @@
         const recentWorkouts = completedWorkouts.slice(-12);
         const workoutLabels = formatLabels(recentWorkouts);
         const colors = getColors();
-        new Chart(document.getElementById('chart-workout-combo'), {
+        const chart = new Chart(document.getElementById('chart-workout-combo'), {
           type: 'bar',
           data: {
             labels: workoutLabels,
@@ -436,11 +506,11 @@
                 type: 'line',
                 label: 'Minutes',
                 data: recentWorkouts.map(d => d.total_minutes),
-                borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
-                backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
+                borderColor: colors.line,
+                backgroundColor: colors.lineBg,
                 borderWidth: 2,
                 pointRadius: 4,
-                pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                pointBackgroundColor: colors.linePoint,
                 tension: 0.3,
                 fill: false,
                 yAxisID: 'y1'
@@ -469,12 +539,13 @@
                 beginAtZero: true,
                 position: 'right',
                 grid: { drawOnChartArea: false },
-                ticks: { color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
-                title: { display: true, text: 'Minutes', color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' }
+                ticks: { color: colors.line },
+                title: { display: true, text: 'Minutes', color: colors.line }
               }
             }
           }
         });
+        activityCharts.push(chart);
       } else {
         showNoData('chart-workout-combo');
       }
@@ -484,7 +555,7 @@
         const recentTravel = fillMonthGaps(travelData.filter(d => d.month !== currentMonth), ['checkins', 'unique_places']).slice(-12);
         const travelLabels = formatLabels(recentTravel);
         const colors = getColors();
-        new Chart(document.getElementById('chart-travel-combo'), {
+        const chart = new Chart(document.getElementById('chart-travel-combo'), {
           type: 'bar',
           data: {
             labels: travelLabels,
@@ -539,6 +610,7 @@
             }
           }
         });
+        activityCharts.push(chart);
       } else {
         showNoData('chart-travel-combo');
       }
@@ -548,7 +620,7 @@
         const recentMovies = fillMonthGaps(moviesData.filter(d => d.month !== currentMonth), ['movies_watched', 'avg_rating']).slice(-12);
         const moviesLabels = formatLabels(recentMovies);
         const colors = getColors();
-        new Chart(document.getElementById('chart-movies-combo'), {
+        const chart = new Chart(document.getElementById('chart-movies-combo'), {
           type: 'bar',
           data: {
             labels: moviesLabels,
@@ -567,11 +639,11 @@
                 type: 'line',
                 label: 'Avg Rating',
                 data: recentMovies.map(d => d.avg_rating),
-                borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
-                backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
+                borderColor: colors.line,
+                backgroundColor: colors.lineBg,
                 borderWidth: 2,
                 pointRadius: 4,
-                pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                pointBackgroundColor: colors.linePoint,
                 tension: 0.3,
                 fill: false,
                 yAxisID: 'y1'
@@ -600,13 +672,14 @@
                 beginAtZero: true,
                 position: 'right',
                 grid: { drawOnChartArea: false },
-                ticks: { color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
-                title: { display: true, text: 'Rating', color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
+                ticks: { color: colors.line },
+                title: { display: true, text: 'Rating', color: colors.line },
                 max: 5
               }
             }
           }
         });
+        activityCharts.push(chart);
       } else {
         showNoData('chart-movies-combo');
       }
@@ -655,14 +728,14 @@
     // Set initial state
     updateGithubImages(isDark());
 
-    // Watch for dark mode changes (debounced to avoid reload loops)
+    // Watch for dark mode changes
     let lastDarkState = isDark();
     const observer = new MutationObserver(() => {
       const currentDarkState = isDark();
       if (currentDarkState !== lastDarkState) {
         lastDarkState = currentDarkState;
         updateGithubImages(currentDarkState);
-        location.reload();
+        updateChartsTheme();
       }
     });
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
