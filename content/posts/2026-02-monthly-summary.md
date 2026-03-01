@@ -1,8 +1,8 @@
 ---
 title: "What did I do this month - 02/2026 edition"
-date: 2026-02-28T19:03:11-08:00
+date: 2026-02-28T19:34:24-08:00
 draft: true
-tags: ["monthly", "digest", "automated", "readwise", "foursquare"]
+tags: ["monthly", "digest", "automated", "readwise", "foursquare", "strong", "github"]
 categories: ["Summary"]
 ---
 
@@ -21,3 +21,17 @@ categories: ["Summary"]
 
 - **Checkins**: 29 (-73% MoM, -15% YoY)
 - **Unique Places Visited**: 24 (-76% MoM, -11% YoY)
+
+
+## Workout
+
+- **Workouts**: 3 (+50% MoM, N/A YoY)
+- **Total Time**: 2h 14m (+38% MoM, N/A YoY)
+- **Unique Exercises**: 6
+- **Total Sets**: 43
+
+
+## Code
+
+- **Commits**: 83 (+337% MoM, +118% YoY)
+- **Repos Touched**: 3 (+0% MoM, +200% YoY)
