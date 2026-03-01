@@ -1,4 +1,5 @@
 /* Place custom css here. */
+@reference 'app.css';
 
 /* Section Styling */
 .activity-section {
