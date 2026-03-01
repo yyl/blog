@@ -1,7 +1,7 @@
 ---
-title: "What did I do this month - 02/2026 edition"
+title: "What did I do in 02/2026"
 date: 2026-02-28T19:34:24-08:00
-draft: true
+draft: false
 tags: ["monthly", "digest", "automated", "readwise", "foursquare", "strong", "github"]
 categories: ["Summary"]
 ---
