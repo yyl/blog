@@ -205,18 +205,6 @@
 
     // Format month labels as two-level: month on top, year only at year boundary
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const formatLabels = (dataSlice) => {
-      let lastYear = null;
-      return dataSlice.map(d => {
-        const [year, month] = d.month.split('-');
-        const monthLabel = monthNames[parseInt(month) - 1];
-        if (year !== lastYear) {
-          lastYear = year;
-          return [monthLabel, year];
-        }
-        return monthLabel;
-      });
-    };
 
     // Show "No data available yet" message for missing data
     const showNoData = (canvasId) => {
@@ -258,38 +246,70 @@
       return filled;
     };
 
-    // Safely initialize charts with data validation
-    const initCharts = (data, chartConfigs, gapFields) => {
-      if (!data || !Array.isArray(data) || data.length === 0) {
-        chartConfigs.forEach(config => showNoData(config.id));
-        return;
-      }
+    // Optimized data processing (single pass for labels and fields)
+    const processActivityData = (data, fields, gapFields) => {
+      if (!data || !Array.isArray(data) || data.length === 0) return null;
       const completed = data.filter(d => d.month !== currentMonth);
       const gapped = gapFields ? fillMonthGaps(completed, gapFields) : completed;
       const recent = gapped.slice(-12);
-      const labels = formatLabels(recent);
+
+      const labels = [];
+      const fieldData = {};
+      const fieldsLen = fields.length;
+      for (let i = 0; i < fieldsLen; i++) {
+        fieldData[fields[i]] = [];
+      }
+
+      let lastYear = null;
+      const recentLen = recent.length;
+      for (let i = 0; i < recentLen; i++) {
+        const d = recent[i];
+        // Format Labels
+        const [year, month] = d.month.split('-');
+        const monthLabel = monthNames[parseInt(month) - 1];
+        if (year !== lastYear) {
+          lastYear = year;
+          labels.push([monthLabel, year]);
+        } else {
+          labels.push(monthLabel);
+        }
+        // Extract Fields
+        for (let j = 0; j < fieldsLen; j++) {
+          const field = fields[j];
+          fieldData[field].push(d[field]);
+        }
+      }
+
+      return { labels, ...fieldData };
+    };
+
+    // Safely initialize charts with data validation
+    const initCharts = (data, chartConfigs, gapFields) => {
+      const processed = processActivityData(data, chartConfigs.map(c => c.field), gapFields);
+      if (!processed) {
+        chartConfigs.forEach(config => showNoData(config.id));
+        return;
+      }
       chartConfigs.forEach(config => {
-        createChart(document.getElementById(config.id), labels, recent.map(d => d[config.field]), config.label);
+        createChart(document.getElementById(config.id), processed.labels, processed[config.field], config.label);
       });
     };
 
     // Initialize charts
     document.addEventListener('DOMContentLoaded', () => {
       // Reading combo chart (bar: total words, line: avg reading speed)
-      if (readingData && Array.isArray(readingData) && readingData.length > 0) {
-        const completedReading = fillMonthGaps(readingData.filter(d => d.month !== currentMonth), ['total_words', 'time_spent_minutes']);
-        const recentReading = completedReading.slice(-12);
-        const readingLabels = formatLabels(recentReading);
+      const reading = processActivityData(readingData, ['total_words', 'time_spent_minutes'], ['total_words', 'time_spent_minutes']);
+      if (reading) {
         const colors = getColors();
         new Chart(document.getElementById('chart-total-words'), {
           type: 'bar',
           data: {
-            labels: readingLabels,
+            labels: reading.labels,
             datasets: [
               {
                 type: 'bar',
                 label: 'Total Words',
-                data: recentReading.map(d => d.total_words),
+                data: reading.total_words,
                 backgroundColor: colors.bar,
                 hoverBackgroundColor: colors.barHover,
                 borderRadius: 4,
@@ -299,7 +319,7 @@
               {
                 type: 'line',
                 label: 'Minutes Read',
-                data: recentReading.map(d => d.time_spent_minutes),
+                data: reading.time_spent_minutes,
                 borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
                 backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
                 borderWidth: 2,
@@ -352,20 +372,18 @@
       ], ['books_finished']);
 
       // Workout combo chart (bar + line with dual y-axes)
-      if (workoutsData && Array.isArray(workoutsData) && workoutsData.length > 0) {
-        const completedWorkouts = fillMonthGaps(workoutsData.filter(d => d.month !== currentMonth), ['workouts', 'total_minutes']);
-        const recentWorkouts = completedWorkouts.slice(-12);
-        const workoutLabels = formatLabels(recentWorkouts);
+      const workouts = processActivityData(workoutsData, ['workouts', 'total_minutes'], ['workouts', 'total_minutes']);
+      if (workouts) {
         const colors = getColors();
         new Chart(document.getElementById('chart-workout-combo'), {
           type: 'bar',
           data: {
-            labels: workoutLabels,
+            labels: workouts.labels,
             datasets: [
               {
                 type: 'bar',
                 label: 'Workouts',
-                data: recentWorkouts.map(d => d.workouts),
+                data: workouts.workouts,
                 backgroundColor: colors.bar,
                 hoverBackgroundColor: colors.barHover,
                 borderRadius: 4,
@@ -375,7 +393,7 @@
               {
                 type: 'line',
                 label: 'Minutes',
-                data: recentWorkouts.map(d => d.total_minutes),
+                data: workouts.total_minutes,
                 borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
                 backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
                 borderWidth: 2,
@@ -420,18 +438,17 @@
       }
 
       // Travel combo chart (overlaid bars)
-      if (travelData && Array.isArray(travelData) && travelData.length > 0) {
-        const recentTravel = fillMonthGaps(travelData.filter(d => d.month !== currentMonth), ['checkins', 'unique_places']).slice(-12);
-        const travelLabels = formatLabels(recentTravel);
+      const travel = processActivityData(travelData, ['checkins', 'unique_places'], ['checkins', 'unique_places']);
+      if (travel) {
         const colors = getColors();
         new Chart(document.getElementById('chart-travel-combo'), {
           type: 'bar',
           data: {
-            labels: travelLabels,
+            labels: travel.labels,
             datasets: [
               {
                 label: 'Check-ins',
-                data: recentTravel.map(d => d.checkins),
+                data: travel.checkins,
                 backgroundColor: colors.bar,
                 hoverBackgroundColor: colors.barHover,
                 borderRadius: 4,
@@ -443,7 +460,7 @@
               },
               {
                 label: 'Unique Places',
-                data: recentTravel.map(d => d.unique_places),
+                data: travel.unique_places,
                 backgroundColor: 'rgba(239, 68, 68, 0.7)',
                 hoverBackgroundColor: 'rgba(239, 68, 68, 1)',
                 borderRadius: 4,
@@ -484,19 +501,18 @@
       }
 
       // Movies combo chart (bar + line with dual y-axes)
-      if (moviesData && Array.isArray(moviesData) && moviesData.length > 0) {
-        const recentMovies = fillMonthGaps(moviesData.filter(d => d.month !== currentMonth), ['movies_watched', 'avg_rating']).slice(-12);
-        const moviesLabels = formatLabels(recentMovies);
+      const movies = processActivityData(moviesData, ['movies_watched', 'avg_rating'], ['movies_watched', 'avg_rating']);
+      if (movies) {
         const colors = getColors();
         new Chart(document.getElementById('chart-movies-combo'), {
           type: 'bar',
           data: {
-            labels: moviesLabels,
+            labels: movies.labels,
             datasets: [
               {
                 type: 'bar',
                 label: 'Movies Watched',
-                data: recentMovies.map(d => d.movies_watched),
+                data: movies.movies_watched,
                 backgroundColor: colors.bar,
                 hoverBackgroundColor: colors.barHover,
                 borderRadius: 4,
@@ -506,7 +522,7 @@
               {
                 type: 'line',
                 label: 'Avg Rating',
-                data: recentMovies.map(d => d.avg_rating),
+                data: movies.avg_rating,
                 borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
                 backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
                 borderWidth: 2,
@@ -557,14 +573,13 @@
       ], ['episodes_played', 'feeds_added', 'feeds_removed']);
 
       // Feed changes (dual chart)
-      if (podcastsData && Array.isArray(podcastsData) && podcastsData.length > 0) {
-        const recentPodcasts = fillMonthGaps(podcastsData.filter(d => d.month !== currentMonth), ['feeds_added', 'feeds_removed']).slice(-12);
-        const feedLabels = formatLabels(recentPodcasts);
+      const podcasts = processActivityData(podcastsData, ['feeds_added', 'feeds_removed'], ['feeds_added', 'feeds_removed']);
+      if (podcasts) {
         createDualChart(
           document.getElementById('chart-feed-changes'),
-          feedLabels,
-          recentPodcasts.map(d => d.feeds_added),
-          recentPodcasts.map(d => d.feeds_removed)
+          podcasts.labels,
+          podcasts.feeds_added,
+          podcasts.feeds_removed
         );
       } else {
         showNoData('chart-feed-changes');
