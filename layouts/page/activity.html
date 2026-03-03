@@ -85,6 +85,8 @@
 
   <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  {{- $js := resources.Get "js/activity-utils.js" | js.Build -}}
+  <script src="{{ $js.RelPermalink }}"></script>
 
   <script>
     // Data from Hugo
@@ -234,29 +236,6 @@
     // Exclude current (incomplete) month
     const now = new Date();
     const currentMonth = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
-
-    // Fill gaps in monthly data so missing months show as 0
-    const fillMonthGaps = (data, fields) => {
-      if (!data || data.length < 2) return data;
-      const filled = [];
-      for (let i = 0; i < data.length; i++) {
-        filled.push(data[i]);
-        if (i < data.length - 1) {
-          let [y, m] = data[i].month.split('-').map(Number);
-          const [ny, nm] = data[i + 1].month.split('-').map(Number);
-          m++;
-          if (m > 12) { m = 1; y++; }
-          while (y < ny || (y === ny && m < nm)) {
-            const entry = { month: y + '-' + String(m).padStart(2, '0') };
-            fields.forEach(f => entry[f] = 0);
-            filled.push(entry);
-            m++;
-            if (m > 12) { m = 1; y++; }
-          }
-        }
-      }
-      return filled;
-    };
 
     // Safely initialize charts with data validation
     const initCharts = (data, chartConfigs, gapFields) => {
