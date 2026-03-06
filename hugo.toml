@@ -5,7 +5,6 @@ theme = 'paper'
 capitalizeListTitles = false
 
 [params]
-  rss = true 
 
 [menu]
   [[menu.main]]
@@ -21,6 +20,6 @@ capitalizeListTitles = false
 
 [outputs]
   home = ['html']
-  section = ['html', 'rss']
+  section = ['html']
   taxonomy = ['html']
   term = ['html']
