@@ -31,6 +31,10 @@ blog/
 │       ├── header.html      # Site header partial
 │       └── footer.html      # Site footer partial
 │
+├── functions/         # Cloudflare Pages Functions (serverless API)
+│   └── api/
+│       └── reactions.js  # Like/dislike reaction counts endpoint
+│
 ├── static/            # Static assets (copied as-is to /public/)
 │
 ├── themes/
@@ -39,6 +43,7 @@ blog/
 ├── public/            # Generated site output (do not edit)
 │
 ├── hugo.toml          # Site configuration
+├── wrangler.toml      # Cloudflare Pages config (KV bindings)
 └── prompt/            # Misc prompts / notes
 ```
 
@@ -76,6 +81,40 @@ Defined in `hugo.toml` under `[menu]`:
 |-------------|--------------|
 | About       | `/about/`    |
 | My Activity | `/activity/` |
+
+### Post Reactions (Like / Dislike)
+
+Each blog post has 👍/👎 buttons that let visitors react. Counts are shared across all visitors.
+
+**Architecture:**
+
+- **Backend:** Cloudflare Pages Function at `functions/api/reactions.js`
+- **Storage:** Cloudflare KV namespace bound as `REACTIONS`
+- **Frontend:** Inline JS in `layouts/_default/single.html`, uses `localStorage` to remember each visitor's choice
+
+**API:**
+
+| Method | URL | Purpose |
+|--------|-----|--------|
+| `GET` | `/api/reactions?slug=<slug>` | Fetch current like/dislike counts |
+| `POST` | `/api/reactions` | Submit or undo a reaction |
+
+POST body: `{ slug, type: "like"|"dislike", undo?: true }`
+
+KV key format: `reactions:<slug>` → `{ likes: N, dislikes: N }`
+
+**Frontend behavior:**
+
+- On page load, fetches counts via GET and restores active state from `localStorage`
+- Clicking a button sends a POST, updates the count, and saves the choice to `localStorage`
+- Clicking the same button again toggles it off (undo)
+- Switching from like→dislike (or vice versa) undoes the old reaction first
+
+**Cloudflare KV setup:**
+
+1. Create a KV namespace named `REACTIONS` in the Cloudflare dashboard
+2. Bind it to the Pages project: Settings → Functions → KV namespace bindings → Variable name `REACTIONS`
+3. For local dev, the namespace ID goes in `wrangler.toml`; run `npx wrangler pages dev ./public`
 
 ### Theme
 

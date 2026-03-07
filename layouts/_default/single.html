@@ -26,34 +26,178 @@
   <footer class="mt-12 flex flex-wrap">
     {{- range .Params.tags -}} {{- $href := print (absURL "tags/") (urlize .)
     -}}
-    <a
-      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="{{- $href -}}"
-      >{{- . -}}</a
-    >
+    <a class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="{{- $href -}}">{{- . -}}</a>
     {{- end -}}
   </footer>
   {{- end -}}
 
+  <!-- Reactions -->
+  {{- if ne .Type "page" -}}
+  <style>
+    .reactions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 2rem;
+    }
+
+    .reaction-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.03);
+      color: inherit;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .reaction-btn:hover {
+      background: rgba(0, 0, 0, 0.07);
+    }
+
+    .reaction-btn.active {
+      border-color: rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .reaction-btn:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    .reaction-btn .emoji {
+      font-size: 1.15rem;
+    }
+
+    .reaction-btn .count {
+      font-variant-numeric: tabular-nums;
+      min-width: 1ch;
+    }
+
+    /* Dark mode */
+    :root.dark .reaction-btn {
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    :root.dark .reaction-btn:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    :root.dark .reaction-btn.active {
+      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.16);
+    }
+  </style>
+  <div class="reactions-bar not-prose" id="reactions-bar">
+    <button class="reaction-btn" id="btn-like" disabled>
+      <span class="emoji">👍</span>
+      <span class="count" id="like-count">–</span>
+    </button>
+    <button class="reaction-btn" id="btn-dislike" disabled>
+      <span class="emoji">👎</span>
+      <span class="count" id="dislike-count">–</span>
+    </button>
+  </div>
+  <script>
+    (function () {
+      const slug = '{{- .RelPermalink | urlize -}}'.replace(/^\/|\/$/g, '').replace(/\//g, '-');
+      const storageKey = 'reaction:' + slug;
+      const apiBase = '/api/reactions';
+      const btnLike = document.getElementById('btn-like');
+      const btnDislike = document.getElementById('btn-dislike');
+      const likeCount = document.getElementById('like-count');
+      const dislikeCount = document.getElementById('dislike-count');
+
+      let userReaction = localStorage.getItem(storageKey); // "like", "dislike", or null
+
+      function updateUI(likes, dislikes) {
+        likeCount.textContent = likes;
+        dislikeCount.textContent = dislikes;
+        btnLike.classList.toggle('active', userReaction === 'like');
+        btnDislike.classList.toggle('active', userReaction === 'dislike');
+        btnLike.disabled = false;
+        btnDislike.disabled = false;
+      }
+
+      // Fetch initial counts
+      fetch(apiBase + '?slug=' + encodeURIComponent(slug))
+        .then(function (r) { return r.json(); })
+        .then(function (data) { updateUI(data.likes, data.dislikes); })
+        .catch(function () { likeCount.textContent = '0'; dislikeCount.textContent = '0'; btnLike.disabled = false; btnDislike.disabled = false; });
+
+      async function submitReaction(type) {
+        btnLike.disabled = true;
+        btnDislike.disabled = true;
+
+        try {
+          let data;
+
+          if (userReaction === type) {
+            // Toggle off: undo current reaction
+            const res = await fetch(apiBase, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ slug: slug, type: type, undo: true }),
+            });
+            data = await res.json();
+            userReaction = null;
+            localStorage.removeItem(storageKey);
+          } else {
+            // Undo previous reaction first (if any)
+            if (userReaction) {
+              await fetch(apiBase, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ slug: slug, type: userReaction, undo: true }),
+              });
+            }
+            // Apply new reaction
+            const res = await fetch(apiBase, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ slug: slug, type: type }),
+            });
+            data = await res.json();
+            userReaction = type;
+            localStorage.setItem(storageKey, type);
+          }
+
+          updateUI(data.likes, data.dislikes);
+        } catch (e) {
+          console.error('Reaction error:', e);
+          btnLike.disabled = false;
+          btnDislike.disabled = false;
+        }
+      }
+
+      btnLike.addEventListener('click', function () { submitReaction('like'); });
+      btnDislike.addEventListener('click', function () { submitReaction('dislike'); });
+    })();
+  </script>
+  {{- end -}}
 
   <!-- Post Nav -->
   {{- if not site.Params.disablePostNavigation -}}<!---->
   {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}<!---->
   {{- if and (gt (len $pages) 1) (in $pages . ) -}}
   <nav
-    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
-  >
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]">
     {{- with $pages.Next . -}}
-    <a class="ltr:pr-3 rtl:pl-3" href="{{- .Permalink -}}"
-      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>{{- .Name -}}</span></a
-    >
+    <a class="ltr:pr-3 rtl:pl-3" href="{{- .Permalink -}}"><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>{{- .Name
+        -}}</span></a>
     {{- end -}}<!---->
     {{- with $pages.Prev . -}}
-    <a
-      class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
-      href="{{- .Permalink -}}"
-      ><span>{{- .Name -}}</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
-    >
+    <a class="justify-end pl-3 ltr:ml-auto rtl:mr-auto" href="{{- .Permalink -}}"><span>{{- .Name -}}</span><span
+        class="ltr:ml-1.5 rtl:mr-1.5">→</span></a>
     {{- end -}}
   </nav>
   {{- end -}}<!---->
@@ -110,11 +254,8 @@
   <!-- giscus comment -->
   {{- if and site.Params.giscus.repo (not (eq .Params.comments false)) -}}
   <div class="giscus mt-24"></div>
-  <script
-    src="https://giscus.app/client.js"
-    data-repo="{{- site.Params.giscus.repo -}}"
-    data-repo-id="{{- site.Params.giscus.repoId -}}"
-    data-category="{{- site.Params.giscus.category -}}"
+  <script src="https://giscus.app/client.js" data-repo="{{- site.Params.giscus.repo -}}"
+    data-repo-id="{{- site.Params.giscus.repoId -}}" data-category="{{- site.Params.giscus.category -}}"
     data-category-id="{{- site.Params.giscus.categoryId -}}"
     data-mapping="{{- site.Params.giscus.mapping | default (print `pathname`) -}}"
     data-strict="{{- site.Params.giscus.strict | default (print `1`) -}}"
@@ -123,10 +264,7 @@
     data-input-position="{{- site.Params.giscus.inputPosition | default (print `top`) -}}"
     data-theme="{{- site.Params.giscus.theme | default (print `light`) -}}"
     data-lang="{{- site.Params.giscus.lang | default (print `en`) -}}"
-    data-loading="{{- site.Params.giscus.loading | default (print `lazy`) -}}"
-    crossorigin="anonymous"
-    async
-  ></script>
+    data-loading="{{- site.Params.giscus.loading | default (print `lazy`) -}}" crossorigin="anonymous" async></script>
   {{- end -}}
 </article>
 

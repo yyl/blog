@@ -163,39 +163,163 @@ To solve both problems, I’ve added an interactive table to display the list of
 <p>Once the code is in, all tables on the site get converted into interactive tables that can be sorted by columns! Some tweaks on the CSS might be needed depending on the website design.</p>
 </section>
 
-  <footer class="mt-12 flex flex-wrap"><a
-      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://www.mildlyjournaling.com/tags/build"
-      >build</a
-    ><a
-      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://www.mildlyjournaling.com/tags/hugo"
-      >hugo</a
-    ><a
-      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://www.mildlyjournaling.com/tags/reading-digest-generator"
-      >reading digest generator</a
-    ><a
-      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://www.mildlyjournaling.com/tags/how-to"
-      >how-to</a
-    ><a
-      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://www.mildlyjournaling.com/tags/coding"
-      >coding</a
-    ><a
-      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://www.mildlyjournaling.com/tags/html"
-      >HTML</a
-    ></footer><nav
-    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
-  ><a class="ltr:pr-3 rtl:pl-3" href="https://www.mildlyjournaling.com/posts/2025-10-11-weekly-reading-digest/"
-      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Weekly Reading Digest - 2025-10-11 to 2025-10-18</span></a
-    ><a
-      class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
-      href="https://www.mildlyjournaling.com/posts/2025-10-04-weekly-reading-digest/"
-      ><span>Weekly Reading Digest - 2025-10-04 to 2025-10-11</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
-    ></nav></article></main>
+  <footer class="mt-12 flex flex-wrap"><a class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://www.mildlyjournaling.com/tags/build">build</a><a class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://www.mildlyjournaling.com/tags/hugo">hugo</a><a class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://www.mildlyjournaling.com/tags/reading-digest-generator">reading digest generator</a><a class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://www.mildlyjournaling.com/tags/how-to">how-to</a><a class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://www.mildlyjournaling.com/tags/coding">coding</a><a class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://www.mildlyjournaling.com/tags/html">HTML</a></footer><style>
+    .reactions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 2rem;
+    }
+
+    .reaction-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.03);
+      color: inherit;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .reaction-btn:hover {
+      background: rgba(0, 0, 0, 0.07);
+    }
+
+    .reaction-btn.active {
+      border-color: rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .reaction-btn:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    .reaction-btn .emoji {
+      font-size: 1.15rem;
+    }
+
+    .reaction-btn .count {
+      font-variant-numeric: tabular-nums;
+      min-width: 1ch;
+    }
+
+     
+    :root.dark .reaction-btn {
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    :root.dark .reaction-btn:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    :root.dark .reaction-btn.active {
+      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.16);
+    }
+  </style>
+  <div class="reactions-bar not-prose" id="reactions-bar">
+    <button class="reaction-btn" id="btn-like" disabled>
+      <span class="emoji">👍</span>
+      <span class="count" id="like-count">–</span>
+    </button>
+    <button class="reaction-btn" id="btn-dislike" disabled>
+      <span class="emoji">👎</span>
+      <span class="count" id="dislike-count">–</span>
+    </button>
+  </div>
+  <script>
+    (function () {
+      const slug = '\/posts\/make-table-in-articles-sortable\/'.replace(/^\/|\/$/g, '').replace(/\//g, '-');
+      const storageKey = 'reaction:' + slug;
+      const apiBase = '/api/reactions';
+      const btnLike = document.getElementById('btn-like');
+      const btnDislike = document.getElementById('btn-dislike');
+      const likeCount = document.getElementById('like-count');
+      const dislikeCount = document.getElementById('dislike-count');
+
+      let userReaction = localStorage.getItem(storageKey); 
+
+      function updateUI(likes, dislikes) {
+        likeCount.textContent = likes;
+        dislikeCount.textContent = dislikes;
+        btnLike.classList.toggle('active', userReaction === 'like');
+        btnDislike.classList.toggle('active', userReaction === 'dislike');
+        btnLike.disabled = false;
+        btnDislike.disabled = false;
+      }
+
+      
+      fetch(apiBase + '?slug=' + encodeURIComponent(slug))
+        .then(function (r) { return r.json(); })
+        .then(function (data) { updateUI(data.likes, data.dislikes); })
+        .catch(function () { likeCount.textContent = '0'; dislikeCount.textContent = '0'; btnLike.disabled = false; btnDislike.disabled = false; });
+
+      async function submitReaction(type) {
+        btnLike.disabled = true;
+        btnDislike.disabled = true;
+
+        try {
+          let data;
+
+          if (userReaction === type) {
+            
+            const res = await fetch(apiBase, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ slug: slug, type: type, undo: true }),
+            });
+            data = await res.json();
+            userReaction = null;
+            localStorage.removeItem(storageKey);
+          } else {
+            
+            if (userReaction) {
+              await fetch(apiBase, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ slug: slug, type: userReaction, undo: true }),
+              });
+            }
+            
+            const res = await fetch(apiBase, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ slug: slug, type: type }),
+            });
+            data = await res.json();
+            userReaction = type;
+            localStorage.setItem(storageKey, type);
+          }
+
+          updateUI(data.likes, data.dislikes);
+        } catch (e) {
+          console.error('Reaction error:', e);
+          btnLike.disabled = false;
+          btnDislike.disabled = false;
+        }
+      }
+
+      btnLike.addEventListener('click', function () { submitReaction('like'); });
+      btnDislike.addEventListener('click', function () { submitReaction('dislike'); });
+    })();
+  </script><nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"><a class="ltr:pr-3 rtl:pl-3" href="https://www.mildlyjournaling.com/posts/2025-10-11-weekly-reading-digest/"><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Weekly Reading Digest - 2025-10-11 to 2025-10-18</span></a><a class="justify-end pl-3 ltr:ml-auto rtl:mr-auto" href="https://www.mildlyjournaling.com/posts/2025-10-04-weekly-reading-digest/"><span>Weekly Reading Digest - 2025-10-04 to 2025-10-11</span><span
+        class="ltr:ml-1.5 rtl:mr-1.5">→</span></a></nav></article></main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js"></script>
 
