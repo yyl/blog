@@ -430,7 +430,8 @@
                 hoverBackgroundColor: colors.barHover,
                 borderRadius: 4,
                 borderSkipped: false,
-                yAxisID: 'y'
+                yAxisID: 'y',
+                order: 1
               },
               {
                 type: 'line',
@@ -438,18 +439,20 @@
                 data: recentReading.map(d => d.time_spent_minutes),
                 borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
                 backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
-                borderWidth: 2,
+                borderWidth: 3,
                 pointRadius: 4,
                 pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
                 tension: 0.3,
                 fill: false,
-                yAxisID: 'y1'
+                yAxisID: 'y1',
+                order: 0
               }
             ]
           },
           options: {
             responsive: true,
             maintainAspectRatio: true,
+            interaction: { mode: 'index', intersect: false },
             plugins: {
               legend: { display: true, labels: { color: colors.text } }
             },
@@ -506,7 +509,8 @@
                 hoverBackgroundColor: colors.barHover,
                 borderRadius: 4,
                 borderSkipped: false,
-                yAxisID: 'y'
+                yAxisID: 'y',
+                order: 1
               },
               {
                 type: 'line',
@@ -514,18 +518,20 @@
                 data: recentWorkouts.map(d => d.total_minutes),
                 borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
                 backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
-                borderWidth: 2,
+                borderWidth: 3,
                 pointRadius: 4,
                 pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
                 tension: 0.3,
                 fill: false,
-                yAxisID: 'y1'
+                yAxisID: 'y1',
+                order: 0
               }
             ]
           },
           options: {
             responsive: true,
             maintainAspectRatio: true,
+            interaction: { mode: 'index', intersect: false },
             plugins: {
               legend: { display: true, labels: { color: colors.text } }
             },
@@ -566,36 +572,72 @@
             labels: travelLabels,
             datasets: [
               {
+                type: 'bar',
                 label: 'Check-ins',
                 data: recentTravel.map(d => d.checkins),
                 backgroundColor: colors.bar,
                 hoverBackgroundColor: colors.barHover,
                 borderRadius: 4,
                 borderSkipped: false,
-                barPercentage: 0.8,
-                categoryPercentage: 0.7,
-                xAxisID: 'x',
-                order: 2
+                order: 1
               },
               {
+                type: 'bar',
                 label: 'Unique Places',
                 data: recentTravel.map(d => d.unique_places),
-                backgroundColor: 'rgba(239, 68, 68, 0.7)',
-                hoverBackgroundColor: 'rgba(239, 68, 68, 1)',
-                borderRadius: 4,
+                backgroundColor: 'transparent',
+                borderColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                borderWidth: { top: 3, right: 0, bottom: 0, left: 0 },
                 borderSkipped: false,
-                barPercentage: 0.8,
-                categoryPercentage: 0.7,
                 xAxisID: 'x2',
-                order: 1
+                order: 0
               }
             ]
           },
           options: {
             responsive: true,
             maintainAspectRatio: true,
+            interaction: { mode: 'index', intersect: false },
             plugins: {
-              legend: { display: true, labels: { color: colors.text } }
+              legend: {
+                display: true,
+                labels: {
+                  color: colors.text,
+                  generateLabels: (chart) => {
+                    const lineColor = isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)';
+                    return [
+                      {
+                        text: 'Check-ins',
+                        fillStyle: colors.bar,
+                        strokeStyle: colors.bar,
+                        lineWidth: 0,
+                        hidden: !chart.isDatasetVisible(0),
+                        datasetIndex: 0
+                      },
+                      {
+                        text: 'Unique Places',
+                        fillStyle: 'transparent',
+                        strokeStyle: lineColor,
+                        lineWidth: 3,
+                        hidden: !chart.isDatasetVisible(1),
+                        datasetIndex: 1
+                      }
+                    ];
+                  }
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  labelColor: (ctx) => {
+                    const ds = ctx.dataset;
+                    const isLine = ds.backgroundColor === 'transparent';
+                    return {
+                      borderColor: isLine ? ds.borderColor : ds.backgroundColor,
+                      backgroundColor: isLine ? ds.borderColor : ds.backgroundColor
+                    };
+                  }
+                }
+              }
             },
             scales: {
               x: {
@@ -637,7 +679,8 @@
                 hoverBackgroundColor: colors.barHover,
                 borderRadius: 4,
                 borderSkipped: false,
-                yAxisID: 'y'
+                yAxisID: 'y',
+                order: 1
               },
               {
                 type: 'line',
@@ -645,18 +688,20 @@
                 data: recentMovies.map(d => d.avg_rating),
                 borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
                 backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
-                borderWidth: 2,
+                borderWidth: 3,
                 pointRadius: 4,
                 pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
                 tension: 0.3,
                 fill: false,
-                yAxisID: 'y1'
+                yAxisID: 'y1',
+                order: 0
               }
             ]
           },
           options: {
             responsive: true,
             maintainAspectRatio: true,
+            interaction: { mode: 'index', intersect: false },
             plugins: {
               legend: { display: true, labels: { color: colors.text } }
             },

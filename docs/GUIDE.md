@@ -73,6 +73,25 @@ Each YAML file follows the same pattern:
   field_2: 100
 ```
 
+**Data sources → charts:**
+
+| YAML file | Section | Chart(s) | Type |
+|-----------|---------|----------|------|
+| `reading.yaml` | 📚 Reading | Articles Read (words bar + minutes line) | Combo (dual y-axis) |
+| `books.yaml` | 📚 Reading | Books Finished | Bar |
+| `travel.yaml` | 🗺️ Travel | Check-ins & Unique Places (bars + line markers) | Combo (single y-axis) |
+| `movies.yaml` | 🎬 Movies | Movies Watched & Rating (bar + line) | Combo (dual y-axis) |
+| `podcasts.yaml` | 🎧 Podcasts | Episodes Played; Feed Changes (added/removed) | Bar; Dual bar |
+| `workouts.yaml` | 🏋️ Workout | Workouts & Minutes (bar + line) | Combo (dual y-axis) |
+| `code.yaml` | 💻 Code | Monthly Commits; Lines Changed | Bar; Dual bar |
+
+**Chart rendering details (in `activity.html`):**
+
+- **`fillMonthGaps(data, fields)`** — utility that fills missing months with zeros so charts display a continuous timeline
+- **Combo charts** use Chart.js mixed types (bar + line datasets) with `order` to draw lines in front of bars
+- **Travel chart** uses a transparent bar with a top-border-only style to render Unique Places as disconnected horizontal line markers overlapping the Check-ins bars
+- **Tooltips** on all combo charts use `interaction: { mode: 'index', intersect: false }` so hovering shows all data points for that month
+
 ### Navigation
 
 Defined in `hugo.toml` under `[menu]`:
