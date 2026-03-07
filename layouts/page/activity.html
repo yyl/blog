@@ -7,6 +7,25 @@
   <!-- 📚 Reading -->
   <section class="activity-section">
     <h2>&#128218; Reading</h2>
+
+    <!-- Currently Reading -->
+    {{ with .Site.Data.activity.currently_reading }}
+    <div class="chart-container" style="margin-bottom: 2rem;">
+      <h3>Currently Reading</h3>
+      <ul class="books-list">
+        {{ range sort . "title" }}
+        <li>
+          <a href="{{ .hardcover_url }}" target="_blank" rel="noopener">{{ .title }}</a>
+          {{ with .started_at }}<span class="book-started">· started {{ div (sub now.Unix (time .).Unix) 86400 }}d
+            ago</span>{{ end }}
+          <br><span class="book-author">{{ .author }}</span>
+        </li>
+        {{ end }}
+      </ul>
+      {{ with index . 0 }}{{ with .last_updated }}<p class="books-updated">Last updated {{ . }}</p>{{ end }}{{ end }}
+    </div>
+    {{ end }}
+
     <div class="charts-grid">
       <div class="chart-container">
         <h3>Articles Read</h3>

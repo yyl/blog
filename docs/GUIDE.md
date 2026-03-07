@@ -7,6 +7,10 @@ Hugo site using the [Paper](https://github.com/nanxiaobei/hugo-paper) theme.
 
 ```
 blog/
+├── .github/
+│   └── workflows/
+│       └── sync-hardcover.yml  # Daily sync of currently-reading books
+│
 ├── archetypes/        # Templates for new content
 │   └── default.md     # Default front matter for `hugo new`
 │
@@ -30,6 +34,9 @@ blog/
 │   └── partials/
 │       ├── header.html      # Site header partial
 │       └── footer.html      # Site footer partial
+│
+├── scripts/           # Automation scripts
+│   └── fetch-hardcover.js  # Fetch currently-reading books from Hardcover API
 │
 ├── functions/         # Cloudflare Pages Functions (serverless API)
 │   └── api/
@@ -77,6 +84,7 @@ Each YAML file follows the same pattern:
 
 | YAML file | Section | Chart(s) | Type |
 |-----------|---------|----------|------|
+| `currently_reading.yaml` | 📚 Reading | Currently Reading book cards | Card list (auto-generated) |
 | `reading.yaml` | 📚 Reading | Articles Read (words bar + minutes line) | Combo (dual y-axis) |
 | `books.yaml` | 📚 Reading | Books Finished | Bar |
 | `travel.yaml` | 🗺️ Travel | Check-ins & Unique Places (bars + line markers) | Combo (single y-axis) |
@@ -134,6 +142,47 @@ KV key format: `reactions:<slug>` → `{ likes: N, dislikes: N }`
 1. Create a KV namespace named `REACTIONS` in the Cloudflare dashboard
 2. Bind it to the Pages project: Settings → Functions → KV namespace bindings → Variable name `REACTIONS`
 3. For local dev, the namespace ID goes in `wrangler.toml`; run `npx wrangler pages dev ./public`
+
+### Hardcover Integration (Currently Reading)
+
+The Activity page shows currently-reading books pulled from [Hardcover](https://hardcover.app) via their GraphQL API, displayed as a compact list inside the Reading section.
+
+**Pipeline:**
+
+1. `.github/workflows/sync-hardcover.yml` runs daily at 8 AM UTC (also manually triggerable)
+2. Calls `scripts/fetch-hardcover.js` which queries `status_id: 2` (currently reading) from Hardcover's GraphQL endpoint
+3. Writes results to `data/activity/currently_reading.yaml`
+4. Commits & pushes if data changed → triggers Cloudflare Pages rebuild
+
+**Data format** (`currently_reading.yaml`):
+
+```yaml
+- title: "Book Title"
+  author: "Author Name"
+  hardcover_url: "https://hardcover.app/books/slug"
+  started_at: "2026-01-15"        # from first_started_reading_date or date_added
+  last_updated: "2026-03-07"      # only on first entry, displayed as footer
+```
+
+**Rendering** (in `activity.html`):
+
+- Sorted alphabetically by title using Hugo's `{{ range sort . "title" }}`
+- "started Xd ago" computed at build time: `{{ div (sub now.Unix (time .).Unix) 86400 }}`
+- Wrapped in a `chart-container` for visual consistency with charts
+- "Last updated" date shown at the bottom, read from the first entry's `last_updated` field
+
+**GraphQL fields used:** `user_books.first_started_reading_date`, `date_added`, `book.title`, `book.slug`, `book.cached_contributors`
+
+**Setup:**
+
+1. Get API key from [hardcover.app/account/api](https://hardcover.app/account/api)
+2. Add as GitHub repo secret: `HARDCOVER_API_KEY`
+
+**Local testing:**
+
+```bash
+HARDCOVER_API_KEY=your_key node scripts/fetch-hardcover.js
+```
 
 ### Theme
 
