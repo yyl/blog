@@ -16,8 +16,18 @@
         {{ range sort . "title" }}
         <li>
           <a href="{{ .hardcover_url }}" target="_blank" rel="noopener">{{ .title }}</a>
-          {{ with .started_at }}<span class="book-started">· started {{ div (sub now.Unix (time .).Unix) 86400 }}d
-            ago</span>{{ end }}
+          {{ with .started_at }}
+          {{- $days := div (sub now.Unix (time .).Unix) 86400 -}}
+          <span class="book-started">· started
+            {{- if ge $days 365 -}}
+              {{ print " " (div $days 365) "y" }}
+            {{- else if ge $days 30 -}}
+              {{ print " " (div $days 30) "mo" }}
+            {{- else if ge $days 7 -}}
+              {{ print " " (div $days 7) "wk" }}
+            {{- else -}}
+              {{ print " " $days "d" }}
+            {{- end }} ago</span>{{ end }}
           <br><span class="book-author">{{ .author }}</span>
         </li>
         {{ end }}
