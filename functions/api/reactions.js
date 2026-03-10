@@ -1,13 +1,24 @@
-export async function onRequestGet(context) {
+function isValidSlug(slug) {
+    if (!slug || typeof slug !== 'string') return false;
+    if (slug.length > 100) return false;
+    // Allow alphanumeric characters and hyphens
+    const slugRegex = /^[a-z0-9-]+$/i;
+    return slugRegex.test(slug);
+}
+
+async function onRequestGet(context) {
     const { request, env } = context;
     const url = new URL(request.url);
     const slug = url.searchParams.get('slug');
 
-    if (!slug) {
-        return new Response(JSON.stringify({ error: 'Missing slug parameter' }), {
-            status: 400,
-            headers: { 'Content-Type': 'application/json' },
-        });
+    if (!isValidSlug(slug)) {
+        return new Response(
+            JSON.stringify({ error: 'Invalid or missing slug parameter (alphanumeric and hyphens only, max 100 chars)' }),
+            {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' },
+            }
+        );
     }
 
     const data = await env.REACTIONS.get(`reactions:${slug}`, 'json');
@@ -18,7 +29,7 @@ export async function onRequestGet(context) {
     });
 }
 
-export async function onRequestPost(context) {
+async function onRequestPost(context) {
     const { request, env } = context;
 
     let body;
@@ -33,9 +44,9 @@ export async function onRequestPost(context) {
 
     const { slug, type, undo } = body;
 
-    if (!slug || !['like', 'dislike'].includes(type)) {
+    if (!isValidSlug(slug) || !['like', 'dislike'].includes(type)) {
         return new Response(
-            JSON.stringify({ error: 'Invalid slug or type (must be "like" or "dislike")' }),
+            JSON.stringify({ error: 'Invalid slug or type (slug must be alphanumeric/hyphens, max 100 chars; type must be "like" or "dislike")' }),
             { status: 400, headers: { 'Content-Type': 'application/json' } }
         );
     }
@@ -65,3 +76,9 @@ export async function onRequestPost(context) {
         headers: { 'Content-Type': 'application/json' },
     });
 }
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { onRequestGet, onRequestPost };
+}
+
+export { onRequestGet, onRequestPost };
