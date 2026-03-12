@@ -1,4 +1,4 @@
-const { onRequestGet, onRequestPost } = require('../functions/api/reactions');
+const { onRequestGet, onRequestPost } = require('./_reactions_loader');
 
 // Mock for Response class if not available in the environment
 if (typeof Response === 'undefined') {
