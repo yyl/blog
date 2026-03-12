@@ -152,41 +152,36 @@
         
         <li>
           <a href="https://hardcover.app/books/adult-piano-adventures-classics-book-1" target="_blank" rel="noopener">Adult Piano Adventures - Classics, Book 1</a>
-          <span class="book-started">· started 1d
-            ago</span>
+          <span class="book-started">· started 6d ago</span>
           <br><span class="book-author">Nancy Faber</span>
         </li>
         
         <li>
           <a href="https://hardcover.app/books/apple-in-china" target="_blank" rel="noopener">Apple in China: The Capture of the World&#39;s Greatest Company</a>
-          <span class="book-started">· started 196d
-            ago</span>
-          <br><span class="book-author">Patrick McGee</span>
+          <span class="book-started">· started 6mo ago</span>
+          <br><span class="book-author">Patrick  McGee</span>
         </li>
         
         <li>
           <a href="https://hardcover.app/books/music-theory-for-dummies" target="_blank" rel="noopener">Music Theory for Dummies</a>
-          <span class="book-started">· started 238d
-            ago</span>
+          <span class="book-started">· started 8mo ago</span>
           <br><span class="book-author">Michael Pilhofer</span>
         </li>
         
         <li>
           <a href="https://hardcover.app/books/never-split-the-difference" target="_blank" rel="noopener">Never Split the Difference: Negotiating As If Your Life Depended On It</a>
-          <span class="book-started">· started 421d
-            ago</span>
+          <span class="book-started">· started 1y ago</span>
           <br><span class="book-author">Chris Voss</span>
         </li>
         
         <li>
           <a href="https://hardcover.app/books/zen-and-the-art-of-motorcycle-maintenance" target="_blank" rel="noopener">Zen and the Art of Motorcycle Maintenance: An Inquiry into Values</a>
-          <span class="book-started">· started 21d
-            ago</span>
+          <span class="book-started">· started 3wk ago</span>
           <br><span class="book-author">Robert M. Pirsig</span>
         </li>
         
       </ul>
-      <p class="books-updated">Last updated 2026-03-07</p>
+      <p class="books-updated">Last updated 2026-03-08</p>
     </div>
     
 
@@ -267,7 +262,7 @@
   </section>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script><script src="/js/activity-utils.js"></script>
 
   <script>
     
@@ -281,13 +276,14 @@
 
     
     const isDark = () => document.documentElement.classList.contains('dark');
+    const isDarkMode = isDark();
 
     
     const getColors = () => ({
-      bar: isDark() ? 'rgba(209, 213, 219, 0.8)' : 'rgba(55, 65, 81, 0.8)',
-      barHover: isDark() ? 'rgba(209, 213, 219, 1)' : 'rgba(55, 65, 81, 1)',
-      grid: isDark() ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
-      text: isDark() ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'
+      bar: isDarkMode ? 'rgba(209, 213, 219, 0.8)' : 'rgba(55, 65, 81, 0.8)',
+      barHover: isDarkMode ? 'rgba(209, 213, 219, 1)' : 'rgba(55, 65, 81, 1)',
+      grid: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+      text: isDarkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'
     });
 
     
@@ -342,16 +338,16 @@
             {
               label: 'Added',
               data: addedData,
-              backgroundColor: isDark() ? 'rgba(134, 239, 172, 0.7)' : 'rgba(34, 197, 94, 0.7)',
-              hoverBackgroundColor: isDark() ? 'rgba(134, 239, 172, 1)' : 'rgba(34, 197, 94, 1)',
+              backgroundColor: isDarkMode ? 'rgba(134, 239, 172, 0.7)' : 'rgba(34, 197, 94, 0.7)',
+              hoverBackgroundColor: isDarkMode ? 'rgba(134, 239, 172, 1)' : 'rgba(34, 197, 94, 1)',
               borderRadius: 4,
               borderSkipped: false
             },
             {
               label: 'Removed',
               data: removedData.map(v => -v),
-              backgroundColor: isDark() ? 'rgba(252, 165, 165, 0.7)' : 'rgba(239, 68, 68, 0.7)',
-              hoverBackgroundColor: isDark() ? 'rgba(252, 165, 165, 1)' : 'rgba(239, 68, 68, 1)',
+              backgroundColor: isDarkMode ? 'rgba(252, 165, 165, 0.7)' : 'rgba(239, 68, 68, 0.7)',
+              hoverBackgroundColor: isDarkMode ? 'rgba(252, 165, 165, 1)' : 'rgba(239, 68, 68, 1)',
               borderRadius: 4,
               borderSkipped: false
             }
@@ -419,29 +415,6 @@
     const currentMonth = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
 
     
-    const fillMonthGaps = (data, fields) => {
-      if (!data || data.length < 2) return data;
-      const filled = [];
-      for (let i = 0; i < data.length; i++) {
-        filled.push(data[i]);
-        if (i < data.length - 1) {
-          let [y, m] = data[i].month.split('-').map(Number);
-          const [ny, nm] = data[i + 1].month.split('-').map(Number);
-          m++;
-          if (m > 12) { m = 1; y++; }
-          while (y < ny || (y === ny && m < nm)) {
-            const entry = { month: y + '-' + String(m).padStart(2, '0') };
-            fields.forEach(f => entry[f] = 0);
-            filled.push(entry);
-            m++;
-            if (m > 12) { m = 1; y++; }
-          }
-        }
-      }
-      return filled;
-    };
-
-    
     const initCharts = (data, chartConfigs, gapFields) => {
       if (!data || !Array.isArray(data) || data.length === 0) {
         chartConfigs.forEach(config => showNoData(config.id));
@@ -484,11 +457,11 @@
                 type: 'line',
                 label: 'Minutes Read',
                 data: recentReading.map(d => d.time_spent_minutes),
-                borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
-                backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
+                borderColor: isDarkMode ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
+                backgroundColor: isDarkMode ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
                 borderWidth: 3,
                 pointRadius: 4,
-                pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                pointBackgroundColor: isDarkMode ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
                 tension: 0.3,
                 fill: false,
                 yAxisID: 'y1',
@@ -522,8 +495,8 @@
                 beginAtZero: true,
                 position: 'right',
                 grid: { drawOnChartArea: false },
-                ticks: { color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
-                title: { display: true, text: 'Minutes', color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' }
+                ticks: { color: isDarkMode ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
+                title: { display: true, text: 'Minutes', color: isDarkMode ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' }
               }
             }
           }
@@ -563,11 +536,11 @@
                 type: 'line',
                 label: 'Minutes',
                 data: recentWorkouts.map(d => d.total_minutes),
-                borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
-                backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
+                borderColor: isDarkMode ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
+                backgroundColor: isDarkMode ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
                 borderWidth: 3,
                 pointRadius: 4,
-                pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                pointBackgroundColor: isDarkMode ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
                 tension: 0.3,
                 fill: false,
                 yAxisID: 'y1',
@@ -598,8 +571,8 @@
                 beginAtZero: true,
                 position: 'right',
                 grid: { drawOnChartArea: false },
-                ticks: { color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
-                title: { display: true, text: 'Minutes', color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' }
+                ticks: { color: isDarkMode ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
+                title: { display: true, text: 'Minutes', color: isDarkMode ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' }
               }
             }
           }
@@ -633,7 +606,7 @@
                 label: 'Unique Places',
                 data: recentTravel.map(d => d.unique_places),
                 backgroundColor: 'transparent',
-                borderColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                borderColor: isDarkMode ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
                 borderWidth: { top: 3, right: 0, bottom: 0, left: 0 },
                 borderSkipped: false,
                 xAxisID: 'x2',
@@ -651,7 +624,7 @@
                 labels: {
                   color: colors.text,
                   generateLabels: (chart) => {
-                    const lineColor = isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)';
+                    const lineColor = isDarkMode ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)';
                     return [
                       {
                         text: 'Check-ins',
@@ -733,11 +706,11 @@
                 type: 'line',
                 label: 'Avg Rating',
                 data: recentMovies.map(d => d.avg_rating),
-                borderColor: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
-                backgroundColor: isDark() ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
+                borderColor: isDarkMode ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)',
+                backgroundColor: isDarkMode ? 'rgba(251, 191, 36, 0.2)' : 'rgba(217, 119, 6, 0.2)',
                 borderWidth: 3,
                 pointRadius: 4,
-                pointBackgroundColor: isDark() ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
+                pointBackgroundColor: isDarkMode ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)',
                 tension: 0.3,
                 fill: false,
                 yAxisID: 'y1',
@@ -768,8 +741,8 @@
                 beginAtZero: true,
                 position: 'right',
                 grid: { drawOnChartArea: false },
-                ticks: { color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
-                title: { display: true, text: 'Rating', color: isDark() ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
+                ticks: { color: isDarkMode ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
+                title: { display: true, text: 'Rating', color: isDarkMode ? 'rgba(251, 191, 36, 0.9)' : 'rgba(217, 119, 6, 0.9)' },
                 max: 5
               }
             }
@@ -821,10 +794,10 @@
     };
 
     
-    updateGithubImages(isDark());
+    updateGithubImages(isDarkMode);
 
     
-    let lastDarkState = isDark();
+    let lastDarkState = isDarkMode;
     const observer = new MutationObserver(() => {
       const currentDarkState = isDark();
       if (currentDarkState !== lastDarkState) {
