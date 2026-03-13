@@ -446,16 +446,6 @@
             datasets: [
               {
                 type: 'bar',
-                label: 'Check-ins',
-                data: recentTravel.map(d => d.checkins),
-                backgroundColor: colors.bar,
-                hoverBackgroundColor: colors.barHover,
-                borderRadius: 4,
-                borderSkipped: false,
-                order: 1
-              },
-              {
-                type: 'bar',
                 label: 'Unique Places',
                 data: recentTravel.map(d => d.unique_places),
                 backgroundColor: 'transparent',
@@ -464,6 +454,16 @@
                 borderSkipped: false,
                 xAxisID: 'x2',
                 order: 0
+              },
+              {
+                type: 'bar',
+                label: 'Check-ins',
+                data: recentTravel.map(d => d.checkins),
+                backgroundColor: colors.bar,
+                hoverBackgroundColor: colors.barHover,
+                borderRadius: 4,
+                borderSkipped: false,
+                order: 1
               }
             ]
           },
@@ -480,20 +480,22 @@
                     const lineColor = isDarkMode ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)';
                     return [
                       {
-                        text: 'Check-ins',
-                        fillStyle: colors.bar,
-                        strokeStyle: colors.bar,
-                        lineWidth: 0,
-                        hidden: !chart.isDatasetVisible(0),
-                        datasetIndex: 0
-                      },
-                      {
                         text: 'Unique Places',
                         fillStyle: 'transparent',
                         strokeStyle: lineColor,
                         lineWidth: 3,
+                        hidden: !chart.isDatasetVisible(0),
+                        datasetIndex: 0,
+                        fontColor: colors.text
+                      },
+                      {
+                        text: 'Check-ins',
+                        fillStyle: colors.bar,
+                        strokeStyle: colors.bar,
+                        lineWidth: 0,
                         hidden: !chart.isDatasetVisible(1),
-                        datasetIndex: 1
+                        datasetIndex: 1,
+                        fontColor: colors.text
                       }
                     ];
                   }
