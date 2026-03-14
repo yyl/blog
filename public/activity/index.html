@@ -152,7 +152,7 @@
         
         <li>
           <a href="https://hardcover.app/books/adult-piano-adventures-classics-book-1" target="_blank" rel="noopener">Adult Piano Adventures - Classics, Book 1</a>
-          <span class="book-started">· started 6d ago</span>
+          <span class="book-started">· started 1wk ago</span>
           <br><span class="book-author">Nancy Faber</span>
         </li>
         
@@ -176,7 +176,7 @@
         
         <li>
           <a href="https://hardcover.app/books/zen-and-the-art-of-motorcycle-maintenance" target="_blank" rel="noopener">Zen and the Art of Motorcycle Maintenance: An Inquiry into Values</a>
-          <span class="book-started">· started 3wk ago</span>
+          <span class="book-started">· started 4wk ago</span>
           <br><span class="book-author">Robert M. Pirsig</span>
         </li>
         
@@ -593,16 +593,6 @@
             datasets: [
               {
                 type: 'bar',
-                label: 'Check-ins',
-                data: recentTravel.map(d => d.checkins),
-                backgroundColor: colors.bar,
-                hoverBackgroundColor: colors.barHover,
-                borderRadius: 4,
-                borderSkipped: false,
-                order: 1
-              },
-              {
-                type: 'bar',
                 label: 'Unique Places',
                 data: recentTravel.map(d => d.unique_places),
                 backgroundColor: 'transparent',
@@ -611,6 +601,16 @@
                 borderSkipped: false,
                 xAxisID: 'x2',
                 order: 0
+              },
+              {
+                type: 'bar',
+                label: 'Check-ins',
+                data: recentTravel.map(d => d.checkins),
+                backgroundColor: colors.bar,
+                hoverBackgroundColor: colors.barHover,
+                borderRadius: 4,
+                borderSkipped: false,
+                order: 1
               }
             ]
           },
@@ -627,20 +627,22 @@
                     const lineColor = isDarkMode ? 'rgba(251, 191, 36, 1)' : 'rgba(217, 119, 6, 1)';
                     return [
                       {
-                        text: 'Check-ins',
-                        fillStyle: colors.bar,
-                        strokeStyle: colors.bar,
-                        lineWidth: 0,
-                        hidden: !chart.isDatasetVisible(0),
-                        datasetIndex: 0
-                      },
-                      {
                         text: 'Unique Places',
                         fillStyle: 'transparent',
                         strokeStyle: lineColor,
                         lineWidth: 3,
+                        hidden: !chart.isDatasetVisible(0),
+                        datasetIndex: 0,
+                        fontColor: colors.text
+                      },
+                      {
+                        text: 'Check-ins',
+                        fillStyle: colors.bar,
+                        strokeStyle: colors.bar,
+                        lineWidth: 0,
                         hidden: !chart.isDatasetVisible(1),
-                        datasetIndex: 1
+                        datasetIndex: 1,
+                        fontColor: colors.text
                       }
                     ];
                   }
