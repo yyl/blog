@@ -25,6 +25,7 @@ blog/
 │
 ├── layouts/           # Custom templates (override theme defaults)
 │   ├── _default/      # Default layout overrides
+│   │   ├── list.html         # Post list template (with reaction counts)
 │   │   ├── single.html      # Single post template
 │   │   ├── taxonomy.html    # Taxonomy list page
 │   │   ├── term.html        # Taxonomy term page
@@ -111,31 +112,38 @@ Defined in `hugo.toml` under `[menu]`:
 
 ### Post Reactions (Like / Dislike)
 
-Each blog post has 👍/👎 buttons that let visitors react. Counts are shared across all visitors.
+Each blog post has 👍/👎 buttons that let visitors react. Counts are shared across all visitors and also displayed on the post list page.
 
 **Architecture:**
 
 - **Backend:** Cloudflare Pages Function at `functions/api/reactions.js`
 - **Storage:** Cloudflare KV namespace bound as `REACTIONS`
-- **Frontend:** Inline JS in `layouts/_default/single.html`, uses `localStorage` to remember each visitor's choice
+- **Single post page:** Inline JS in `layouts/_default/single.html` — interactive buttons, uses `localStorage` to track visitor's choice
+- **List page:** Inline JS in `layouts/_default/list.html` — read-only counts (↑/↓) next to each post date, batch-fetched in a single API call
 
 **API:**
 
 | Method | URL | Purpose |
 |--------|-----|--------|
-| `GET` | `/api/reactions?slug=<slug>` | Fetch current like/dislike counts |
+| `GET` | `/api/reactions?slug=<slug>` | Fetch counts for a single post |
+| `GET` | `/api/reactions?slugs=a,b,c` | Batch fetch counts for multiple posts |
 | `POST` | `/api/reactions` | Submit or undo a reaction |
 
 POST body: `{ slug, type: "like"|"dislike", undo?: true }`
 
 KV key format: `reactions:<slug>` → `{ likes: N, dislikes: N }`
 
-**Frontend behavior:**
+**Frontend behavior (single post):**
 
 - On page load, fetches counts via GET and restores active state from `localStorage`
 - Clicking a button sends a POST, updates the count, and saves the choice to `localStorage`
 - Clicking the same button again toggles it off (undo)
 - Switching from like→dislike (or vice versa) undoes the old reaction first
+
+**Frontend behavior (list page):**
+
+- On page load, collects all post slugs from `data-slug` attributes and batch-fetches counts via `?slugs=`
+- Displays read-only ↑/↓ counts next to each post's date
 
 **Cloudflare KV setup:**
 

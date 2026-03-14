@@ -10,7 +10,24 @@ async function onRequestGet(context) {
     const { request, env } = context;
     const url = new URL(request.url);
     const slug = url.searchParams.get('slug');
+    const slugs = url.searchParams.get('slugs');
 
+    // Batch mode: ?slugs=slug1,slug2,slug3
+    if (slugs) {
+        const slugList = slugs.split(',').filter(isValidSlug).slice(0, 100);
+        const results = {};
+        await Promise.all(
+            slugList.map(async (s) => {
+                const data = await env.REACTIONS.get(`reactions:${s}`, 'json');
+                results[s] = data || { likes: 0, dislikes: 0 };
+            })
+        );
+        return new Response(JSON.stringify(results), {
+            headers: { 'Content-Type': 'application/json' },
+        });
+    }
+
+    // Single mode: ?slug=myslug
     if (!isValidSlug(slug)) {
         return new Response(
             JSON.stringify({ error: 'Invalid or missing slug parameter (alphanumeric and hyphens only, max 100 chars)' }),
