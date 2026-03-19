@@ -20,6 +20,6 @@ Adding it is straightforward:
 2. Find a Javascript library that makes HTML tables sortable and add it to each post
 3. Add a Javascript code snippet to each post to use the library to make the table sortable
 
-The challenge for me is to find out where to add the library. I use Hugo to generate my website. The way how Hugo sites work is that usually files under `/layouts` defines how the HTML pages look. Specifically, `/layouts/partials/footer.html` has elements that are usually placed after `</body>` tag, such as `<footer>` and Javascript code. This should be where the code lies in. [This file from my Github](https://github.com/yyl/blog/blob/main/layouts/partials/footer.html) has the code I put in for my blog.
+The challenge for me is to find out where to add the library. I use Hugo to generate my website. The way how Hugo sites work is that usually files under `/layouts` defines how the HTML pages look. Specifically, `/layouts/partials/footer.html` has elements that are usually placed after `</body>` tag, such as `<footer>` and Javascript code. This should be where the code lies in. [This file from my Github](https://github.com/yyl/compute-stuff/blob/main/layouts/partials/footer.html) has the code I put in for my blog.
 
 Once the code is in, all tables on the site get converted into interactive tables that can be sorted by columns! Some tweaks on the CSS might be needed depending on the website design.	
