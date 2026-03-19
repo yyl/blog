@@ -18,13 +18,9 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: cd tests && npm install
-
       - name: Fetch currently reading books
         env:
           HARDCOVER_API_KEY: ${{ secrets.HARDCOVER_API_KEY }}
-          NODE_PATH: tests/node_modules
         run: node scripts/fetch-hardcover.js
 
       - name: Commit and push if changed
