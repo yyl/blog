@@ -83,13 +83,11 @@ async function main() {
     console.log(`Wrote ${outPath}`);
 }
 
-// Simple YAML string escaper
+// Simple YAML string escaper using JSON.stringify for robust escaping
 function yamlStr(s) {
     if (!s) return '""';
-    if (/[:#\[\]{}&*!|>'"%@`,?]/.test(s) || s.includes('\n')) {
-        return '"' + s.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"';
-    }
-    return '"' + s + '"';
+    // JSON.stringify handles backslashes, quotes, and control characters safely
+    return JSON.stringify(String(s));
 }
 
 main().catch(err => {
