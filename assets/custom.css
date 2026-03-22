@@ -92,3 +92,110 @@
   opacity: 0.4;
   font-style: italic;
 }
+
+/* ─── Apps I Built ─── */
+.apps-intro {
+  opacity: 0.6;
+  margin: -0.5rem 0 2rem 0;
+  font-size: 0.95rem;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.app-card {
+  background: rgba(0, 0, 0, 0.025);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.dark .app-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .app-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.app-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.app-card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.app-card-desc {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  opacity: 0.65;
+  line-height: 1.5;
+}
+
+.app-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.app-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.app-link--live {
+  background: rgba(0, 0, 0, 0.05);
+  color: inherit;
+}
+
+.app-link--live:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dark .app-link--live {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dark .app-link--live:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.app-link--source {
+  background: rgba(0, 0, 0, 0.05);
+  color: inherit;
+}
+
+.app-link--source:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dark .app-link--source {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dark .app-link--source:hover {
+  background: rgba(255, 255, 255, 0.14);
+}

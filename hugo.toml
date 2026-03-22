@@ -14,8 +14,13 @@ capitalizeListTitles = false
     url = "/about/"
     weight = 10
   [[menu.main]]
+    identifier = "apps"
+    name = "Apps"
+    url = "/apps/"
+    weight = 15
+  [[menu.main]]
     identifier = "activity"
-    name = "My Activity"
+    name = "Activity"
     url = "/activity/"
     weight = 20
 
