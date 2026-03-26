@@ -1,7 +1,7 @@
 ---
 title: "Things I learned in 03/2026"
 slug: "things-i-learned-in-03-2026"
-date: 2026-03-25T21:10:04-07:00
+date: 2026-03-25T21:10:31-07:00
 draft: true
 tags: ["monthly", "digest", "automated", "readwise", "foursquare", "github"]
 categories: ["Summary"]
