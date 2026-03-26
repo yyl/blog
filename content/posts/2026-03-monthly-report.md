@@ -1,9 +1,9 @@
 ---
 title: "Things I learned in 03/2026"
 slug: "things-i-learned-in-03-2026"
-date: 2026-03-25T21:18:32-07:00
+date: 2026-03-26T05:48:50-07:00
 draft: true
-tags: ["monthly", "digest", "automated", "readwise", "foursquare", "github"]
+tags: ["monthly", "digest", "automated", "readwise", "foursquare", "letterboxd", "overcast", "strong", "github"]
 categories: ["Summary"]
 ---
 
@@ -90,13 +90,94 @@ categories: ["Summary"]
 - **Unique Places Visited**: 20 (-17% MoM, +54% YoY)
 
 
+## Movies
+
+- **Movies Watched**: 2 (+0% MoM, N/A YoY)
+- **Average Rating**: 2.00 ⭐ (-27% MoM, N/A YoY)
+- **Lowest Rating**: 2.00 ⭐
+- **Highest Rating**: 2.00 ⭐
+- **Average Years Since Release**: 1.50
+
+### Movies Watched
+- [The Substance](https://boxd.it/zanS) (2024) - 2.00 ⭐, 2026-03-20
+- [Final Destination Bloodlines](https://boxd.it/l5y4) (2025) - 2.00 ⭐, 2026-03-07
+
+
+## Podcasts
+
+- **New Feeds Subscribed**: 1
+- **Feeds Removed**: 1
+- **Episodes Played**: 44 (-20% MoM, +2100% YoY)
+
+### Episodes Listened
+- [The Bill Simmons Podcast](https://www.theringer.com/): [Luka’s Heater, Wemby’s Bid, and Stealth Winners of the NBA Season With Zach Lowe](https://overcast.fm/+b0zn6MqBc)
+- [Dithering](https://dithering.fm/): [John Ternus and Responsible Individuals](https://overcast.fm/+BCC5y4MBeA)
+- [Sharp Tech with Ben Thompson](https://sharptech.fm/): [OpenAI’s Enterprise Pivot, The Rise of Agents and Bubble Counterpoints, Nvidia Changes Its Inference Story](https://overcast.fm/+BB5hlgElCs)
+- [Stratechery](https://stratechery.com/): [Jensen Huang and Andy Grove, Groq LPUs and Vera CPUs, Hotel California](https://overcast.fm/+BB5hhS6UJI)
+- [Greatest Of All Talk (Stratechery Plus Edition)](https://goat.passport.online/): [How NOT to Miss a Free Throw, Generic Houston Rockets Slander, The Top 100 Pleasant Surprises](https://overcast.fm/+BCHyh-5gt0)
+- [The Big Picture](https://www.theringer.com/): [Our Final 2026 Oscar Predictions: Who Will Win, and Who Should Win](https://overcast.fm/+bggmhhgqc)
+- [Decoder with Nilay Patel](https://theverge.com/): [Paramount’s $110 billion Warner Bros. gamble](https://overcast.fm/+QLdv1G53Q)
+- [Sharp China with Sinocism’s Bill Bishop](https://sharpchina.fm/): [The ‘Raising a Lobster’ Frenzy; Iran and US-China as Trump’s Visit Looms; Two Sessions Takeaways](https://overcast.fm/+BC7fCete54)
+- [Dithering](https://dithering.fm/): [Jensen Huang’s Jobsian Keynote](https://overcast.fm/+BCC5wz0Le8)
+- [The Bill Simmons Podcast](https://www.theringer.com/): [The Annual Worst NBA Contracts Draft With Joe House and Wosny Lambre](https://overcast.fm/+b0zmiyrfE)
+- [Stratechery](https://stratechery.com/): [An Interview with Nvidia CEO Jensen Huang About Accelerated Computing](https://overcast.fm/+BB5hgNSviY)
+- [Greatest Of All Talk (Stratechery Plus Edition)](https://goat.passport.online/): [How to Miss a Free Throw, The Biggest Top 100 Disappointments, Expansion is Afoot (Again)](https://overcast.fm/+BCHyhAIanA)
+- [Sharp Tech with Ben Thompson](https://sharptech.fm/): [Nerding Out with the Neo, Claude and the Integration Question, The End of Coding Language History](https://overcast.fm/+BB5hmFOV1U)
+- [How I Built This with Guy Raz](https://wondery.com/shows/how-i-built-this/?utm_source=rss): [Netflix: Reed Hastings. “We’re Not a Family.” The Provocative Idea That Helped Build a Streaming Giant](https://overcast.fm/+37C7TJl2Q)
+- [Stratechery](https://stratechery.com/): [Agents Over Bubbles](https://overcast.fm/+BB5hhKoIIQ)
+- [Dithering](https://dithering.fm/): [LLM Paradigm Changes](https://overcast.fm/+BCC5xJEMNU)
+- [Greatest Of All Talk (Stratechery Plus Edition)](https://goat.passport.online/): [Spo and Bam and a Basketball Betrayal, An SGA Early Warning System, Kawhi, Luka and The Other MVP Candidate](https://overcast.fm/+BCHyhQ0jv4)
+- [The Bill Simmons Podcast](https://www.theringer.com/): [The Bam Backlash, Kawhi’s Heater, East vs. West, and SGA vs. Jokic, With Tim Legler](https://overcast.fm/+b0zm_9yOE)
+- [Dithering](https://dithering.fm/): [Designing for the Low End](https://overcast.fm/+BCC5winY8o)
+- [The Bill Simmons Podcast](https://www.theringer.com/): [An NBA Mailbag, LeBron’s Next Move, and the Wild Paramount-WBD Merger With David Jacoby and Matt Belloni](https://overcast.fm/+b0zmuRJXc)
+- [Greatest Of All Talk (Stratechery Plus Edition)](https://goat.passport.online/): [Tatum and the Team Test, The Spurs Continue to Defy Young Team Gravity, Russ Takes Aim at Kings Reporters](https://overcast.fm/+BCHygJJEUs)
+- [Sharp Tech with Ben Thompson](https://sharptech.fm/): [The Anthropic Mess Continues, Frontier AI and the Uncertain Future of Law, Q&A on Netflix, Dating Apps, F1](https://overcast.fm/+BB5hmskdLM)
+- [The Bill Simmons Podcast](https://www.theringer.com/): [Tatum’s Stunning Return, Wemby’s Big Weekend, and a 2011 MVP Deep Dive With Zach Lowe](https://overcast.fm/+b0zl-tcbs)
+- [Stratechery](https://stratechery.com/): [An Interview with Bill Gurley About Runnin' Down a Dream](https://overcast.fm/+BB5hh913o0)
+- [Greatest Of All Talk (Stratechery Plus Edition)](https://goat.passport.online/): [How High Can the Hornets Fly?, Book Club on Cavs-Pistons, Mail on Wemby, Desertion Rates, and Coach Flopping](https://overcast.fm/+BCHyiG8kY8)
+- [Stratechery](https://stratechery.com/): [Oracle Earnings, Oracle's Cloud Growth, Oracle's Software Defense](https://overcast.fm/+BB5hhTymx0)
+- [Stratechery](https://stratechery.com/): [Copilot Cowork, Anthropic's Integration, Microsoft's New Bundle](https://overcast.fm/+BB5hiyNqaE)
+- [Dithering](https://dithering.fm/): [MacBook Neo Review](https://overcast.fm/+BCC5yrgpJ8)
+- [Stratechery](https://stratechery.com/): [MacBook Neo, The (Not-So) Thin MacBook, Apple and Memory](https://overcast.fm/+BB5hiejp-U)
+- [Stratechery](https://stratechery.com/): [An Interview with Gregory Allen About Anthropic and the U.S. Government](https://overcast.fm/+BB5hicsA2U)
+- [Dithering](https://dithering.fm/): [MacBook Neo](https://overcast.fm/+BCC5x7kstQ)
+- [Sharp Tech with Ben Thompson](https://sharptech.fm/): [The Roots of a Global Memory Shortage, Thick, Thin and Apple, Shopify is Fine, Actually](https://overcast.fm/+BB5hnZt084)
+- [Decoder with Nilay Patel](https://theverge.com/): [Netflix is eating Hollywood — because it has to](https://overcast.fm/+QLduR8Jd0)
+- [Greatest Of All Talk (Stratechery Plus Edition)](https://goat.passport.online/): [An Emergency Bullseye Designation, Reviewing a Surprisingly Eventful Week, Remembering the 2011 Lockout League](https://overcast.fm/+BCHygwHlAo)
+- [The Bill Simmons Podcast](https://www.theringer.com/): [Luka’s Strange L.A. Ride, a New York Sports Drought, Lost NBA Nicknames, and a Big Mailbag With Max Kellerman](https://overcast.fm/+b0zkAIEzY)
+- [Stratechery](https://stratechery.com/): [Anthropic's Skyrocketing Revenue, A Contract Compromise?, Nvidia Earnings](https://overcast.fm/+BB5hiJKwOo)
+- [Dithering](https://dithering.fm/): [Anthropic and the U.S. Government](https://overcast.fm/+BCC5xddNMY)
+- [Greatest Of All Talk (Stratechery Plus Edition)](https://goat.passport.online/): [Stock Picks on the Way into the Playoffs, Giannis at a Crossroads, Wolves Against the World](https://overcast.fm/+BCHyjAosU8)
+- [Stratechery](https://stratechery.com/): [Technological Scale and Government Control, Paramount Outbids Netflix for Warner Bros.](https://overcast.fm/+BB5hirWYdM)
+- [Sharp Tech with Ben Thompson](https://sharptech.fm/): [The Futures for Cursor and Perplexity, Multi Modality Dreams and Apple Possibilities, Normies Contemplate an AI Future](https://overcast.fm/+BB5hkrRK3M)
+- [Stratechery](https://stratechery.com/): [Anthropic and Alignment](https://overcast.fm/+BB5hgurYIw)
+- [Greatest Of All Talk (Stratechery Plus Edition)](https://goat.passport.online/): [Ominous Signs for the Bucks, Week One Panic Levels Around the League, Two Emails from Nuggets Fans](https://overcast.fm/+BCHyjQW7j0)
+- [Greatest Of All Talk (Stratechery Plus Edition)](https://goat.passport.online/): [Summer Top Fives: Christmas Games and Airports](https://overcast.fm/+BCHyhJHmgs)
+- [Decoder with Nilay Patel](https://theverge.com/): [Inside Xbox’s executive shakeup](https://overcast.fm/+QLdvMqQE4)
+
+
+## Workout
+
+- **Workouts**: 2 (-60% MoM, +100% YoY)
+- **Total Time**: 1h 58m (-52% MoM, +114% YoY)
+- **Unique Exercises**: 7
+- **Total Sets**: 41
+
+
 ## Code
 
-- **Commits**: 57 (-31% MoM, +235% YoY)
+- **Commits**: 59 (-29% MoM, +247% YoY)
 - **Repos Touched**: 5 (+67% MoM, +400% YoY)
 
 ### Commits by Repo
+#### [yyl/digital-footprint-dump](https://github.com/yyl/digital-footprint-dump)
+- Add detailed monthly report content and rename report draft
+- update README.md
+- fix tests
+- update publish to include rest stats
+- Rename github username
 #### [yyl/compute-stuff](https://github.com/yyl/compute-stuff)
+- feat: Add monthly report draft for 03/2026
 - feat: Add monthly report draft for 03/2026
 - feat: Add monthly report draft for 03/2026
 - new page apps;rename activity page
@@ -126,8 +207,3 @@ categories: ["Summary"]
 #### [yyl/ai-tools](https://github.com/yyl/ai-tools)
 - repo stat tool
 - use uv instead
-#### [yyl/digital-footprint-dump](https://github.com/yyl/digital-footprint-dump)
-- update README.md
-- fix tests
-- update publish to include rest stats
-- Rename github username
