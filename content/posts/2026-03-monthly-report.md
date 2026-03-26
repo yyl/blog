@@ -1,7 +1,7 @@
 ---
 title: "Things I learned in 03/2026"
 slug: "things-i-learned-in-03-2026"
-date: 2026-03-25T21:10:31-07:00
+date: 2026-03-25T21:18:32-07:00
 draft: true
 tags: ["monthly", "digest", "automated", "readwise", "foursquare", "github"]
 categories: ["Summary"]
@@ -92,63 +92,33 @@ categories: ["Summary"]
 
 ## Code
 
-- **Commits**: 55 (-34% MoM, +224% YoY)
+- **Commits**: 57 (-31% MoM, +235% YoY)
 - **Repos Touched**: 5 (+67% MoM, +400% YoY)
 
 ### Commits by Repo
-#### [yyl/digital-footprint-dump](https://github.com/yyl/digital-footprint-dump)
-- Merge pull request #42 from yyl/testing-improvement-github-api-client-12527738348293422477
-- Merge pull request #41 from yyl/cleanup-readwise-imports-14005771724611464445
-- Merge pull request #40 from yyl/testing-improvement-readwise-sync-documents-3057552462441538417
-- Merge pull request #39 from yyl/perf-letterboxd-batch-upsert-15701286339336853832
-- Merge pull request #32 from yyl/fix-foursquare-token-permissions-7614255769426778083
-- Merge pull request #33 from yyl/fix-foursquare-redirect-uri-vulnerability-11859104242298305325
-- Merge pull request #36 from yyl/fix/unused-import-github-client-17022232562482750072
-- Merge pull request #35 from yyl/security/fix-readwise-sql-injection-997354309995928044
-- Merge pull request #34 from yyl/perf-optimize-readwise-tag-sync-12292598368080014412
-- update README.md
-- fix tests
-- Merge pull request #19 from yyl/refactor-publisher-analysis-fetch-1697200672633792374
-- Merge pull request #10 from yyl/refactor/letterboxd-database-connection-12305952257031431961
-- Merge pull request #26 from yyl/test-config-github-activity-951974665924470322
-- Merge pull request #20 from yyl/refactor-overcast-importer-10336438515440083206
-- update publish to include rest stats
-- Rename github username
 #### [yyl/compute-stuff](https://github.com/yyl/compute-stuff)
-- Merge pull request #19 from yyl/fix-insecure-yaml-generation-5738817887069903553
+- feat: Add monthly report draft for 03/2026
+- feat: Add monthly report draft for 03/2026
 - new page apps;rename activity page
 - update url
 - readme
 - new post: anyblog v1
 - reactions on posts page
 - chart fix
-- Merge pull request #18 from yyl/fix-travel-chart-legend-17291758705935228314
 - new post
-- Merge pull request #17 from yyl/perf-optimize-activity-charts-12187544799225107736
-- Merge pull request #16 from yyl/security-fix-slug-validation-1279887178196995261
-- Merge pull request #14 from yyl/jules-weekly-sync-hardcover-1602869275119878029
-- Merge pull request #15 from yyl/feat/dynamic-currently-reading-date-7394871238909421193
 - add Currently reading section and github action
-- Merge pull request #13 from yyl/activity-utils-tests-10527503417229310896
 - refine activity charts: combo chart styling, gap filling, index tooltips
 - readd rss
 - add likes and dislikes per post
 - Remove rss
 - remove newsletter for now
-- Merge pull request #11 from yyl/security-fix-reverse-tabnabbing-8390991582322625342
 - Update title and publish status for February summary
-- Merge pull request #10 from yyl/jules-extract-activity-css-17362448269136450949
 - Update assets/custom.css
 - data: Update activity data files
 - feat: Add monthly summary draft for 02/2026
 - feat: Add monthly summary draft for 02/2026
 #### [yyl/anyblog](https://github.com/yyl/anyblog)
 - better footer
-- Merge pull request #6 from yyl/update-website-title-6080044846801466774
-- Merge pull request #3 from yyl/security-fix-domain-validation-16843165191349879383
-- Merge pull request #5 from yyl/fix-footer-position-16571178655865990369
-- Merge pull request #4 from yyl/fix-inaccurate-jsdoc-domains-14790670430707280193
-- Merge pull request #1 from yyl/add-submit-blog-link-17807431851421379892
 - init
 #### [yyl/utilities](https://github.com/yyl/utilities)
 - add github repo stat script
@@ -156,3 +126,8 @@ categories: ["Summary"]
 #### [yyl/ai-tools](https://github.com/yyl/ai-tools)
 - repo stat tool
 - use uv instead
+#### [yyl/digital-footprint-dump](https://github.com/yyl/digital-footprint-dump)
+- update README.md
+- fix tests
+- update publish to include rest stats
+- Rename github username
