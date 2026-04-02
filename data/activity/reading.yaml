@@ -100,10 +100,19 @@
 
 - month: "2026-02"
   articles_archived: 35
-  total_words: 79582
+  total_words: 79639
   time_spent_minutes: 256
   avg_reading_speed: 311
   max_words_per_article: 16687
   median_words_per_article: 1522
-  min_words_per_article: 155
+  min_words_per_article: 153
+
+- month: "2026-03"
+  articles_archived: 58
+  total_words: 115905
+  time_spent_minutes: 467
+  avg_reading_speed: 248
+  max_words_per_article: 12756
+  median_words_per_article: 1596
+  min_words_per_article: 109
 

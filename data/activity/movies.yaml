@@ -27,3 +27,11 @@
   movies_watched: 1.00
   avg_rating: 4.50
 
+- month: "2026-02"
+  movies_watched: 2.00
+  avg_rating: 2.75
+
+- month: "2026-03"
+  movies_watched: 2.00
+  avg_rating: 2.00
+

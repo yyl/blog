@@ -716,6 +716,6 @@
   unique_places: 24
 
 - month: "2026-03"
-  checkins: 1
-  unique_places: 1
+  checkins: 30
+  unique_places: 25
 

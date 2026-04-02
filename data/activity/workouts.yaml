@@ -66,8 +66,14 @@
   total_sets: 34
 
 - month: "2026-02"
+  workouts: 5
+  total_minutes: 246
+  unique_exercises: 7
+  total_sets: 82
+
+- month: "2026-03"
   workouts: 3
-  total_minutes: 134
-  unique_exercises: 6
-  total_sets: 43
+  total_minutes: 219
+  unique_exercises: 7
+  total_sets: 61
 
