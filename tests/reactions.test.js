@@ -1,18 +1,19 @@
 const { onRequestGet, onRequestPost } = require('./_reactions_loader');
 
 // Mock for Response class if not available in the environment
-if (typeof Response === 'undefined') {
-    global.Response = class {
-        constructor(body, init) {
-            this.body = body;
-            this.init = init;
-            this.status = init && init.status ? init.status : 200;
-        }
-        async json() {
-            return JSON.parse(this.body);
-        }
-    };
-}
+global.Response = class {
+    constructor(body, init) {
+        this.body = body;
+        this.init = init;
+        this.status = init && init.status ? init.status : 200;
+        this.headers = {
+            get: (name) => this.init && this.init.headers ? this.init.headers[name] : null
+        };
+    }
+    async json() {
+        return JSON.parse(this.body);
+    }
+};
 
 describe('Reactions API Validation', () => {
     let mockEnv;
@@ -56,6 +57,25 @@ describe('Reactions API Validation', () => {
             };
             const response = await onRequestGet(mockContext);
             expect(response.status).toBe(400);
+        });
+
+        test('should include security headers in response', async () => {
+            mockContext = {
+                request: { url: 'https://example.com/api/reactions?slug=test-slug' },
+                env: mockEnv,
+            };
+            mockEnv.REACTIONS.get.mockResolvedValue({ likes: 5, dislikes: 2 });
+            const response = await onRequestGet(mockContext);
+            expect(response.status).toBe(200);
+
+            expect(response.init.headers).toMatchObject({
+                'X-Content-Type-Options': 'nosniff',
+                'X-Frame-Options': 'DENY',
+                'Content-Security-Policy': "default-src 'none'; frame-ancestors 'none';",
+                'Referrer-Policy': 'no-referrer',
+                'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+                'Content-Type': 'application/json'
+            });
         });
     });
 

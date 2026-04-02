@@ -1,3 +1,11 @@
+const SECURITY_HEADERS = {
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'Content-Security-Policy': "default-src 'none'; frame-ancestors 'none';",
+    'Referrer-Policy': 'no-referrer',
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+};
+
 function isValidSlug(slug) {
     if (!slug || typeof slug !== 'string') return false;
     if (slug.length > 100) return false;
@@ -23,7 +31,10 @@ async function onRequestGet(context) {
             })
         );
         return new Response(JSON.stringify(results), {
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                ...SECURITY_HEADERS,
+                'Content-Type': 'application/json',
+            },
         });
     }
 
@@ -33,7 +44,10 @@ async function onRequestGet(context) {
             JSON.stringify({ error: 'Invalid or missing slug parameter (alphanumeric and hyphens only, max 100 chars)' }),
             {
                 status: 400,
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    ...SECURITY_HEADERS,
+                    'Content-Type': 'application/json',
+                },
             }
         );
     }
@@ -42,7 +56,10 @@ async function onRequestGet(context) {
     const reactions = data || { likes: 0, dislikes: 0 };
 
     return new Response(JSON.stringify(reactions), {
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+            ...SECURITY_HEADERS,
+            'Content-Type': 'application/json',
+        },
     });
 }
 
@@ -55,7 +72,10 @@ async function onRequestPost(context) {
     } catch {
         return new Response(JSON.stringify({ error: 'Invalid JSON body' }), {
             status: 400,
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                ...SECURITY_HEADERS,
+                'Content-Type': 'application/json',
+            },
         });
     }
 
@@ -64,7 +84,13 @@ async function onRequestPost(context) {
     if (!isValidSlug(slug) || !['like', 'dislike'].includes(type)) {
         return new Response(
             JSON.stringify({ error: 'Invalid slug or type (slug must be alphanumeric/hyphens, max 100 chars; type must be "like" or "dislike")' }),
-            { status: 400, headers: { 'Content-Type': 'application/json' } }
+            {
+                status: 400,
+                headers: {
+                    ...SECURITY_HEADERS,
+                    'Content-Type': 'application/json',
+                },
+            }
         );
     }
 
@@ -90,7 +116,10 @@ async function onRequestPost(context) {
     await env.REACTIONS.put(key, JSON.stringify(reactions));
 
     return new Response(JSON.stringify(reactions), {
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+            ...SECURITY_HEADERS,
+            'Content-Type': 'application/json',
+        },
     });
 }
 
