@@ -1,7 +1,7 @@
 ---
 title: "Things I learned in 03/2026"
 slug: "things-i-learned-in-03-2026"
-date: 2026-03-26T06:56:43-07:00
+date: 2026-04-01T19:26:20-07:00
 draft: true
 tags: ["monthly", "digest", "automated", "readwise", "foursquare", "letterboxd", "overcast", "strong", "github"]
 categories: ["Summary"]
@@ -9,110 +9,124 @@ categories: ["Summary"]
 
 ## Reading
 
-- **Articles Archived**: 55 (+57% MoM, N/A YoY)
-- **Total Words Read**: 111,506 (+40% MoM, N/A YoY)
-- **Time Spent Reading**: 7h 29m (+75% MoM, N/A YoY)
+- **Articles Archived**: 58 (+66% MoM, N/A YoY)
+- **Total Words Read**: 115,905 (+46% MoM, N/A YoY)
+- **Time Spent Reading**: 7h 47m (+82% MoM, N/A YoY)
 - **Average Reading Speed**: 248 words/min (-20% MoM, N/A YoY)
 - **Max Words (single article)**: 12,756
-- **Median Words (per article)**: 1,621
+- **Median Words (per article)**: 1,596
 - **Min Words (single article)**: 109
 
 ### Articles Read
 #### chartr.co
 
-| Date | Article |
-| --- | --- |
-| 2026-03-25 | [Slowing Coach](mailto:reader-forwarded-email/7e953d2bb97d845cfa5e9d77e51ae1aa) |
-| 2026-03-20 | [New Dollywood](mailto:reader-forwarded-email/17e41c2520e119a38f04eb57e7353a7d) |
-| 2026-03-19 | [Trust The Process](mailto:reader-forwarded-email/ffa6c189face3c854728f034c4c5dbc8) |
-| 2026-03-10 | [Keep Carmen, Carry On](mailto:reader-forwarded-email/110ddffbe27552a741e5b7897fb20111) |
-| 2026-03-09 | [All By Myself](mailto:reader-forwarded-email/1ab134cfa273c8adb5366175538fe9c6) |
-| 2026-03-05 | [Love Is An Opendoor](mailto:reader-forwarded-email/b9df69373b2a63084ab24150db4990e7) |
-| 2026-03-03 | [Some Novel Findings](mailto:reader-forwarded-email/390d3592838f1ad267e22ae2d9bde5d5) |
-| 2026-03-02 | [Learning Machines](mailto:reader-forwarded-email/e3b944e635c8365015be76b8afad094b) |
+| Date | Article | Speed |
+| --- | --- | --- |
+| 2026-03-27 | [Direction To Consumer](mailto:reader-forwarded-email/faa063148946b3fee9c7d6b73a74743b) | 238 wpm |
+| 2026-03-25 | [Slowing Coach](mailto:reader-forwarded-email/7e953d2bb97d845cfa5e9d77e51ae1aa) | 250 wpm |
+| 2026-03-20 | [New Dollywood](mailto:reader-forwarded-email/17e41c2520e119a38f04eb57e7353a7d) | 262 wpm |
+| 2026-03-19 | [Trust The Process](mailto:reader-forwarded-email/ffa6c189face3c854728f034c4c5dbc8) | 234 wpm |
+| 2026-03-10 | [Keep Carmen, Carry On](mailto:reader-forwarded-email/110ddffbe27552a741e5b7897fb20111) | 250 wpm |
+| 2026-03-09 | [All By Myself](mailto:reader-forwarded-email/1ab134cfa273c8adb5366175538fe9c6) | 254 wpm |
+| 2026-03-05 | [Love Is An Opendoor](mailto:reader-forwarded-email/b9df69373b2a63084ab24150db4990e7) | 233 wpm |
+| 2026-03-03 | [Some Novel Findings](mailto:reader-forwarded-email/390d3592838f1ad267e22ae2d9bde5d5) | 237 wpm |
+| 2026-03-02 | [Learning Machines](mailto:reader-forwarded-email/e3b944e635c8365015be76b8afad094b) | 259 wpm |
 #### Daring Fireball
 
-| Date | Article |
-| --- | --- |
-| 2026-03-14 | [The Website Hacker News Is Afraid to Discuss (You’re Reading It)](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss) |
-| 2026-03-10 | [The iPhone 17e](https://daringfireball.net/2026/03/the_iphone_17e) |
-| 2026-03-10 | [Thoughts and Observations on the MacBook Neo](https://daringfireball.net/2026/03/599_not_a_piece_of_junk_macbook_neo) |
+| Date | Article | Speed |
+| --- | --- | --- |
+| 2026-03-14 | [The Website Hacker News Is Afraid to Discuss (You’re Reading It)](https://daringfireball.net/2025/03/the_website_hacker_news_is_afraid_to_discuss) | 237 wpm |
+| 2026-03-10 | [The iPhone 17e](https://daringfireball.net/2026/03/the_iphone_17e) | 248 wpm |
+| 2026-03-10 | [Thoughts and Observations on the MacBook Neo](https://daringfireball.net/2026/03/599_not_a_piece_of_junk_macbook_neo) | 260 wpm |
 #### emgoto.com
 
-| Date | Article |
-| --- | --- |
-| 2026-03-14 | [Flipper's Shinjuku: Souffle pancakes](https://www.emgoto.com/flippers-pancakes-shinjuku/) |
-| 2026-03-06 | [2025 in review: a good year](https://www.emgoto.com/review-2025/) |
-| 2026-03-05 | [Four years on a 4-day workweek](https://www.emgoto.com/four-day-work-week/) |
+| Date | Article | Speed |
+| --- | --- | --- |
+| 2026-03-14 | [Flipper's Shinjuku: Souffle pancakes](https://www.emgoto.com/flippers-pancakes-shinjuku/) | 197 wpm |
+| 2026-03-06 | [2025 in review: a good year](https://www.emgoto.com/review-2025/) | 251 wpm |
+| 2026-03-05 | [Four years on a 4-day workweek](https://www.emgoto.com/four-day-work-week/) | 250 wpm |
 #### Stratechery by Ben Thompson
 
-| Date | Article |
-| --- | --- |
-| 2026-03-24 | [Agents Over Bubbles (Stratechery Article 3-16-2026)](mailto:reader-forwarded-email/e5507ae1d98222c358953477cfff51b3) |
-| 2026-03-21 | [Please Listen to My Podcast (This Week in Stratechery)](mailto:reader-forwarded-email/8f8ec4719965a6778adebd6232fe293c) |
-| 2026-03-20 | [Oracle Earnings, Oracle’s Cloud Growth, Oracle’s Software Defense (Stratechery Update 3-11-2026)](mailto:reader-forwarded-email/2d0af9226cd32a53aa20853fc0b5179c) |
-| 2026-03-18 | [Copilot Cowork, Anthropic’s Integration, Microsoft’s New Bundle (Stratechery Update 3-10-2026)](mailto:reader-forwarded-email/c56bef18b26d142aaf3b148020399ced) |
-| 2026-03-16 | [Winners, Losers, and the Unknown (This Week in Stratechery)](mailto:reader-forwarded-email/320464f69327cdbe2af4a4647338d05f) |
-| 2026-03-16 | [Anthropic’s Skyrocketing Revenue, A Contract Compromise?, Nvidia Earnings (Stratechery Update 3-4-2026)](mailto:reader-forwarded-email/8167f66120bd0e0276eaceff692799bf) |
-| 2026-03-13 | [An Interview with Gregory Allen About Anthropic and the U.S. Government (Stratechery Interview 3-5-2026)](mailto:reader-forwarded-email/8f86c999084f6442ae79deb6f7b3011a) |
-| 2026-03-10 | [MacBook Neo, The (Not-So) Thin MacBook, Apple and Memory (Stratechery Update 3-9-2026)](mailto:reader-forwarded-email/a9e7c34c7b41c05e2190d0a95bfaacaf) |
-| 2026-03-09 | [Higher Powers and Lower Macs (This Week in Stratechery)](mailto:reader-forwarded-email/c30e165d6051735dc1b6f13f32591077) |
-| 2026-03-06 | [Losing in the Attention Economy (This Week in Stratechery)](mailto:reader-forwarded-email/4e08c58ad484dba593001ec30448aaa7) |
-| 2026-03-04 | [Technological Scale and Government Control, Paramount Outbids Netflix for Warner Bros. (Stratechery Update 3-3-2026)](mailto:reader-forwarded-email/768a1ac5c78196f3cc612b9c323cbe47) |
-| 2026-03-04 | [Anthropic and Alignment (Stratechery Article 3-2-2026)](mailto:reader-forwarded-email/5c06fa32dd3988fe63de7a116e2734b2) |
-| 2026-03-03 | [Grantland and the (Surprising) Future of Publishing](https://stratechery.com/2015/grantland-and-the-surprising-future-of-publishing/) |
-| 2026-03-03 | [An Interview with The Ringer Founder and CEO Bill Simmons](https://stratechery.com/2023/an-interview-with-the-ringer-founder-and-ceo-bill-simmons/) |
+| Date | Article | Speed |
+| --- | --- | --- |
+| 2026-03-29 | [So Long to Sora (This Week in Stratechery)](mailto:reader-forwarded-email/826b83ba5053dbe52a2027916ab767cf) | 228 wpm |
+| 2026-03-24 | [Agents Over Bubbles (Stratechery Article 3-16-2026)](mailto:reader-forwarded-email/e5507ae1d98222c358953477cfff51b3) | 257 wpm |
+| 2026-03-21 | [Please Listen to My Podcast (This Week in Stratechery)](mailto:reader-forwarded-email/8f8ec4719965a6778adebd6232fe293c) | 202 wpm |
+| 2026-03-20 | [Oracle Earnings, Oracle’s Cloud Growth, Oracle’s Software Defense (Stratechery Update 3-11-2026)](mailto:reader-forwarded-email/2d0af9226cd32a53aa20853fc0b5179c) | 251 wpm |
+| 2026-03-18 | [Copilot Cowork, Anthropic’s Integration, Microsoft’s New Bundle (Stratechery Update 3-10-2026)](mailto:reader-forwarded-email/c56bef18b26d142aaf3b148020399ced) | 236 wpm |
+| 2026-03-16 | [Winners, Losers, and the Unknown (This Week in Stratechery)](mailto:reader-forwarded-email/320464f69327cdbe2af4a4647338d05f) | 202 wpm |
+| 2026-03-16 | [Anthropic’s Skyrocketing Revenue, A Contract Compromise?, Nvidia Earnings (Stratechery Update 3-4-2026)](mailto:reader-forwarded-email/8167f66120bd0e0276eaceff692799bf) | 260 wpm |
+| 2026-03-13 | [An Interview with Gregory Allen About Anthropic and the U.S. Government (Stratechery Interview 3-5-2026)](mailto:reader-forwarded-email/8f86c999084f6442ae79deb6f7b3011a) | 260 wpm |
+| 2026-03-10 | [MacBook Neo, The (Not-So) Thin MacBook, Apple and Memory (Stratechery Update 3-9-2026)](mailto:reader-forwarded-email/a9e7c34c7b41c05e2190d0a95bfaacaf) | 236 wpm |
+| 2026-03-09 | [Higher Powers and Lower Macs (This Week in Stratechery)](mailto:reader-forwarded-email/c30e165d6051735dc1b6f13f32591077) | 253 wpm |
+| 2026-03-06 | [Losing in the Attention Economy (This Week in Stratechery)](mailto:reader-forwarded-email/4e08c58ad484dba593001ec30448aaa7) | 240 wpm |
+| 2026-03-04 | [Technological Scale and Government Control, Paramount Outbids Netflix for Warner Bros. (Stratechery Update 3-3-2026)](mailto:reader-forwarded-email/768a1ac5c78196f3cc612b9c323cbe47) | 251 wpm |
+| 2026-03-04 | [Anthropic and Alignment (Stratechery Article 3-2-2026)](mailto:reader-forwarded-email/5c06fa32dd3988fe63de7a116e2734b2) | 263 wpm |
+| 2026-03-03 | [Grantland and the (Surprising) Future of Publishing](https://stratechery.com/2015/grantland-and-the-surprising-future-of-publishing/) | 263 wpm |
+| 2026-03-03 | [An Interview with The Ringer Founder and CEO Bill Simmons](https://stratechery.com/2023/an-interview-with-the-ringer-founder-and-ceo-bill-simmons/) | 262 wpm |
 #### Other
 
-| Date | Article | Source |
-| --- | --- | --- |
-| 2026-03-25 | [How did Anthropic do it?](https://ramp.com/velocity/ai-index-march-2026) | Ramp |
-| 2026-03-25 | [Benedict's Newsletter: No. 635](mailto:reader-forwarded-email/e5cc544934f7734f27db1d8e2fe8c9f0) |  |
-| 2026-03-23 | [The most brilliant move in corporate history?](https://asymco.com/2026/03/10/the-most-brilliant-move-in-corporate-history/) | Asymco |
-| 2026-03-23 | [🟦 I have some questions](mailto:reader-forwarded-email/b37e9730437b41b54328be253b3435d3) | Not-Ship |
-| 2026-03-23 | [I vibe coded my dream macOS presentation app](https://simonwillison.net/2026/Feb/25/present/) | simonwillison.net |
-| 2026-03-21 | [2025, A Retrospective](https://www.wheresyoured.at/2025-a-retrospective/) | wheresyoured.at |
-| 2026-03-21 | [Grammarly Is Facing a Class Action Lawsuit Over Its AI ‘Expert Review’ Feature](https://www.wired.com/story/grammarly-is-facing-a-class-action-lawsuit-over-its-ai-expert-review-feature/) | WIRED |
-| 2026-03-20 | [239. Mac Neo and my afternoon of reflection and melancholy](https://hardcoresoftware.learningbyshipping.com/p/239-mac-neo-and-my-afternoon-of-reflection) | learningbyshipping.com |
-| 2026-03-18 | [Benedict's Newsletter: No. 634](mailto:reader-forwarded-email/a77943f9472699323ecb576ae4789fdd) |  |
-| 2026-03-16 | [So, I Wrote a Book](https://www.thecoder.cafe/p/100-go-mistakes) | thecoder.cafe |
-| 2026-03-14 | [Why read novels?](https://dynomight.net/novels/) | DYNOMIGHT |
-| 2026-03-14 | [90% of My Skills Are Now Worth $0 - by Kent Beck 90% of My Skills Are Now Worth $0](https://tidyfirst.substack.com/p/90-of-my-skills-are-now-worth-0) | substack.com |
-| 2026-03-14 | [失败者卢安克](https://mp.weixin.qq.com/s/mCmb7SDSrNHpNlOx1yhOkg) | Weixin Official Accounts Platform |
-| 2026-03-14 | [Programming With Chronic Pain](https://thomasvogelaar.me/posts/programming-with-chronic-pain/) | thomasvogelaar.me |
-| 2026-03-14 | [Slopware](https://thomasvogelaar.me/posts/slopware/) | thomasvogelaar.me |
-| 2026-03-14 | [My Eighth Year as a Bootstrapped Founder](https://mtlynch.io/bootstrapped-founder-year-8/) | mtlynch.io |
-| 2026-03-14 | [My Book's Pre-Sale Just Barely Succeeded](https://mtlynch.io/book-pre-sale-just-barely-succeeded/) | mtlynch.io |
-| 2026-03-12 | [Apple Does Fusion.](https://om.co/2026/03/03/apple-does-fusion/) | On my Om |
-| 2026-03-12 | [OpenClaw Conquered China in 100 Days](https://hellochinatech.com/p/openclaw-china-ai-stack) | Hello China Tech |
-| 2026-03-11 | [千问模型负责人林俊旸提出离职，阿里高管紧急答疑 \| 智能涌现独家](https://www.36kr.com/p/3708425301749891) | 36kr.com |
-| 2026-03-11 | [Something is afoot in the land of Qwen](https://simonwillison.net/2026/Mar/4/qwen/) | simonwillison.net |
-| 2026-03-11 | [AI Doesn’t Reduce Work—It Intensifies It](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it) | Harvard Business Review |
-| 2026-03-11 | [Benedict's Newsletter: No. 633](mailto:reader-forwarded-email/cd82cce429b3d277a7ed07b55a4fb0a5) |  |
-| 2026-03-11 | [The Man Who Could Be Apple’s Next C.E.O.](https://www.nytimes.com/2026/01/08/technology/apple-ceo-tim-cook-john-ternus.html?unlocked_article_code=1.DFA.Qm0v.SxztBxvFrAF-&smid=url-share) | New York Times |
-| 2026-03-06 | [Benedict's Newsletter: No. 624](mailto:reader-forwarded-email/bc56046620405696ee385b283f49567e) |  |
-| 2026-03-02 | [All the Ways Netflix Actually Won Even Though It Lost Warner](https://www.wsj.com/business/media/netflix-deal-warner-bros-discover-3b33b02c?st=CphU5i&reflink=desktopwebshare_permalink) | WSJ |
-| 2026-03-02 | [Bill Simmons Gets Brutally Honest About His Explosive Break with ESPN](https://www.vanityfair.com/hollywood/2016/06/bill-simmons-espn-hbo) | Vanity Fair |
+| Date | Article | Speed | Source |
+| --- | --- | --- | --- |
+| 2026-03-27 | [How to Write Blog Posts that Developers Read](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/) | 254 wpm | refactoringenglish.com |
+| 2026-03-25 | [How did Anthropic do it?](https://ramp.com/velocity/ai-index-march-2026) | 249 wpm | Ramp |
+| 2026-03-25 | [Benedict's Newsletter: No. 635](mailto:reader-forwarded-email/e5cc544934f7734f27db1d8e2fe8c9f0) | 244 wpm |  |
+| 2026-03-23 | [The most brilliant move in corporate history?](https://asymco.com/2026/03/10/the-most-brilliant-move-in-corporate-history/) | 217 wpm | Asymco |
+| 2026-03-23 | [🟦 I have some questions](mailto:reader-forwarded-email/b37e9730437b41b54328be253b3435d3) | 244 wpm | Not-Ship |
+| 2026-03-23 | [I vibe coded my dream macOS presentation app](https://simonwillison.net/2026/Feb/25/present/) | 260 wpm | simonwillison.net |
+| 2026-03-21 | [2025, A Retrospective](https://www.wheresyoured.at/2025-a-retrospective/) | 237 wpm | wheresyoured.at |
+| 2026-03-21 | [Grammarly Is Facing a Class Action Lawsuit Over Its AI ‘Expert Review’ Feature](https://www.wired.com/story/grammarly-is-facing-a-class-action-lawsuit-over-its-ai-expert-review-feature/) | 207 wpm | WIRED |
+| 2026-03-20 | [239. Mac Neo and my afternoon of reflection and melancholy](https://hardcoresoftware.learningbyshipping.com/p/239-mac-neo-and-my-afternoon-of-reflection) | 246 wpm | learningbyshipping.com |
+| 2026-03-18 | [Benedict's Newsletter: No. 634](mailto:reader-forwarded-email/a77943f9472699323ecb576ae4789fdd) | 256 wpm |  |
+| 2026-03-16 | [So, I Wrote a Book](https://www.thecoder.cafe/p/100-go-mistakes) | 261 wpm | thecoder.cafe |
+| 2026-03-14 | [Why read novels?](https://dynomight.net/novels/) | 232 wpm | DYNOMIGHT |
+| 2026-03-14 | [90% of My Skills Are Now Worth $0 - by Kent Beck 90% of My Skills Are Now Worth $0](https://tidyfirst.substack.com/p/90-of-my-skills-are-now-worth-0) | 244 wpm | substack.com |
+| 2026-03-14 | [失败者卢安克](https://mp.weixin.qq.com/s/mCmb7SDSrNHpNlOx1yhOkg) | 110 wpm | Weixin Official Accounts Platform |
+| 2026-03-14 | [Programming With Chronic Pain](https://thomasvogelaar.me/posts/programming-with-chronic-pain/) | 244 wpm | thomasvogelaar.me |
+| 2026-03-14 | [Slopware](https://thomasvogelaar.me/posts/slopware/) | 215 wpm | thomasvogelaar.me |
+| 2026-03-14 | [My Eighth Year as a Bootstrapped Founder](https://mtlynch.io/bootstrapped-founder-year-8/) | 249 wpm | mtlynch.io |
+| 2026-03-14 | [My Book's Pre-Sale Just Barely Succeeded](https://mtlynch.io/book-pre-sale-just-barely-succeeded/) | 252 wpm | mtlynch.io |
+| 2026-03-12 | [Apple Does Fusion.](https://om.co/2026/03/03/apple-does-fusion/) | 263 wpm | On my Om |
+| 2026-03-12 | [OpenClaw Conquered China in 100 Days](https://hellochinatech.com/p/openclaw-china-ai-stack) | 200 wpm | Hello China Tech |
+| 2026-03-11 | [千问模型负责人林俊旸提出离职，阿里高管紧急答疑 \| 智能涌现独家](https://www.36kr.com/p/3708425301749891) | 109 wpm | 36kr.com |
+| 2026-03-11 | [Something is afoot in the land of Qwen](https://simonwillison.net/2026/Mar/4/qwen/) | 230 wpm | simonwillison.net |
+| 2026-03-11 | [AI Doesn’t Reduce Work—It Intensifies It](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it) | 195 wpm | Harvard Business Review |
+| 2026-03-11 | [Benedict's Newsletter: No. 633](mailto:reader-forwarded-email/cd82cce429b3d277a7ed07b55a4fb0a5) | 244 wpm |  |
+| 2026-03-11 | [The Man Who Could Be Apple’s Next C.E.O.](https://www.nytimes.com/2026/01/08/technology/apple-ceo-tim-cook-john-ternus.html?unlocked_article_code=1.DFA.Qm0v.SxztBxvFrAF-&smid=url-share) | 250 wpm | New York Times |
+| 2026-03-06 | [Benedict's Newsletter: No. 624](mailto:reader-forwarded-email/bc56046620405696ee385b283f49567e) | 244 wpm |  |
+| 2026-03-02 | [All the Ways Netflix Actually Won Even Though It Lost Warner](https://www.wsj.com/business/media/netflix-deal-warner-bros-discover-3b33b02c?st=CphU5i&reflink=desktopwebshare_permalink) | 233 wpm | WSJ |
+| 2026-03-02 | [Bill Simmons Gets Brutally Honest About His Explosive Break with ESPN](https://www.vanityfair.com/hollywood/2016/06/bill-simmons-espn-hbo) | 200 wpm | Vanity Fair |
 
 ### Highlights
+#### [An Interview With Nvidia CEO Jensen Huang About Accelerated Computing](mailto:reader-forwarded-email/ab561fce725d95453dd9d275eafe739b) (articles)
+
+| Date | Highlight | Note |
+| --- | --- | --- |
+| 2026-03-30 | Just to go back to that software bit, you mentioned Excel wasn’t designed to be used by AI. You have things like [Claude has this new functionality to use Excel](https://stratechery.com/2026/copilot-cowork-anthropics-integration-microsofts-new-bundle/?access_token=eyJhbGciOiJSUzI1NiIsImtpZCI6InN0cmF0ZWNoZXJ5LnBhc3Nwb3J0Lm9ubGluZSIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJzdHJhdGVjaGVyeS5wYXNzcG9ydC5vbmxpbmUiLCJhenAiOiJIS0xjUzREd1Nod1AyWURLYmZQV00xIiwiZW50Ijp7InVyaSI6WyJodHRwczovL3N0cmF0ZWNoZXJ5LmNvbS8yMDI2L2NvcGlsb3QtY293b3JrLWFudGhyb3BpY3MtaW50ZWdyYXRpb24tbWljcm9zb2Z0cy1uZXctYnVuZGxlLyJdfSwiZXhwIjoxNzc2MzMzODM3LCJpYXQiOjE3NzM3NDE4MzcsImlzcyI6Imh0dHBzOi8vYXBwLnBhc3Nwb3J0Lm9ubGluZS9vYXV0aCIsInNjb3BlIjoiZmVlZDpyZWFkIGFydGljbGU6cmVhZCBhc3NldDpyZWFkIGNhdGVnb3J5OnJlYWQgZW50aXRsZW1lbnRzIiwic3ViIjoiNWRhMmYxNWUtMmIyZS00NGEyLWJhNTktMmRjNWRhNGNmNzFjIiwidXNlIjoiYWNjZXNzIn0.hA1W9LrAeRzytN_ErXkmNywbedRqMzv2VhWo8iDsFcW0XDgx3STwKMYLCDRuv9ndv7TtMSGwRTz9_9-ghYCFQIVJnT4rSFFRFmmLCbnjTcmFZ9lS3yMsY_wYc57VLMJuAA8OBYaCEWqw4g6c5KtLbNTkqUY93-S6UAY77acwUPQ3sPqhfzWPWMaseTM2TlPoY0L7J9vPrJAx8R163suhevSi6Q4oXy_a1Q23DcG8gezChKD0V5anAuTKwXOuviX2-p4k1qdx3b2EqZsNOYOpaDGEM6O8jVyrDPJor4rSAAbU5qdWsXHk1GAN4LPFLF9jg4sXlolCii69J4mXPYso7w), so when you talk about that, you want to invest in these libraries, is that to enable models like that to do better? | So in future there’ll be a new excel that’s built for agents not humans |
+#### [Zen and the Art of Motorcycle Maintenance](https://readwise.io/bookreview/56765072) (books)
+
+| Date | Highlight | Note |
+| --- | --- | --- |
+| 2026-03-28 | To the untrained eye ego-climbing and selfless climbing may appear identical. Both kinds of climbers place one foot in front of the other. Both breathe in and out at the same rate. Both stop when tired. Both go forward when rested. But what a difference! The ego-climber is like an instrument that’s out of adjustment. He puts his foot down an instant too soon or too late. He’s likely to miss a beautiful passage of sunlight through the trees. He goes on when the sloppiness of his step shows he’s tired. He rests at odd times. He looks up the trail trying to see what’s ahead even when he knows what’s ahead because he just looked a second before. He goes too fast or too slow for the conditions and when he talks his talk is forever about somewhere else, something else. He’s here but he’s not here. He rejects the here, is unhappy with it, wants to be farther up the trail but when he gets there will be just as unhappy because then it will be “here.” What he’s looking for, what he wants, is all around him, but he doesn’t want that because it is all around him. Every step’s an effort, both physically and spiritually, because he imagines his goal to be external and distant. |  |
+| 2026-03-21 | She was blocked because she was trying to repeat, in her writing, things she had already heard, just as on the first day he had tried to repeat things he had already decided to say. She couldn’t think of anything to write about Bozeman because she couldn’t recall anything she had heard worth repeating. She was strangely unaware that she could look and see freshly for herself, as she wrote, without primary regard for what had been said before. The narrowing down to one brick destroyed the blockage because it was so obvious she had to do some original and direct seeing. |  |
+| 2026-03-21 | This surprising result supported a hunch he had had for a long time: that the brighter, more serious students were the least desirous of grades, possibly because they were more interested in the subject matter of the course, whereas the dull or lazy students were the most desirous of grades, possibly because grades told them if they were getting by. |  |
+| 2026-03-21 | The answer that had seemed right when he started now made less and less sense. He had wanted his students to become creative by deciding for themselves what was good writing instead of asking him all the time. The real purpose of withholding the grades was to force them to look within themselves, the only place they would ever get a really right answer. But now this made no sense. If they already knew what was good and bad, there was no reason for them to take the course in the first place. The fact that they were there as students presumed they did not know what was good or bad. That was his job as instructor—to tell them what was good or bad. The whole idea of individual creativity and expression in the classroom was really basically opposed to the whole idea of the University. |  |
+#### [Cloudflare: Leading Cybersecurity](https://colossus.com/episode/cloudflare-leading-cybersecurity/) (articles)
+
+| Date | Highlight | Note |
+| --- | --- | --- |
+| 2026-03-27 | If you look at customers over $100,000 in revenue, they're less than 1.5% of the actual customer base, but they contribute to about 75% of the revenue. It's very important to get this segment right. There's a long runway to that segment as well. They're at a bit over $2 billion of annualized revenue. With that, they have a bit less than 200 customers that are over $1 million. If you compare that to Zscaler, when they were at that same size, that $2 billion run rate, they had almost 500 customers with that $1 million revenue. So it highlights that runway that they have at that very large enterprise end, and the go-to-market transformation is a big part of that. |  |
 #### [Agents Over Bubbles](mailto:reader-forwarded-email/e5507ae1d98222c358953477cfff51b3) (articles)
 
 | Date | Highlight | Note |
 | --- | --- | --- |
 | 2026-03-23 | AI, however, not only gives the aforementioned excuse to undo that bloat, but also moves the “rightsize” point significantly towards a much smaller workforce. More and more companies are not simply going to wonder if they hired too much for a pre-AI world, but also if they hired too much for a post-AI world; the most forward-looking and future-proof approach will likely be to cut more rather than less, with the hope that those who remain have no choice but to rebuild scale with agents. After all, if they don’t, dramatically smaller competitors built with AI from the beginning will soon be nipping at their heels with both smaller cost structures and more capabilities that will structurally increase over time. |  |
-#### [Zen and the Art of Motorcycle Maintenance](https://readwise.io/bookreview/56765072) (books)
-
-| Date | Highlight | Note |
-| --- | --- | --- |
-| 2026-03-21 | She was blocked because she was trying to repeat, in her writing, things she had already heard, just as on the first day he had tried to repeat things he had already decided to say. She couldn’t think of anything to write about Bozeman because she couldn’t recall anything she had heard worth repeating. She was strangely unaware that she could look and see freshly for herself, as she wrote, without primary regard for what had been said before. The narrowing down to one brick destroyed the blockage because it was so obvious she had to do some original and direct seeing. |  |
-| 2026-03-21 | This surprising result supported a hunch he had had for a long time: that the brighter, more serious students were the least desirous of grades, possibly because they were more interested in the subject matter of the course, whereas the dull or lazy students were the most desirous of grades, possibly because grades told them if they were getting by. |  |
-| 2026-03-21 | The answer that had seemed right when he started now made less and less sense. He had wanted his students to become creative by deciding for themselves what was good writing instead of asking him all the time. The real purpose of withholding the grades was to force them to look within themselves, the only place they would ever get a really right answer. But now this made no sense. If they already knew what was good and bad, there was no reason for them to take the course in the first place. The fact that they were there as students presumed they did not know what was good or bad. That was his job as instructor—to tell them what was good or bad. The whole idea of individual creativity and expression in the classroom was really basically opposed to the whole idea of the University. |  |
 
 
 ## Travel
 
-- **Checkins**: 23 (-21% MoM, +64% YoY)
-- **Unique Places Visited**: 20 (-17% MoM, +54% YoY)
+- **Checkins**: 30 (+3% MoM, +114% YoY)
+- **Unique Places Visited**: 25 (+4% MoM, +92% YoY)
 
 
 ## Movies
@@ -134,7 +148,7 @@ categories: ["Summary"]
 ## Podcasts
 
 - **New Feeds Subscribed**: 1
-- **Feeds Removed**: 1
+- **Feeds Removed**: 0
 - **Episodes Played**: 44 (-20% MoM, +2100% YoY)
 
 ### Episodes Listened
@@ -230,14 +244,22 @@ categories: ["Summary"]
 
 ## Code
 
-- **Commits**: 66 (-20% MoM, +288% YoY)
-- **Repos Touched**: 5 (+67% MoM, +400% YoY)
+- **Commits**: 81 (-2% MoM, +376% YoY)
+- **Repos Touched**: 6 (+100% MoM, +500% YoY)
 
 ### Commits by Repo
 #### [yyl/digital-footprint-dump](https://github.com/yyl/digital-footprint-dump)
 
 | Date | Commit Message |
 | --- | --- |
+| 2026-03-30 | fix: harden publish month selection and github sync cursor |
+| 2026-03-27 | Pin CI Python version and add local test-ci workflow |
+| 2026-03-27 | Stabilize publish GitHub client tests across PyGithub versions |
+| 2026-03-27 | Stabilize GitHub publish retry tests |
+| 2026-03-27 | Retry GitHub publish on non-fast-forward updates |
+| 2026-03-27 | Update PyGithub auth usage and dependency version |
+| 2026-03-27 | Add reading speed to Readwise article tables |
+| 2026-03-26 | Add publish flag to skip sync and analysis |
 | 2026-03-26 | Fix article tables and escape pipe characters in titles |
 | 2026-03-26 | Add table of contents to README |
 | 2026-03-26 | Document report table output and grouped article sections |
@@ -247,10 +269,20 @@ categories: ["Summary"]
 | 2026-03-01 | fix tests |
 | 2026-03-01 | update publish to include rest stats |
 | 2026-03-01 | Rename github username |
+#### [yyl/utilities](https://github.com/yyl/utilities)
+
+| Date | Commit Message |
+| --- | --- |
+| 2026-03-30 | parallel graphql |
+| 2026-03-30 | update github_repo_stat.py to support large repo |
+| 2026-03-10 | add github repo stat script |
+| 2026-03-10 | use uv |
 #### [yyl/compute-stuff](https://github.com/yyl/compute-stuff)
 
 | Date | Commit Message |
 | --- | --- |
+| 2026-03-27 | timestamp update |
+| 2026-03-26 | feat: Add monthly report draft for 03/2026 |
 | 2026-03-26 | feat: Add monthly report draft for 03/2026 |
 | 2026-03-26 | feat: Add monthly report draft for 03/2026 |
 | 2026-03-26 | feat: Add monthly report draft for 03/2026 |
@@ -273,23 +305,21 @@ categories: ["Summary"]
 | 2026-03-01 | Update title and publish status for February summary |
 | 2026-03-01 | Update assets/custom.css |
 | 2026-03-01 | data: Update activity data files |
-| 2026-03-01 | feat: Add monthly summary draft for 02/2026 |
-| 2026-03-01 | feat: Add monthly summary draft for 02/2026 |
 #### [yyl/anyblog](https://github.com/yyl/anyblog)
 
 | Date | Commit Message |
 | --- | --- |
 | 2026-03-19 | better footer |
 | 2026-03-14 | init |
-#### [yyl/utilities](https://github.com/yyl/utilities)
-
-| Date | Commit Message |
-| --- | --- |
-| 2026-03-10 | add github repo stat script |
-| 2026-03-10 | use uv |
 #### [yyl/ai-tools](https://github.com/yyl/ai-tools)
 
 | Date | Commit Message |
 | --- | --- |
 | 2026-03-08 | repo stat tool |
 | 2026-03-08 | use uv instead |
+#### [yyl/blog](https://github.com/yyl/blog)
+
+| Date | Commit Message |
+| --- | --- |
+| 2026-03-01 | feat: Add monthly summary draft for 02/2026 |
+| 2026-03-01 | feat: Add monthly summary draft for 02/2026 |
