@@ -1,7 +1,7 @@
 ---
 title: "Things I learned in 03/2026"
 slug: "things-i-learned-in-03-2026"
-date: 2026-04-01T19:26:20-07:00
+date: 2026-04-04T21:29:55-07:00
 draft: true
 tags: ["monthly", "digest", "automated", "readwise", "foursquare", "letterboxd", "overcast", "strong", "github"]
 categories: ["Summary"]
@@ -22,15 +22,15 @@ categories: ["Summary"]
 
 | Date | Article | Speed |
 | --- | --- | --- |
-| 2026-03-27 | [Direction To Consumer](mailto:reader-forwarded-email/faa063148946b3fee9c7d6b73a74743b) | 238 wpm |
-| 2026-03-25 | [Slowing Coach](mailto:reader-forwarded-email/7e953d2bb97d845cfa5e9d77e51ae1aa) | 250 wpm |
-| 2026-03-20 | [New Dollywood](mailto:reader-forwarded-email/17e41c2520e119a38f04eb57e7353a7d) | 262 wpm |
-| 2026-03-19 | [Trust The Process](mailto:reader-forwarded-email/ffa6c189face3c854728f034c4c5dbc8) | 234 wpm |
-| 2026-03-10 | [Keep Carmen, Carry On](mailto:reader-forwarded-email/110ddffbe27552a741e5b7897fb20111) | 250 wpm |
-| 2026-03-09 | [All By Myself](mailto:reader-forwarded-email/1ab134cfa273c8adb5366175538fe9c6) | 254 wpm |
-| 2026-03-05 | [Love Is An Opendoor](mailto:reader-forwarded-email/b9df69373b2a63084ab24150db4990e7) | 233 wpm |
-| 2026-03-03 | [Some Novel Findings](mailto:reader-forwarded-email/390d3592838f1ad267e22ae2d9bde5d5) | 237 wpm |
-| 2026-03-02 | [Learning Machines](mailto:reader-forwarded-email/e3b944e635c8365015be76b8afad094b) | 259 wpm |
+| 2026-03-27 | Direction To Consumer | 238 wpm |
+| 2026-03-25 | Slowing Coach | 250 wpm |
+| 2026-03-20 | New Dollywood | 262 wpm |
+| 2026-03-19 | Trust The Process | 234 wpm |
+| 2026-03-10 | Keep Carmen, Carry On | 250 wpm |
+| 2026-03-09 | All By Myself | 254 wpm |
+| 2026-03-05 | Love Is An Opendoor | 233 wpm |
+| 2026-03-03 | Some Novel Findings | 237 wpm |
+| 2026-03-02 | Learning Machines | 259 wpm |
 #### Daring Fireball
 
 | Date | Article | Speed |
@@ -49,19 +49,19 @@ categories: ["Summary"]
 
 | Date | Article | Speed |
 | --- | --- | --- |
-| 2026-03-29 | [So Long to Sora (This Week in Stratechery)](mailto:reader-forwarded-email/826b83ba5053dbe52a2027916ab767cf) | 228 wpm |
-| 2026-03-24 | [Agents Over Bubbles (Stratechery Article 3-16-2026)](mailto:reader-forwarded-email/e5507ae1d98222c358953477cfff51b3) | 257 wpm |
-| 2026-03-21 | [Please Listen to My Podcast (This Week in Stratechery)](mailto:reader-forwarded-email/8f8ec4719965a6778adebd6232fe293c) | 202 wpm |
-| 2026-03-20 | [Oracle Earnings, Oracle’s Cloud Growth, Oracle’s Software Defense (Stratechery Update 3-11-2026)](mailto:reader-forwarded-email/2d0af9226cd32a53aa20853fc0b5179c) | 251 wpm |
-| 2026-03-18 | [Copilot Cowork, Anthropic’s Integration, Microsoft’s New Bundle (Stratechery Update 3-10-2026)](mailto:reader-forwarded-email/c56bef18b26d142aaf3b148020399ced) | 236 wpm |
-| 2026-03-16 | [Winners, Losers, and the Unknown (This Week in Stratechery)](mailto:reader-forwarded-email/320464f69327cdbe2af4a4647338d05f) | 202 wpm |
-| 2026-03-16 | [Anthropic’s Skyrocketing Revenue, A Contract Compromise?, Nvidia Earnings (Stratechery Update 3-4-2026)](mailto:reader-forwarded-email/8167f66120bd0e0276eaceff692799bf) | 260 wpm |
-| 2026-03-13 | [An Interview with Gregory Allen About Anthropic and the U.S. Government (Stratechery Interview 3-5-2026)](mailto:reader-forwarded-email/8f86c999084f6442ae79deb6f7b3011a) | 260 wpm |
-| 2026-03-10 | [MacBook Neo, The (Not-So) Thin MacBook, Apple and Memory (Stratechery Update 3-9-2026)](mailto:reader-forwarded-email/a9e7c34c7b41c05e2190d0a95bfaacaf) | 236 wpm |
-| 2026-03-09 | [Higher Powers and Lower Macs (This Week in Stratechery)](mailto:reader-forwarded-email/c30e165d6051735dc1b6f13f32591077) | 253 wpm |
-| 2026-03-06 | [Losing in the Attention Economy (This Week in Stratechery)](mailto:reader-forwarded-email/4e08c58ad484dba593001ec30448aaa7) | 240 wpm |
-| 2026-03-04 | [Technological Scale and Government Control, Paramount Outbids Netflix for Warner Bros. (Stratechery Update 3-3-2026)](mailto:reader-forwarded-email/768a1ac5c78196f3cc612b9c323cbe47) | 251 wpm |
-| 2026-03-04 | [Anthropic and Alignment (Stratechery Article 3-2-2026)](mailto:reader-forwarded-email/5c06fa32dd3988fe63de7a116e2734b2) | 263 wpm |
+| 2026-03-29 | So Long to Sora (This Week in Stratechery) | 228 wpm |
+| 2026-03-24 | Agents Over Bubbles (Stratechery Article 3-16-2026) | 257 wpm |
+| 2026-03-21 | Please Listen to My Podcast (This Week in Stratechery) | 202 wpm |
+| 2026-03-20 | Oracle Earnings, Oracle’s Cloud Growth, Oracle’s Software Defense (Stratechery Update 3-11-2026) | 251 wpm |
+| 2026-03-18 | Copilot Cowork, Anthropic’s Integration, Microsoft’s New Bundle (Stratechery Update 3-10-2026) | 236 wpm |
+| 2026-03-16 | Winners, Losers, and the Unknown (This Week in Stratechery) | 202 wpm |
+| 2026-03-16 | Anthropic’s Skyrocketing Revenue, A Contract Compromise?, Nvidia Earnings (Stratechery Update 3-4-2026) | 260 wpm |
+| 2026-03-13 | An Interview with Gregory Allen About Anthropic and the U.S. Government (Stratechery Interview 3-5-2026) | 260 wpm |
+| 2026-03-10 | MacBook Neo, The (Not-So) Thin MacBook, Apple and Memory (Stratechery Update 3-9-2026) | 236 wpm |
+| 2026-03-09 | Higher Powers and Lower Macs (This Week in Stratechery) | 253 wpm |
+| 2026-03-06 | Losing in the Attention Economy (This Week in Stratechery) | 240 wpm |
+| 2026-03-04 | Technological Scale and Government Control, Paramount Outbids Netflix for Warner Bros. (Stratechery Update 3-3-2026) | 251 wpm |
+| 2026-03-04 | Anthropic and Alignment (Stratechery Article 3-2-2026) | 263 wpm |
 | 2026-03-03 | [Grantland and the (Surprising) Future of Publishing](https://stratechery.com/2015/grantland-and-the-surprising-future-of-publishing/) | 263 wpm |
 | 2026-03-03 | [An Interview with The Ringer Founder and CEO Bill Simmons](https://stratechery.com/2023/an-interview-with-the-ringer-founder-and-ceo-bill-simmons/) | 262 wpm |
 #### Other
@@ -70,14 +70,14 @@ categories: ["Summary"]
 | --- | --- | --- | --- |
 | 2026-03-27 | [How to Write Blog Posts that Developers Read](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/) | 254 wpm | refactoringenglish.com |
 | 2026-03-25 | [How did Anthropic do it?](https://ramp.com/velocity/ai-index-march-2026) | 249 wpm | Ramp |
-| 2026-03-25 | [Benedict's Newsletter: No. 635](mailto:reader-forwarded-email/e5cc544934f7734f27db1d8e2fe8c9f0) | 244 wpm |  |
+| 2026-03-25 | Benedict's Newsletter: No. 635 | 244 wpm |  |
 | 2026-03-23 | [The most brilliant move in corporate history?](https://asymco.com/2026/03/10/the-most-brilliant-move-in-corporate-history/) | 217 wpm | Asymco |
-| 2026-03-23 | [🟦 I have some questions](mailto:reader-forwarded-email/b37e9730437b41b54328be253b3435d3) | 244 wpm | Not-Ship |
+| 2026-03-23 | 🟦 I have some questions | 244 wpm | Not-Ship |
 | 2026-03-23 | [I vibe coded my dream macOS presentation app](https://simonwillison.net/2026/Feb/25/present/) | 260 wpm | simonwillison.net |
 | 2026-03-21 | [2025, A Retrospective](https://www.wheresyoured.at/2025-a-retrospective/) | 237 wpm | wheresyoured.at |
 | 2026-03-21 | [Grammarly Is Facing a Class Action Lawsuit Over Its AI ‘Expert Review’ Feature](https://www.wired.com/story/grammarly-is-facing-a-class-action-lawsuit-over-its-ai-expert-review-feature/) | 207 wpm | WIRED |
 | 2026-03-20 | [239. Mac Neo and my afternoon of reflection and melancholy](https://hardcoresoftware.learningbyshipping.com/p/239-mac-neo-and-my-afternoon-of-reflection) | 246 wpm | learningbyshipping.com |
-| 2026-03-18 | [Benedict's Newsletter: No. 634](mailto:reader-forwarded-email/a77943f9472699323ecb576ae4789fdd) | 256 wpm |  |
+| 2026-03-18 | Benedict's Newsletter: No. 634 | 256 wpm |  |
 | 2026-03-16 | [So, I Wrote a Book](https://www.thecoder.cafe/p/100-go-mistakes) | 261 wpm | thecoder.cafe |
 | 2026-03-14 | [Why read novels?](https://dynomight.net/novels/) | 232 wpm | DYNOMIGHT |
 | 2026-03-14 | [90% of My Skills Are Now Worth $0 - by Kent Beck 90% of My Skills Are Now Worth $0](https://tidyfirst.substack.com/p/90-of-my-skills-are-now-worth-0) | 244 wpm | substack.com |
@@ -91,14 +91,14 @@ categories: ["Summary"]
 | 2026-03-11 | [千问模型负责人林俊旸提出离职，阿里高管紧急答疑 \| 智能涌现独家](https://www.36kr.com/p/3708425301749891) | 109 wpm | 36kr.com |
 | 2026-03-11 | [Something is afoot in the land of Qwen](https://simonwillison.net/2026/Mar/4/qwen/) | 230 wpm | simonwillison.net |
 | 2026-03-11 | [AI Doesn’t Reduce Work—It Intensifies It](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it) | 195 wpm | Harvard Business Review |
-| 2026-03-11 | [Benedict's Newsletter: No. 633](mailto:reader-forwarded-email/cd82cce429b3d277a7ed07b55a4fb0a5) | 244 wpm |  |
+| 2026-03-11 | Benedict's Newsletter: No. 633 | 244 wpm |  |
 | 2026-03-11 | [The Man Who Could Be Apple’s Next C.E.O.](https://www.nytimes.com/2026/01/08/technology/apple-ceo-tim-cook-john-ternus.html?unlocked_article_code=1.DFA.Qm0v.SxztBxvFrAF-&smid=url-share) | 250 wpm | New York Times |
-| 2026-03-06 | [Benedict's Newsletter: No. 624](mailto:reader-forwarded-email/bc56046620405696ee385b283f49567e) | 244 wpm |  |
+| 2026-03-06 | Benedict's Newsletter: No. 624 | 244 wpm |  |
 | 2026-03-02 | [All the Ways Netflix Actually Won Even Though It Lost Warner](https://www.wsj.com/business/media/netflix-deal-warner-bros-discover-3b33b02c?st=CphU5i&reflink=desktopwebshare_permalink) | 233 wpm | WSJ |
 | 2026-03-02 | [Bill Simmons Gets Brutally Honest About His Explosive Break with ESPN](https://www.vanityfair.com/hollywood/2016/06/bill-simmons-espn-hbo) | 200 wpm | Vanity Fair |
 
 ### Highlights
-#### [An Interview With Nvidia CEO Jensen Huang About Accelerated Computing](mailto:reader-forwarded-email/ab561fce725d95453dd9d275eafe739b) (articles)
+#### An Interview With Nvidia CEO Jensen Huang About Accelerated Computing (articles)
 
 | Date | Highlight | Note |
 | --- | --- | --- |
@@ -116,7 +116,7 @@ categories: ["Summary"]
 | Date | Highlight | Note |
 | --- | --- | --- |
 | 2026-03-27 | If you look at customers over $100,000 in revenue, they're less than 1.5% of the actual customer base, but they contribute to about 75% of the revenue. It's very important to get this segment right. There's a long runway to that segment as well. They're at a bit over $2 billion of annualized revenue. With that, they have a bit less than 200 customers that are over $1 million. If you compare that to Zscaler, when they were at that same size, that $2 billion run rate, they had almost 500 customers with that $1 million revenue. So it highlights that runway that they have at that very large enterprise end, and the go-to-market transformation is a big part of that. |  |
-#### [Agents Over Bubbles](mailto:reader-forwarded-email/e5507ae1d98222c358953477cfff51b3) (articles)
+#### Agents Over Bubbles (articles)
 
 | Date | Highlight | Note |
 | --- | --- | --- |
@@ -147,15 +147,17 @@ categories: ["Summary"]
 
 ## Podcasts
 
-- **New Feeds Subscribed**: 1
+- **New Feeds Subscribed**: 2
 - **Feeds Removed**: 0
-- **Episodes Played**: 44 (-20% MoM, +2100% YoY)
+- **Episodes Played**: 54 (-2% MoM, +2600% YoY)
 
 ### Episodes Listened
 #### [The Bill Simmons Podcast](https://www.theringer.com/)
 
 | Date | Episode |
 | --- | --- |
+| 2026-03-31 | [UConn’s Miracle, Weirdest NBA Season Ever, A Scary Playoff Team Draft, and an Iffy Expansion Plan With Zach Lowe](https://overcast.fm/+b0znjgxu8) |
+| 2026-03-30 | [NBA Hot Takes, OKC’s Red Flag, and Giannis vs. Father Time With Kirk Goldsberry and Joe House](https://overcast.fm/+b0znJ5alo) |
 | 2026-03-25 | [Luka’s Heater, Wemby’s Bid, and Stealth Winners of the NBA Season With Zach Lowe](https://overcast.fm/+b0zn6MqBc) |
 | 2026-03-19 | [The Annual Worst NBA Contracts Draft With Joe House and Wosny Lambre](https://overcast.fm/+b0zmiyrfE) |
 | 2026-03-16 | [The Bam Backlash, Kawhi’s Heater, East vs. West, and SGA vs. Jokic, With Tim Legler](https://overcast.fm/+b0zm_9yOE) |
@@ -166,6 +168,8 @@ categories: ["Summary"]
 
 | Date | Episode |
 | --- | --- |
+| 2026-03-31 | [Apple at 50](https://overcast.fm/+BCC5zaKPis) |
+| 2026-03-27 | [Sora and Mac Pro Dead](https://overcast.fm/+BCC5whahyQ) |
 | 2026-03-24 | [John Ternus and Responsible Individuals](https://overcast.fm/+BCC5y4MBeA) |
 | 2026-03-20 | [Jensen Huang’s Jobsian Keynote](https://overcast.fm/+BCC5wz0Le8) |
 | 2026-03-16 | [LLM Paradigm Changes](https://overcast.fm/+BCC5xJEMNU) |
@@ -173,19 +177,12 @@ categories: ["Summary"]
 | 2026-03-10 | [MacBook Neo Review](https://overcast.fm/+BCC5yrgpJ8) |
 | 2026-03-06 | [MacBook Neo](https://overcast.fm/+BCC5x7kstQ) |
 | 2026-03-03 | [Anthropic and the U.S. Government](https://overcast.fm/+BCC5xddNMY) |
-#### [Sharp Tech with Ben Thompson](https://sharptech.fm/)
-
-| Date | Episode |
-| --- | --- |
-| 2026-03-23 | [OpenAI’s Enterprise Pivot, The Rise of Agents and Bubble Counterpoints, Nvidia Changes Its Inference Story](https://overcast.fm/+BB5hlgElCs) |
-| 2026-03-19 | [Nerding Out with the Neo, Claude and the Integration Question, The End of Coding Language History](https://overcast.fm/+BB5hmFOV1U) |
-| 2026-03-13 | [The Anthropic Mess Continues, Frontier AI and the Uncertain Future of Law, Q&A on Netflix, Dating Apps, F1](https://overcast.fm/+BB5hmskdLM) |
-| 2026-03-06 | [The Roots of a Global Memory Shortage, Thick, Thin and Apple, Shopify is Fine, Actually](https://overcast.fm/+BB5hnZt084) |
-| 2026-03-02 | [The Futures for Cursor and Perplexity, Multi Modality Dreams and Apple Possibilities, Normies Contemplate an AI Future](https://overcast.fm/+BB5hkrRK3M) |
 #### [Stratechery](https://stratechery.com/)
 
 | Date | Episode |
 | --- | --- |
+| 2026-03-31 | [Apple's 50 Years of Integration](https://overcast.fm/+BB5hioKW1I) |
+| 2026-03-26 | [Arm Launches Own CPU, Arm's Motivation, Constraints and Systems](https://overcast.fm/+BB5hjzlrws) |
 | 2026-03-23 | [Jensen Huang and Andy Grove, Groq LPUs and Vera CPUs, Hotel California](https://overcast.fm/+BB5hhS6UJI) |
 | 2026-03-19 | [An Interview with Nvidia CEO Jensen Huang About Accelerated Computing](https://overcast.fm/+BB5hgNSviY) |
 | 2026-03-16 | [Agents Over Bubbles](https://overcast.fm/+BB5hhKoIIQ) |
@@ -201,6 +198,8 @@ categories: ["Summary"]
 
 | Date | Episode |
 | --- | --- |
+| 2026-03-29 | [The BULLSEYE List in 2026: Playoff Questions for Ant, Chet, Tatum, Mitchell, Wemby, and Beyond](https://overcast.fm/+BCHyhHNraY) |
+| 2026-03-26 | [The Intrigue(?) in the East, Peterson and Acuff On Center Stage, Revisiting Draft Kevin Durant](https://overcast.fm/+BCHyj1irfo) |
 | 2026-03-23 | [How NOT to Miss a Free Throw, Generic Houston Rockets Slander, The Top 100 Pleasant Surprises](https://overcast.fm/+BCHyh-5gt0) |
 | 2026-03-19 | [How to Miss a Free Throw, The Biggest Top 100 Disappointments, Expansion is Afoot (Again)](https://overcast.fm/+BCHyhAIanA) |
 | 2026-03-16 | [Spo and Bam and a Basketball Betrayal, An SGA Early Warning System, Kawhi, Luka and The Other MVP Candidate](https://overcast.fm/+BCHyhQ0jv4) |
@@ -210,6 +209,21 @@ categories: ["Summary"]
 | 2026-03-03 | [Stock Picks on the Way into the Playoffs, Giannis at a Crossroads, Wolves Against the World](https://overcast.fm/+BCHyjAosU8) |
 | 2026-03-01 | [Ominous Signs for the Bucks, Week One Panic Levels Around the League, Two Emails from Nuggets Fans](https://overcast.fm/+BCHyjQW7j0) |
 | 2026-03-01 | [Summer Top Fives: Christmas Games and Airports](https://overcast.fm/+BCHyhJHmgs) |
+#### [Sharp Tech with Ben Thompson](https://sharptech.fm/)
+
+| Date | Episode |
+| --- | --- |
+| 2026-03-28 | [A Spring Break Mailbag: RIP Sora, Ads and Surplus, F1 Going in Reverse, Elon Inc., Smartphone Parenting, and More](https://overcast.fm/+BB5hn2SCkA) |
+| 2026-03-27 | [OpenAI’s Enterprise Pivot, The Rise of Agents and Bubble Counterpoints, Nvidia Changes Its Inference Story](https://overcast.fm/+BB5hlgElCs) |
+| 2026-03-19 | [Nerding Out with the Neo, Claude and the Integration Question, The End of Coding Language History](https://overcast.fm/+BB5hmFOV1U) |
+| 2026-03-13 | [The Anthropic Mess Continues, Frontier AI and the Uncertain Future of Law, Q&A on Netflix, Dating Apps, F1](https://overcast.fm/+BB5hmskdLM) |
+| 2026-03-06 | [The Roots of a Global Memory Shortage, Thick, Thin and Apple, Shopify is Fine, Actually](https://overcast.fm/+BB5hnZt084) |
+| 2026-03-02 | [The Futures for Cursor and Perplexity, Multi Modality Dreams and Apple Possibilities, Normies Contemplate an AI Future](https://overcast.fm/+BB5hkrRK3M) |
+#### [ACCESS](http://podcasts.voxmedia.com/show/access)
+
+| Date | Episode |
+| --- | --- |
+| 2026-03-26 | [Building an autonomous car utopia with Rivian’s RJ Scaringe](https://overcast.fm/+BRkMyjV36E) |
 #### [The Big Picture](https://www.theringer.com/)
 
 | Date | Episode |
@@ -236,10 +250,10 @@ categories: ["Summary"]
 
 ## Workout
 
-- **Workouts**: 2 (-60% MoM, +100% YoY)
-- **Total Time**: 1h 58m (-52% MoM, +114% YoY)
+- **Workouts**: 3 (-40% MoM, +200% YoY)
+- **Total Time**: 3h 39m (-11% MoM, +298% YoY)
 - **Unique Exercises**: 7
-- **Total Sets**: 41
+- **Total Sets**: 61
 
 
 ## Code
