@@ -5,7 +5,7 @@ title = 'Anyblog: the Roulette to Discover New Blogs'
 tags = ['anyblog', 'blogging', 'blog', 'ai', 'writing', 'build']
 +++
 
-I built a website with only one button. Clicking the button takes people to a blog randomly sourced from [this list](https://github.com/mtlynch/hn-popularity-contest-data/blob/master/data/domains-meta.csv). The domain is https://anyblog.co - feel free to take a spin! 
+I built a website with only one button. Clicking the button takes people to a blog randomly sourced from [this list](https://github.com/mtlynch/hn-popularity-contest-data/blob/master/data/domains-meta.csv). The domain is https://anyblog.cc - feel free to take a spin! 
 
 ![Anyblog website screenshot](/anyblog_website.png)
 

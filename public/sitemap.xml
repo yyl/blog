@@ -2,11 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mildlyjournaling.com/tags/automated/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/categories/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/digest/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/foursquare/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/github/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/letterboxd/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
     <loc>https://www.mildlyjournaling.com/</loc>
-    <lastmod>2026-03-26T06:56:43-07:00</lastmod>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/monthly/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/overcast/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/</loc>
-    <lastmod>2026-03-26T06:56:43-07:00</lastmod>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/readwise/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/strong/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/summary/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/categories/summary/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/posts/wrap-up-2026-03/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mildlyjournaling.com/tags/wrap-up/</loc>
+    <lastmod>2026-04-05T06:50:09-07:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/ai/</loc>
     <lastmod>2026-03-15T14:15:36-07:00</lastmod>
@@ -26,9 +71,6 @@
     <loc>https://www.mildlyjournaling.com/tags/build/</loc>
     <lastmod>2026-03-15T14:15:36-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/</loc>
-    <lastmod>2026-03-15T14:15:36-07:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/writing/</loc>
     <lastmod>2026-03-15T14:15:36-07:00</lastmod>
   </url><url>
@@ -44,9 +86,6 @@
     <loc>https://www.mildlyjournaling.com/tags/coding-agent/</loc>
     <lastmod>2026-03-11T21:04:58-07:00</lastmod>
   </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/github/</loc>
-    <lastmod>2026-03-11T21:04:58-07:00</lastmod>
-  </url><url>
     <loc>https://www.mildlyjournaling.com/tags/ide/</loc>
     <lastmod>2026-03-11T21:04:58-07:00</lastmod>
   </url><url>
@@ -58,30 +97,6 @@
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/would-i-ever-write-code-again/</loc>
     <lastmod>2026-03-11T21:04:58-07:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/automated/</loc>
-    <lastmod>2026-02-28T19:34:24-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/categories/</loc>
-    <lastmod>2026-02-28T19:34:24-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/digest/</loc>
-    <lastmod>2026-02-28T19:34:24-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/foursquare/</loc>
-    <lastmod>2026-02-28T19:34:24-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/monthly/</loc>
-    <lastmod>2026-02-28T19:34:24-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/readwise/</loc>
-    <lastmod>2026-02-28T19:34:24-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/strong/</loc>
-    <lastmod>2026-02-28T19:34:24-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/categories/summary/</loc>
-    <lastmod>2026-02-28T19:34:24-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/2026-02-monthly-summary/</loc>
     <lastmod>2026-02-28T19:34:24-08:00</lastmod>
@@ -103,12 +118,6 @@
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/reading-digest-generator/</loc>
     <lastmod>2026-02-15T20:35:44-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/letterboxd/</loc>
-    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/overcast/</loc>
-    <lastmod>2026-02-01T08:19:42-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/posts/2026-01-monthly-summary/</loc>
     <lastmod>2026-02-01T08:19:42-08:00</lastmod>
@@ -138,9 +147,6 @@
     <lastmod>2026-01-10T20:16:59-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/recurring/</loc>
-    <lastmod>2026-01-10T20:16:59-08:00</lastmod>
-  </url><url>
-    <loc>https://www.mildlyjournaling.com/tags/wrap-up/</loc>
     <lastmod>2026-01-10T20:16:59-08:00</lastmod>
   </url><url>
     <loc>https://www.mildlyjournaling.com/tags/wrap-up-2025/</loc>
